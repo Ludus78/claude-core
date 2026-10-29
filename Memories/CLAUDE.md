@@ -4,6 +4,8 @@ Projet de BD humoristique et fantasy tirée de 15 ans de souvenirs de WoW entre 
 
 ## Contenu
 
+- `ROADMAP.md` : tâches à suivre (la plupart demandent ta participation ou celle du groupe).
+- `personnages/`, `anecdotes/` (modèles `_modele.md`), `style/guide-de-style.md` (à rédiger), `planches/` (pour les planches finies).
 - `memories-synthese.md.py` : synthèse du projet (objectif, décisions, avancement, reste à faire). Malgré l'extension, c'est du texte Markdown : ne jamais l'exécuter. Proposer de le renommer en `.md`, après accord.
 
 ## Règles

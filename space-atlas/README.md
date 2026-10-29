@@ -27,9 +27,13 @@ Les deux projets partagent un **contrat de données** simple (schéma des fiches
 ```
 space-atlas/
 ├── README.md
+├── CLAUDE.md            ← règles pour Claude Code
 ├── docs/
-│   ├── roadmap.md
-│   └── research/        ← un fichier par thème de recherche
+│   ├── synthese.md      ← synthèse de cadrage (29/10/2026)
+│   ├── roadmap.md       ← roadmap 12 mois + suivi des tâches
+│   ├── decisions.md     ← journal des décisions
+│   ├── prompts/         ← prompts de brainstorm et d'intégration
+│   └── research/        ← plan de recherche + un fichier par thème
 ├── data-contract/       ← schéma partagé (brouillon)
 ├── globe/               ← projet 1
 └── observatory/         ← projet 2
@@ -44,4 +48,4 @@ Chaque projet aura son propre `package.json` (npm, TypeScript), comme les autres
 - Pas de comptes utilisateurs, pas d'IA, pas de backend lourd tant que la v1 n'a pas d'utilisateurs.
 - Tout fait technique cité dans la documentation (quota, licence, format, API) est à vérifier à la source avant d'être utilisé.
 
-Voir la [roadmap](docs/roadmap.md) et le [dossier de recherche](docs/research/).
+Voir la [roadmap](docs/roadmap.md), le [journal des décisions](docs/decisions.md), la [synthèse](docs/synthese.md) et le [plan de recherche](docs/research/README.md).
