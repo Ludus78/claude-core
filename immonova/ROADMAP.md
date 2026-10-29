@@ -4,7 +4,7 @@ Tâches tirées de l'état réel du dépôt (octobre 2026). La commande `/next i
 
 ## Phase 0 : clarifier l'existant
 
-- [ ] Documenter les routes API dans `immonova2.0/docs/api.md` : `auth`, `chat`, `contact`, `leads`, `market-rates`, `news`, `seed-news`, `simulations`, `web-search` (lecture du code, aucune modification de l'application)
+- [x] Documenter les routes API dans `immonova2.0/docs/api.md` : `auth`, `chat`, `contact`, `leads`, `market-rates`, `news`, `seed-news`, `simulations`, `web-search` (lecture du code, aucune modification de l'application) (2026-10-29)
 - [ ] Décider de l'authentification : `next-auth` ou Kinde (décision de ta part, validation requise)
 - [ ] Supprimer les doublons de configuration : `next.config.js` / `.mjs`, `next-sitemap.config.js` / `.cjs`, `app/globals.css.save` (validation requise : suppression)
 - [ ] Décider si le hook Husky doit lancer un build complet à chaque commit (validation requise)
