@@ -33,7 +33,7 @@ Toutes ces tâches sont à ta main ou demandent ta validation.
 La base technique est déjà dans ce dossier (`db/`, `packages/score/`, `docker-compose.yml`, `apps/` vide). Voir le `README.md`.
 
 - [x] Créer l'application : `apps/web` (Next.js, TypeScript, Tailwind) (validation requise : nouvelles dépendances) — 2026-10-29
-- [ ] Brancher la base (`DATABASE_URL`) et choisir l'accès aux données (validation requise)
+- [x] Brancher la base (`DATABASE_URL`) et choisir l'accès aux données (validation requise) — 2026-10-29
 - [ ] Auth.js : Google, Discord, e-mail (validation requise)
 - [ ] Inscription : pseudo unique, date de naissance, consentement ; refus sous 13 ans ; compte `pending_parental` pour moins de 15 ans
 - [x] Reprendre les couleurs des maquettes : fond `#0E0E10`, texte `#F5F2EC`, accent `#D7263D` — 2026-10-29

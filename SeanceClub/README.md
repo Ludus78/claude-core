@@ -29,7 +29,7 @@ docker compose exec -T db psql -q -U seance -d seanceclub_test < db/tests/age_ru
 ## Checklist phase 1 (semaines 4 à 6 de la roadmap)
 
 1. [ ] Créer l'application : `npx create-next-app@latest apps/web --typescript`
-2. [ ] Brancher la base (`DATABASE_URL`) et choisir l'accès aux données (voir notes).
+2. [x] Brancher la base (`DATABASE_URL`) et choisir l'accès aux données (voir notes).
 3. [ ] Auth.js : Google, Discord, e-mail.
 4. [ ] Inscription : pseudo unique, date de naissance, consentement. Refus sous 13 ans (la base le refuse aussi).
 5. [ ] Moins de 15 ans : compte `pending_parental`, e-mail au parent, validation dans `parental_consents`.
