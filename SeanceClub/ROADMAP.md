@@ -34,7 +34,8 @@ La base technique est déjà dans ce dossier (`db/`, `packages/score/`, `docker-
 
 - [x] Créer l'application : `apps/web` (Next.js, TypeScript, Tailwind) (validation requise : nouvelles dépendances) — 2026-10-29
 - [x] Brancher la base (`DATABASE_URL`) et choisir l'accès aux données (validation requise) — 2026-10-29
-- [ ] Auth.js : Google, Discord, e-mail (validation requise)
+- [x] Auth.js : Google, Discord (validation requise) — 2026-10-29
+- [ ] Auth.js : connexion par e-mail (après le choix du service d'e-mails, validation requise)
 - [ ] Inscription : pseudo unique, date de naissance, consentement ; refus sous 13 ans ; compte `pending_parental` pour moins de 15 ans
 - [x] Reprendre les couleurs des maquettes : fond `#0E0E10`, texte `#F5F2EC`, accent `#D7263D` — 2026-10-29
 - [ ] Premiers écrans : accueil, inscription, profil
