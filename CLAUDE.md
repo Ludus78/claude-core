@@ -14,8 +14,8 @@ Monorepo de projets personnels. **Un dossier = un projet indépendant** (son pro
 ## Règles générales
 
 - Ne travailler que dans le projet demandé. Ne rien modifier ailleurs.
-- Git : on travaille sur des branches `feat/...` créées depuis `develop`, avec une pull request. `develop` est fusionnée dans `main` par pull request. **Jamais de push direct sur `main`.**
-- Demander confirmation avant : suppression de fichiers, migration, nouvelle dépendance, push.
+- Git : on travaille directement sur `main`, sans branche `feat/` ni pull request. Commits petits, une tâche = un commit, message court en français. On pousse sur `main` seulement si les tests et le build du projet passent ; sinon on ne pousse pas et on explique pourquoi. **Jamais de force push ni de réécriture d'historique.**
+- Demander confirmation avant : suppression de fichiers, migration, nouvelle dépendance, tout ce qui touche un secret ou une vraie donnée.
 - Jamais de secret (`.env`, clés, tokens) dans un fichier, un commit ou une réponse. Ne pas lire `.env`.
 - Réponses courtes : ce qui a été fait, le résultat des vérifications, les points à contrôler.
 - Tout fait technique non vérifié (quota, licence, API) est signalé « à vérifier à la source ».

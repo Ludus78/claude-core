@@ -18,5 +18,5 @@ Ce dossier est le poste de pilotage de tous les projets de `claude-core`. Il ne 
 ## Règles
 
 - Lecture seule sur les projets : le hub ne modifie que `_hub/`.
-- `PROJETS.md` se modifie sur une branche `feat/...` avec une pull request, comme le reste (voir le `CLAUDE.md` racine).
+- `PROJETS.md` se modifie directement sur `main`, comme le reste (voir le `CLAUDE.md` racine).
 - Réponses courtes.

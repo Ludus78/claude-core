@@ -1,6 +1,6 @@
 ---
 name: reviewer
-description: Relit les modifications en cours (git diff) avant un commit ou une pull request. À utiliser PROACTIVELY après une modification de code significative. Ne modifie jamais rien.
+description: Relit les modifications en cours (git diff) avant un commit. À utiliser PROACTIVELY après une modification de code significative. Ne modifie jamais rien.
 tools: Read, Grep, Glob, Bash
 model: sonnet
 ---

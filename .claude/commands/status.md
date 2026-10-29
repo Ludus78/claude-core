@@ -11,6 +11,6 @@ Fais le point sur tous mes projets. Réponds en français, de façon courte.
    - une ligne par projet (statut + dernier mouvement) ;
    - les projets sans activité depuis plus de 10 jours, avec une micro-tâche de 30 minutes pour chacun ;
    - les 3 actions les plus rentables à faire maintenant ;
-   - les pull requests ou branches en attente, si tu peux les voir.
+   - les branches locales ou distantes restantes autres que `main`, si tu peux les voir.
 
 Marque « à vérifier » tout ce qui est déduit et non constaté.
