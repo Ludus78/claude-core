@@ -9,6 +9,7 @@ Monorepo de projets personnels. **Un dossier = un projet indépendant** (son pro
 | `SeanceClub/` | Cadrage d'une plateforme pour cinéphiles (documents, schéma SQL) |
 | `Memories/` | Projet de BD sur des souvenirs de WoW (pas de code) |
 | `space-atlas/` | Globe des orbites + observatoire spatial européen (recherche) |
+| `_hub/` | Poste de pilotage : `PROJETS.md` (état de chaque projet), commande `/status` |
 
 ## Règles générales
 
