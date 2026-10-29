@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Fiche d'acteur du spatial européen (brouillon à valider)",
+  "description": "Une fiche par entreprise ou agence. Brouillon : les valeurs de segment et les champs optionnels sont à valider.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["name", "segment", "location", "product", "founded", "sources", "last_updated"],
+  "properties": {
+    "name": { "type": "string", "minLength": 1 },
+    "segment": {
+      "description": "launcher = lanceur, satellite-constellation = satellites et constellations, orbital-transport = transport orbital, manufacturer = industriel, agency = agence, downstream = services aval",
+      "enum": ["launcher", "satellite-constellation", "orbital-transport", "manufacturer", "agency", "downstream"]
+    },
+    "location": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["city", "country"],
+      "properties": {
+        "city": { "type": "string", "minLength": 1 },
+        "country": { "description": "Code pays à deux lettres", "type": "string", "pattern": "^[A-Z]{2}$" },
+        "latitude": { "description": "Optionnel, pour la carte", "type": "number", "minimum": -90, "maximum": 90 },
+        "longitude": { "description": "Optionnel, pour la carte", "type": "number", "minimum": -180, "maximum": 180 }
+      }
+    },
+    "product": { "description": "Produit ou activité principale", "type": "string", "minLength": 1 },
+    "founded": { "description": "Année (AAAA) ou date (AAAA-MM ou AAAA-MM-JJ)", "type": "string", "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$" },
+    "objects": {
+      "description": "Satellites ou lanceurs associés. norad_id est renseigné quand il existe : c'est le lien avec le globe.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "kind"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "kind": { "enum": ["satellite", "launcher"] },
+          "norad_id": { "type": "integer", "minimum": 1 }
+        }
+      }
+    },
+    "careers_url": { "type": "string", "format": "uri" },
+    "sources": {
+      "description": "Au moins 3 sources par fiche",
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["title", "url", "accessed"],
+        "properties": {
+          "title": { "type": "string", "minLength": 1 },
+          "url": { "type": "string", "format": "uri" },
+          "accessed": { "description": "Date de consultation", "type": "string", "format": "date" }
+        }
+      }
+    },
+    "last_updated": { "type": "string", "format": "date" }
+  }
+}
