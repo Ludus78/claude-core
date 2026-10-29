@@ -4,7 +4,7 @@ Tâches tirées de l'état réel du dépôt (octobre 2026). La commande `/next C
 
 ## Phase 0 : fiabiliser l'existant
 
-- [ ] Écrire les tests de `src/detection/signals/auth.ts`
+- [x] Écrire les tests de `src/detection/signals/auth.ts` (2026-10-29)
 - [ ] Écrire les tests de `src/detection/signals/sender.ts`
 - [ ] Écrire les tests de `src/detection/signals/urgency.ts`
 - [ ] Écrire les tests de `src/gmail/headers.ts`
