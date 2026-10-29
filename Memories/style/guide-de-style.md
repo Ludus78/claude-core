@@ -16,6 +16,8 @@ Objectif : garder des personnages cohérents d'une planche à l'autre. Style vis
 
 Dark Legacy Comics, WaoW (exemples de référence évoqués dans la synthèse du projet).
 
+Style graphique que tu aimes (anime rétro cinématographique, ambiance sombre, gros plans expressifs, grain de pellicule) : voir [`references-visuelles.md`](references-visuelles.md). À concilier avec le ton humoristique visé, la décision reste à prendre.
+
 ## Personnages définis pour l'instant
 
 Prêtre chauve (grande robe blanche, énorme croix, regard perçant), démoniste orc, paladin elfe de sang, guerrier mort-vivant très laid, moine orc obèse. Détails à reprendre dans `personnages/`.
