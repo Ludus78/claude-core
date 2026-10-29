@@ -2,7 +2,7 @@
 
 Registre des projets de `claude-core`. Mis à jour par la commande `/status` (voir `_hub/CLAUDE.md`).
 
-**Dernière mise à jour : 2026-10-29** (roadmaps ajoutées, base SeanceClub intégrée).
+**Dernière mise à jour : 2026-10-29** (synthèse space-atlas intégrée).
 Statuts : `idée` · `étude` · `en cours` · `pause`.
 
 ## Vue d'ensemble
@@ -35,7 +35,7 @@ Statuts : `idée` · `étude` · `en cours` · `pause`.
 
 ### SeanceClub
 - **Nature** : plateforme sociale francophone pour cinéphiles (score cinéphile, avis, calendrier des sorties, séances avec chat en direct).
-- **État** : cadrage terminé (concept, maquettes ordinateur, business plan, spécification du score, schéma PostgreSQL de 27 tables, module de score TypeScript avec 11 tests, projet de démarrage en zip). **Aucune ligne de l'application web n'est écrite.**
+- **État** : cadrage terminé (concept, maquettes ordinateur, business plan, spécification du score, schéma PostgreSQL de 27 tables, module de score TypeScript avec 11 tests, projet de démarrage intégré au dépôt). **Aucune ligne de l'application web n'est écrite.**
 - **Reste à faire** (source : `CONTEXTE.md`) : licence commerciale TMDB, marque et domaine, liste de référence, documents juridiques et accord parental, règles du chat, back-office minimal, maquettes manquantes, hébergement, vraie liste d'attente. Puis 7 phases, environ 22 semaines à 10 h par semaine.
 - **Roadmap** : `SeanceClub/ROADMAP.md` (source : `CONTEXTE.md`). Base technique intégrée : `db/`, `packages/score/`, `docker-compose.yml`, `apps/` vide.
 - **Prochaine action** : phase 0 (validation) : écrire à TMDB, vérifier la marque, mettre en place une vraie liste d'attente.
@@ -51,10 +51,11 @@ Statuts : `idée` · `étude` · `en cours` · `pause`.
 
 ### space-atlas
 - **Nature** : globe pédagogique des orbites + observatoire de l'écosystème spatial européen, liés par les NORAD IDs.
-- **État** : documentation uniquement (README, roadmap sur 12 mois, contrat de données en brouillon, 8 fichiers de recherche à remplir). Aucun code.
-- **Reste à faire** : remplir `docs/research/`, trancher Cesium ou Three.js, démarrer le globe (M1-3).
-- **Roadmap** : `space-atlas/docs/roadmap.md`. Pas de squelette de code avant le choix Cesium ou Three.js.
-- **Prochaine action** : remplir `cesium-vs-threejs.md` et `celestrak-usage-policy.md` avant M1.
+- **État** : documentation uniquement, aucun code : synthèse de cadrage, journal des décisions (`docs/decisions.md`), prompts, plan de recherche de 2 semaines, roadmap avec suivi cochable, brouillon du schéma des fiches (`data-contract/company.schema.json`, contrôlé sur des exemples fictifs), 8 fichiers de recherche à remplir.
+- **Reste à faire** : choisir le nom définitif, remplir `docs/research/` (menée par toi), trancher Cesium ou Three.js, valider le schéma, puis le globe de départ (M1-3).
+- **Roadmap** : `space-atlas/docs/roadmap.md` (section « Suivi »). Pas de squelette de code avant le choix Cesium ou Three.js.
+- **Prochaine action** : suivre le plan de recherche (`docs/research/README.md`), en commençant par `cesium-vs-threejs.md` et `celestrak-usage-policy.md`.
+- **À clarifier** : emplacement des fiches (`data/companies/` ou ailleurs, voir `docs/decisions.md` D20).
 
 ## Idées en attente
 
