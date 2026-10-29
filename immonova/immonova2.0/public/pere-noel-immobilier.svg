@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <!-- Fond -->
+  <rect width="500" height="500" fill="transparent"/>
+  
+  <!-- Maison -->
+  <path d="M300,300 h100 v-70 h-100 z" fill="#a67c52"/>
+  <path d="M300,230 l50,-40 l50,40 z" fill="#8b4513"/>
+  <rect x="330" y="260" width="40" height="40" fill="#603813"/>
+  <rect x="340" y="240" width="5" height="5" fill="#fff"/>
+  
+  <!-- Corps du Père Noël -->
+  <circle cx="200" cy="230" r="80" fill="#e74c3c"/>
+  
+  <!-- Tête du Père Noël -->
+  <circle cx="200" cy="140" r="50" fill="#f5d6ab"/>
+  
+  <!-- Barbe -->
+  <path d="M200,150 q-30,50 -5,80 q10,10 5,20 q30,10 60,0 q-5,-10 5,-20 q25,-30 -5,-80 z" fill="#fff"/>
+  
+  <!-- Chapeau -->
+  <path d="M150,120 q0,-20 50,-20 q50,0 50,20 h-100 z" fill="#e74c3c"/>
+  <path d="M140,120 h120 q5,0 5,10 q0,10 -5,10 h-120 q-5,0 -5,-10 q0,-10 5,-10 z" fill="#e74c3c"/>
+  <circle cx="250" cy="120" r="10" fill="#fff"/>
+  
+  <!-- Bras tenant la maison -->
+  <path d="M130,230 q-10,30 25,80 q10,10 40,10" fill="transparent" stroke="#e74c3c" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="200" cy="320" r="15" fill="#e74c3c"/>
+  
+  <!-- Détails du visage -->
+  <circle cx="180" cy="130" r="5" fill="#000"/>
+  <circle cx="220" cy="130" r="5" fill="#000"/>
+  <path d="M190,150 q10,10 20,0" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Ceinture -->
+  <path d="M135,230 h130" stroke="#000" stroke-width="10"/>
+  <rect x="190" y="225" width="20" height="15" fill="#f1c40f" stroke="#000" stroke-width="2"/>
+  
+  <!-- Cadeaux -->
+  <rect x="150" y="350" width="30" height="25" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <rect x="150" y="350" width="30" height="5" fill="#2980b9"/>
+  <path d="M165,350 v25" stroke="#9b59b6" stroke-width="2"/>
+  <path d="M150,362 h30" stroke="#9b59b6" stroke-width="2"/>
+  
+  <rect x="190" y="360" width="25" height="20" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <rect x="190" y="360" width="25" height="4" fill="#c0392b"/>
+  <path d="M202,360 v20" stroke="#f1c40f" stroke-width="2"/>
+  <path d="M190,370 h25" stroke="#f1c40f" stroke-width="2"/>
+  
+  <!-- Texte -->
+  <text x="250" y="410" font-family="Arial" font-size="24" font-weight="bold" fill="#e74c3c">OFFRE SPÉCIALE NOËL</text>
+</svg> 

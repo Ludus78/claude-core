@@ -216,5 +216,21 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# JavaScript dependencies and generated output
+**/node_modules/
+**/.next/
+**/.vite/
+**/dist/
+**/out/
+**/coverage/
+**/.turbo/
+**/.vercel/
+**/.cache/
+
 # Streamlit
 .streamlit/secrets.toml

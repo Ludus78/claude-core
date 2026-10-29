@@ -1,0 +1,12 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /api/*
+Disallow: /dashboard/*
+Disallow: /auth/*
+
+# Host
+Host: https://immonova.org
+
+# Sitemaps
+Sitemap: https://immonova.org/sitemap.xml

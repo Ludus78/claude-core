@@ -1,0 +1,85 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Contact {
+    id          String    @id @default(cuid())
+    createdAt   DateTime  @default(now())
+    updatedAt   DateTime? @updatedAt
+    name        String?   @unique
+    email       String?   @unique
+    phone       String?
+    subject     String?
+    projectType String?
+    budget      Int?
+    message     String?
+}
+
+model NewsArticle {
+    id          String    @id @default(cuid())
+    createdAt   DateTime  @default(now())
+    updatedAt   DateTime? @updatedAt
+    title       String
+    excerpt     String
+    content     String?
+    category    String
+    authorName  String?
+    publishedAt DateTime  @default(now())
+    imageUrl    String?
+    isPublished Boolean   @default(true)
+}
+
+model Simulation {
+  id        String   @id @default(cuid())
+  type      String
+  url       String
+  date      DateTime
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model User {
+    id              String    @id
+    createdAt       DateTime  @default(now())
+    updatedAt       DateTime? @updatedAt
+    email           String    @unique
+    password        String?
+    resetToken      String?   @unique
+    resetTokenExp   DateTime?
+    name            String?
+    role            String    @default("user")
+    simulations     Simulation[]
+    properties      RealEstate[]
+}
+
+model RealEstate {
+  id          String    @id @default(cuid())
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime? @updatedAt
+  title       String
+  description String
+  price       Float
+  location    String
+  type        String    // apartment, house, etc.
+  status      String    // for sale, sold, etc.
+  area        Float     // in square meters
+  rooms       Int
+  bedrooms    Int
+  bathrooms   Int
+  imageUrl    String?
+  ownerId     String
+  owner       User      @relation(fields: [ownerId], references: [id])
+}
