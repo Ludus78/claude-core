@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import CalculatorActions from '../../components/CalculatorActions';
 import { formatNumber } from '../../utils/formatters';
+import { calculateLoanDetails, type LoanDetails } from '../../utils/pret';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -42,16 +43,6 @@ ChartJS.register(
 const DynamicLine = dynamic(() => import('react-chartjs-2').then(mod => mod.Line), { ssr: false });
 const DynamicDoughnut = dynamic(() => import('react-chartjs-2').then(mod => mod.Doughnut), { ssr: false });
 
-interface LoanDetails {
-  monthlyPayment: number;
-  totalInterest: number;
-  totalAmount: number;
-  debtRatio: number;
-  notaryFees: number;
-  ptzAmount: number;
-  remainingForLife: number;
-}
-
 export default function LoanCalculator() {
   const calculatorRef = useRef<HTMLDivElement>(null);
   // États pour les entrées utilisateur
@@ -81,60 +72,12 @@ export default function LoanCalculator() {
   // État pour le mode d'affichage
   const [displayMode, setDisplayMode] = useState<'graph' | 'table'>('graph');
 
-  // Calcul du PTZ
-  const calculatePTZ = (price: number, zone: string) => {
-    if (!isFirstTimeBuyer) return 0;
-    
-    const maxPriceByZone = {
-      'A': 150000,
-      'B1': 135000,
-      'B2': 110000,
-      'C': 100000
-    };
-    
-    const maxPrice = maxPriceByZone[zone as keyof typeof maxPriceByZone] || 100000;
-    return Math.min(price * 0.4, maxPrice);
-  };
-
-  // Calcul des frais de notaire
-  const calculateNotaryFees = (price: number) => {
-    return price * 0.08; // Approximation des frais de notaire
-  };
-
   // Calcul du prêt
   useEffect(() => {
-    const calculateLoan = () => {
-      const ptz = calculatePTZ(purchasePrice, propertyZone);
-      const notaryFees = calculateNotaryFees(purchasePrice);
-      const totalLoanAmount = purchasePrice + notaryFees - downPayment - ptz;
-      
-      // Calcul du prêt principal
-      const monthlyRate = interestRate / 1200;
-      const numberOfPayments = loanTerm * 12;
-      const monthlyPayment = totalLoanAmount * (monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments)) / (Math.pow(1 + monthlyRate, numberOfPayments) - 1);
-      
-      // Ajout de l'assurance
-      const monthlyInsurance = (totalLoanAmount * (insuranceRate / 100)) / 12;
-      const totalMonthlyPayment = monthlyPayment + monthlyInsurance;
-      
-      // Calcul du taux d'endettement
-      const debtRatio = (totalMonthlyPayment / monthlyIncome) * 100;
-      
-      // Calcul du reste à vivre
-      const remainingForLife = monthlyIncome - totalMonthlyPayment - monthlyExpenses;
-
-      setLoanDetails({
-        monthlyPayment: totalMonthlyPayment,
-        totalInterest: (monthlyPayment * numberOfPayments) - totalLoanAmount,
-        totalAmount: monthlyPayment * numberOfPayments,
-        debtRatio: debtRatio,
-        notaryFees: notaryFees,
-        ptzAmount: ptz,
-        remainingForLife: remainingForLife
-      });
-    };
-
-    calculateLoan();
+    setLoanDetails(calculateLoanDetails({
+      purchasePrice, downPayment, loanTerm, interestRate,
+      monthlyIncome, monthlyExpenses, insuranceRate, isFirstTimeBuyer, propertyZone
+    }));
   }, [purchasePrice, downPayment, loanTerm, interestRate, monthlyIncome, monthlyExpenses, insuranceRate, isFirstTimeBuyer, propertyZone]);
 
   // Configuration du graphique en donut

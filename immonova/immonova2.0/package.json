@@ -10,7 +10,8 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky",
-    "export": "next export"
+    "export": "next export",
+    "test": "vitest run"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
@@ -43,7 +44,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.14",
     "@types/bcrypt": "^5.0.2",
-    "@types/node": "^20.10.5",
+    "@types/node": "^22.10.0",
     "@types/nodemailer": "^6.4.17",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
@@ -53,7 +54,8 @@
     "postcss": "^8.5.3",
     "prisma": "^6.5.0",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vitest": "^5.0.5"
   },
   "browserslist": [
     ">0.3%",
@@ -61,6 +63,4 @@
     "not op_mini all",
     "last 2 versions"
   ]
-  
 }
-

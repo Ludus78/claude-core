@@ -10,7 +10,7 @@ Tâches tirées de l'état réel du dépôt (octobre 2026). La commande `/next i
 - [ ] Fusionner `next.config.js` et `next.config.mjs` (le `.mjs` porte la config Sentry, probablement ignorée) (validation requise)
 - [ ] Migrer `src/app/api/real-estate/route.ts` de `next-auth` vers Kinde, puis retirer `next-auth` (validation requise : dépendance)
 - [x] Hook Husky : on garde le build complet à chaque commit (2026-10-30)
-- [ ] Ajouter un script de test et les premiers tests (validation requise : nouvelle dépendance)
+- [x] Ajouter un script de test et les premiers tests (Vitest, calcul de prêt extrait dans `app/utils/pret.ts`, 12 tests ; `@types/node` passé en 22 car Vitest 5 l'exige) (2026-10-31)
 
 ## Phase 1 : assainir le site (aucune nouvelle fonction)
 
