@@ -36,7 +36,7 @@ La base technique est déjà dans ce dossier (`db/`, `packages/score/`, `docker-
 - [x] Brancher la base (`DATABASE_URL`) et choisir l'accès aux données (validation requise) — 2026-10-29
 - [x] Auth.js : Google, Discord (validation requise) — 2026-10-29
 - [ ] Auth.js : connexion par e-mail (après le choix du service d'e-mails, validation requise)
-- [ ] Inscription : pseudo unique, date de naissance, consentement ; refus sous 13 ans ; compte `pending_parental` pour moins de 15 ans
+- [x] Inscription : pseudo unique, date de naissance, consentement ; refus sous 13 ans ; compte `pending_parental` pour moins de 15 ans (logique serveur `server/signup.ts` et `server/users.ts` ; formulaire dans « Premiers écrans ») — 2026-10-30
 - [x] Reprendre les couleurs des maquettes : fond `#0E0E10`, texte `#F5F2EC`, accent `#D7263D` — 2026-10-29
 - [ ] Premiers écrans : accueil, inscription, profil
 

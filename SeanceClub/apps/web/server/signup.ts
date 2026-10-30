@@ -6,6 +6,12 @@ export type SignupDecision =
   | { allowed: false; reason: "invalid_birth_date" | "consent_required" | "too_young" };
 
 const BIRTH_DATE_PATTERN = /^(\d{4})-(\d{2})-(\d{2})$/;
+// Same rule as the CHECK constraint on users.pseudo.
+const PSEUDO_PATTERN = /^[A-Za-z0-9_.-]{3,20}$/;
+
+export function isValidPseudo(pseudo: string): boolean {
+  return PSEUDO_PATTERN.test(pseudo);
+}
 
 // Age in full years on `today`, both as YYYY-MM-DD. Returns null for an invalid or future date.
 export function ageOn(birthDate: string, today: string): number | null {

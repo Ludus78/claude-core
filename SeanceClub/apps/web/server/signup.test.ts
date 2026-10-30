@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { ageOn, decideSignup } from './signup';
+import { ageOn, decideSignup, isValidPseudo } from './signup';
 
 const TODAY = '2026-10-30';
 
@@ -119,5 +119,31 @@ describe('decideSignup', () => {
       allowed: false,
       reason: 'consent_required',
     });
+  });
+});
+
+describe('isValidPseudo', () => {
+  it('accepte 3 et 20 caractères', () => {
+    expect(isValidPseudo('abc')).toBe(true);
+    expect(isValidPseudo('a'.repeat(20))).toBe(true);
+  });
+
+  it('refuse 2 et 21 caractères', () => {
+    expect(isValidPseudo('ab')).toBe(false);
+    expect(isValidPseudo('a'.repeat(21))).toBe(false);
+  });
+
+  it('accepte les caractères _ . - et les chiffres', () => {
+    expect(isValidPseudo('a_b')).toBe(true);
+    expect(isValidPseudo('a.b')).toBe(true);
+    expect(isValidPseudo('a-b')).toBe(true);
+    expect(isValidPseudo('User42')).toBe(true);
+  });
+
+  it('refuse un espace, un accent, un @ et la chaîne vide', () => {
+    expect(isValidPseudo('a b c')).toBe(false);
+    expect(isValidPseudo('Zoé')).toBe(false);
+    expect(isValidPseudo('abc@x')).toBe(false);
+    expect(isValidPseudo('')).toBe(false);
   });
 });
