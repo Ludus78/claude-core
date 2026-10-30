@@ -21,7 +21,7 @@ Audits en lecture seule d'abord : chacun produit un rapport dans `immonova2.0/do
 - [ ] Audit de sécurité des routes API : authentification, validation des entrées, limites de débit, accès public ou non (surtout `seed-news`, `leads`, `chat`, `web-search`). Rapport dans `docs/audit-api.md`
 - [ ] Audit SEO, performance et accessibilité des pages principales (balises, sitemap, images, contrastes). Rapport dans `docs/audit-seo.md`
 - [ ] Audit RGPD : ce que PostHog, les formulaires (`contact`, `leads`) et les simulations enregistrent, et où figure le consentement. Rapport dans `docs/audit-rgpd.md`
-- [ ] Rétablir un build reproductible : retrouver le dossier `lib/` (gitignoré, absent du dépôt) et décider de le versionner ou de le régénérer (validation requise : touche `.gitignore` et du code)
+- [x] Rétablir un build reproductible : `lib/` et `src/lib/` récupérés depuis l'ancien dépôt `Ludus78/immonova` et versionnés, `.gitignore` corrigé (`/lib/`). Le build passe avec les variables Kinde (`KINDE_*`) définies ; sans elles, il échoue à la collecte des pages (2026-10-31)
 - [ ] Appliquer les corrections issues des audits, une par tâche (validation requise)
 
 ## Phase 2 : produit (chaque choix est à valider)
