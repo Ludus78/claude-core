@@ -1,5 +1,8 @@
+import { z } from "zod";
 import { query } from "./db";
 import { decideSignup, isValidPseudo } from "./signup";
+
+const emailSchema = z.email();
 
 export type CreateUserInput = {
   email: string;
@@ -10,6 +13,7 @@ export type CreateUserInput = {
 
 export type CreateUserFailure =
   | "invalid_pseudo"
+  | "invalid_email"
   | "invalid_birth_date"
   | "consent_required"
   | "too_young"
@@ -27,6 +31,7 @@ export async function createUser(input: CreateUserInput, today = todayUtc()): Pr
   const decision = decideSignup({ birthDate: input.birthDate, consent: input.consent, today });
   if (!decision.allowed) return { ok: false, reason: decision.reason };
   if (!isValidPseudo(input.pseudo)) return { ok: false, reason: "invalid_pseudo" };
+  if (!emailSchema.safeParse(input.email).success) return { ok: false, reason: "invalid_email" };
 
   try {
     const result = await query<{ id: string }>(

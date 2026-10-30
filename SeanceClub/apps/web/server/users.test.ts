@@ -71,6 +71,13 @@ describe('createUser', () => {
     expect(queryMock).not.toHaveBeenCalled();
   });
 
+  it('refuse un e-mail invalide sans appeler la base', async () => {
+    const result = await createUser({ ...adult, email: 'pas-un-email' }, TODAY);
+
+    expect(result).toEqual({ ok: false, reason: 'invalid_email' });
+    expect(queryMock).not.toHaveBeenCalled();
+  });
+
   it('traduit une violation de contrainte pseudo en pseudo_taken', async () => {
     queryMock.mockRejectedValueOnce({ code: '23505', constraint: 'users_pseudo_key' });
 
