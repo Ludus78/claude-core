@@ -1,6 +1,6 @@
 ---
 name: tester
-description: Écrit et lance les tests d'un projet, puis rapporte les échecs. À utiliser pour ajouter des tests à du code modifié ou pour vérifier qu'une modification n'a rien cassé.
+description: Écrit et lance les tests d'un projet, puis rapporte les échecs. À utiliser uniquement quand l'utilisateur demande explicitement des tests, ou après l'ajout d'une fonctionnalité importante. Pas pour les petites modifications.
 tools: Read, Grep, Glob, Edit, Write, Bash
 model: haiku
 ---

@@ -19,6 +19,7 @@ Monorepo de projets personnels. **Un dossier = un projet indépendant** (son pro
 - Jamais de secret (`.env`, clés, tokens) dans un fichier, un commit ou une réponse. Ne pas lire `.env`.
 - Réponses courtes : ce qui a été fait, le résultat des vérifications, les points à contrôler.
 - Tout fait technique non vérifié (quota, licence, API) est signalé « à vérifier à la source ».
+- Ne pas proposer d'écrire ou de lancer des tests à chaque échange. Tests seulement sur demande explicite, ou après l'ajout d'une fonctionnalité importante.
 
 ## Économie de tokens
 
