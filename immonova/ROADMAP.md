@@ -12,9 +12,33 @@ Tâches tirées de l'état réel du dépôt (octobre 2026). La commande `/next i
 - [x] Hook Husky : on garde le build complet à chaque commit (2026-10-30)
 - [ ] Ajouter un script de test et les premiers tests (validation requise : nouvelle dépendance)
 
-## Phase 1 : produit
+## Phase 1 : assainir le site (aucune nouvelle fonction)
 
-À définir par toi (nouveaux calculateurs, contenu, acquisition…). La revue hebdomadaire propose des pistes, à valider.
+Audits en lecture seule d'abord : chacun produit un rapport dans `immonova2.0/docs/`, sans modifier l'application. Les corrections qui en découlent deviennent des tâches à valider.
+
+- [ ] Audit des pages : lister les pages de `app/` et leur rôle dans `docs/pages.md`, repérer les doublons probables (`calculette/`, `calculateurs/`, `calculette-locative/`, `calculette-viager/`) (à confirmer)
+- [ ] Audit des deux dossiers `app/` et `src/app/` : `src/app/` ne contient que `api/real-estate` et `PropertyCard.tsx`. Next.js l'utilise-t-il vraiment à côté de `app/` ? (à vérifier à la source, dans la documentation de Next.js). Rapport dans `docs/audit-structure.md`
+- [ ] Audit de sécurité des routes API : authentification, validation des entrées, limites de débit, accès public ou non (surtout `seed-news`, `leads`, `chat`, `web-search`). Rapport dans `docs/audit-api.md`
+- [ ] Audit SEO, performance et accessibilité des pages principales (balises, sitemap, images, contrastes). Rapport dans `docs/audit-seo.md`
+- [ ] Audit RGPD : ce que PostHog, les formulaires (`contact`, `leads`) et les simulations enregistrent, et où figure le consentement. Rapport dans `docs/audit-rgpd.md`
+- [ ] Rétablir un build reproductible : retrouver le dossier `lib/` (gitignoré, absent du dépôt) et décider de le versionner ou de le régénérer (validation requise : touche `.gitignore` et du code)
+- [ ] Appliquer les corrections issues des audits, une par tâche (validation requise)
+
+## Phase 2 : produit (chaque choix est à valider)
+
+- [ ] Choisir les 3 usages prioritaires du site (acheter, estimer, investir en locatif, gérer un bien…) et les écrire dans `docs/produit.md` (validation requise)
+- [ ] Unifier l'expérience des calculateurs : un même format de résultat, de partage et d'export PDF (`jspdf` est déjà présent) (validation requise)
+- [ ] Sauvegarde des simulations liée au compte Kinde, avec historique dans `dashboard` (validation requise)
+- [ ] Estimation : vérifier la fiabilité et la licence des sources de `market-rates` (à vérifier à la source) et afficher leur origine (validation requise)
+- [ ] Actualités : définir qui alimente `seed-news` et à quel rythme, puis automatiser (validation requise)
+- [ ] Assistant IA (`chat`) : cadrer le coût, les limites d'usage et l'avertissement « pas un conseil » (validation requise)
+- [ ] Mesure : lister les événements PostHog utiles (usage des calculateurs, demandes de contact) (validation requise)
+
+## Phase 3 : croissance (à décider après la phase 2)
+
+- [ ] Contenu SEO : guides et pages par ville ou par thème (validation requise)
+- [ ] Qualification des demandes (`leads`) et suivi (validation requise)
+- [ ] Modèle économique : partenaires, annonces, ou autre (validation requise)
 
 ## Légende
 
