@@ -41,7 +41,8 @@ export function parseFromHeader(raw: string | null): ParsedFrom {
 export function extractAuthSignals(headers: GmailHeader[]): MailAuthSignals {
   const authenticationResults = getHeader(headers, 'Authentication-Results')
   const receivedSpf = getHeader(headers, 'Received-SPF')
-  const source = `${authenticationResults ?? ''} ${receivedSpf ?? ''}`
+  const spfSource = receivedSpf && !/\bspf\s*[=:]/i.test(receivedSpf) ? `spf=${receivedSpf}` : receivedSpf
+  const source = `${authenticationResults ?? ''} ${spfSource ?? ''}`
 
   return {
     spf: readAuthResult(source, 'spf'),
@@ -74,8 +75,8 @@ function unquote(value: string): string {
 }
 
 export function decodeMimeHeader(value: string): string {
-  return value.replace(/=\?([^?]+)\?([bBqQ])\?([^?]*)\?=/g, (_, _charset, encoding, encoded) => {
-    const raw = encoding.toLowerCase() === 'b' ? decodeBase64Word(encoded) : decodeQWord(encoded)
+  return value.replace(/=\?([^?]+)\?([bBqQ])\?([^?]*)\?=/g, (_, charset, encoding, encoded) => {
+    const raw = encoding.toLowerCase() === 'b' ? decodeBase64Word(encoded) : decodeQWord(encoded, charset)
     return raw
   })
 }
@@ -94,8 +95,15 @@ function decodeBase64Word(value: string): string {
   }
 }
 
-function decodeQWord(value: string): string {
-  return value
-    .replace(/=([A-Fa-f0-9]{2})/g, (_, hex) => String.fromCharCode(parseInt(hex, 16)))
-    .replace(/_/g, ' ')
+function decodeQWord(value: string, charset: string): string {
+  const bytes = Uint8Array.from(
+    value.replace(/_/g, ' ').replace(/=([A-Fa-f0-9]{2})/g, (_, hex) => String.fromCharCode(parseInt(hex, 16))),
+    (char) => char.charCodeAt(0),
+  )
+
+  try {
+    return new TextDecoder(charset).decode(bytes)
+  } catch {
+    return new TextDecoder('utf-8').decode(bytes)
+  }
 }

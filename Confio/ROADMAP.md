@@ -7,7 +7,7 @@ Tâches tirées de l'état réel du dépôt (octobre 2026). La commande `/next C
 - [x] Écrire les tests de `src/detection/signals/auth.ts` (2026-10-29)
 - [x] Écrire les tests de `src/detection/signals/sender.ts` (2026-10-29)
 - [x] Écrire les tests de `src/detection/signals/urgency.ts` (2026-10-29)
-- [ ] Écrire les tests de `src/gmail/headers.ts`
+- [x] Écrire les tests de `src/gmail/headers.ts` (2026-10-30)
 - [ ] Écrire les tests de `src/gmail/client.ts` (client simulé, jamais de vraie boîte Gmail)
 - [ ] Ajouter un script `lint` à `package.json` (validation requise : nouvelle dépendance)
 - [ ] Renommer `claudetest.md` en fichier TypeScript, ou le supprimer (validation requise : il contient du TypeScript)
