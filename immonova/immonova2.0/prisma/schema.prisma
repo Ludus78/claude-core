@@ -9,8 +9,8 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model Contact {
@@ -61,6 +61,8 @@ model User {
     resetTokenExp   DateTime?
     name            String?
     role            String    @default("user")
+    lastLoginAt     DateTime?
+    loginCount      Int       @default(0)
     simulations     Simulation[]
     properties      RealEstate[]
 }
@@ -82,4 +84,18 @@ model RealEstate {
   imageUrl    String?
   ownerId     String
   owner       User      @relation(fields: [ownerId], references: [id])
+}
+
+// E-mails recueillis par le popup avant l'ouverture d'une calculette.
+// Un enregistrement par e-mail ; acceptNewsletter vaut true seulement si la case a été cochée.
+model Lead {
+  id                  String    @id @default(cuid())
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime  @updatedAt
+  email               String    @unique
+  acceptNewsletter    Boolean   @default(false)
+  newsletterConsentAt DateTime?
+  firstCalculator     String
+  lastCalculator      String
+  submissions         Int       @default(1)
 }

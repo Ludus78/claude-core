@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ReactNode } from 'react';
 import Footer from './Footer';
 import ChatWidget from './ChatWidget';
+import LoginTracker from './LoginTracker';
 import {useKindeBrowserClient} from "@kinde-oss/kinde-auth-nextjs";
 import {RegisterLink, LoginLink, LogoutLink} from "@kinde-oss/kinde-auth-nextjs/components";
 import { XMarkIcon, UserIcon, ArrowRightOnRectangleIcon, PlusCircleIcon } from '@heroicons/react/24/outline';
@@ -74,6 +75,7 @@ export default function SharedLayout({ children }: SharedLayoutProps) {
       
       {/* Chat Widget */}
       <ChatWidget />
+      <LoginTracker />
     </div>
   );
 }

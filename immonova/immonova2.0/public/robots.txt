@@ -3,6 +3,8 @@ User-agent: *
 Allow: /
 Disallow: /api/*
 Disallow: /dashboard/*
+Disallow: /admin
+Disallow: /admin/*
 Disallow: /auth/*
 Disallow: /reset-password
 

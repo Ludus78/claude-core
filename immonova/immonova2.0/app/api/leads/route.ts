@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import prisma from '@/lib/prisma';
 import { validateEmail } from '../../utils/validateEmail';
 
 export async function POST(request: Request) {
@@ -6,7 +7,6 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { email, calculatorType, acceptNewsletter } = body;
 
-    // Valider l'email
     const emailValidation = validateEmail(email);
     if (!emailValidation.isValid) {
       return NextResponse.json(
@@ -15,21 +15,35 @@ export async function POST(request: Request) {
       );
     }
 
-    // Ici, vous pourriez stocker l'email dans une base de données
-    // Pour l'instant, nous allons simplement enregistrer dans la console pour le débogage
-    console.log(`Nouvel email enregistré: ${email}, Type de calculette: ${calculatorType}, Newsletter: ${acceptNewsletter}`);
+    const normalizedEmail = String(email).trim().toLowerCase();
+    const calculator = typeof calculatorType === 'string' ? calculatorType.slice(0, 40) : 'inconnu';
+    const wantsNewsletter = acceptNewsletter === true;
 
-    // Simuler un délai pour une expérience plus réaliste
-    await new Promise(resolve => setTimeout(resolve, 500));
+    // Un enregistrement par e-mail. Le consentement newsletter, une fois donné, n'est
+    // jamais retiré par un nouveau passage sans la case cochée.
+    await prisma.lead.upsert({
+      where: { email: normalizedEmail },
+      create: {
+        email: normalizedEmail,
+        acceptNewsletter: wantsNewsletter,
+        newsletterConsentAt: wantsNewsletter ? new Date() : null,
+        firstCalculator: calculator,
+        lastCalculator: calculator,
+      },
+      update: {
+        lastCalculator: calculator,
+        submissions: { increment: 1 },
+        ...(wantsNewsletter ? { acceptNewsletter: true, newsletterConsentAt: new Date() } : {}),
+      },
+    });
 
-    // Répondre avec succès
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Erreur lors de l\'enregistrement du lead:', error);
-    
+
     return NextResponse.json(
       { success: false, error: "Une erreur est survenue lors de l'enregistrement" },
       { status: 500 }
     );
   }
-} 
+}
