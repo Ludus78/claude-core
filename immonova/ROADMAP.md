@@ -40,7 +40,8 @@ Audits en lecture seule d'abord : chacun produit un rapport dans `immonova2.0/do
 - [ ] Estimation : vérifier la fiabilité et la licence des sources de `market-rates` (à vérifier à la source) et afficher leur origine (validation requise)
 - [ ] Actualités : définir qui alimente `seed-news` et à quel rythme, puis automatiser (validation requise)
 - [ ] Assistant IA (`chat`) : cadrer le coût, les limites d'usage et l'avertissement « pas un conseil » (validation requise)
-- [ ] Mesure : lister les événements PostHog utiles (usage des calculateurs, demandes de contact) (validation requise)
+- [x] Mesure des calculateurs : `calculator_viewed`, `calculator_used` (première saisie), `calculator_pdf_exported`, `calculator_shared` (canal), `calculator_saved`, chacun avec la propriété `calculator` (achat, pret, locatif, viager) et jamais de montant. Branchés dans `CalculatorActions.tsx` ; envoi vérifié en local après accord, noms exacts des événements à contrôler dans PostHog (Activity) après déploiement (2026-11-01)
+- [ ] Mesure : événements PostHog pour les demandes de contact (`contact`, `leads`) et l'inscription (validation requise)
 
 ## Phase 2 bis : cadrage de la 2.0 (objectif : audience récurrente)
 
