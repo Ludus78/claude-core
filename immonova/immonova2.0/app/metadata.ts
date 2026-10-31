@@ -3,11 +3,11 @@ import { Metadata } from 'next'
 export const defaultMetadata: Metadata = {
   metadataBase: new URL('https://immonova.org'),
   title: {
-    default: 'Immonova - Votre Expert Immobilier à Paris',
+    default: 'Immonova - Calculettes et guides pour votre projet immobilier',
     template: '%s | Immonova'
   },
-  description: 'Immonova, votre expert immobilier à Paris. Estimation gratuite, accompagnement personnalisé pour l\'achat et la vente de biens immobiliers.',
-  keywords: ['immobilier', 'Paris', 'expert immobilier', 'estimation', 'achat', 'vente', 'investissement immobilier'],
+  description: 'Simulez gratuitement votre prêt, votre capacité d\'emprunt et la rentabilité d\'un investissement locatif. Guides et actualités pour acheter, investir et vendre en toute sérénité.',
+  keywords: ['calculette immobilière', 'capacité d\'emprunt', 'simulation prêt immobilier', 'PTZ', 'investissement locatif', 'achat immobilier', 'primo-accédant'],
   authors: [{ name: 'Immonova' }],
   creator: 'Immonova',
   publisher: 'Immonova',
@@ -21,22 +21,22 @@ export const defaultMetadata: Metadata = {
     locale: 'fr_FR',
     url: 'https://immonova.org',
     siteName: 'Immonova',
-    title: 'Immonova - Votre Expert Immobilier à Paris',
-    description: 'Immonova, votre expert immobilier à Paris. Estimation gratuite, accompagnement personnalisé pour l\'achat et la vente de biens immobiliers.',
+    title: 'Immonova - Calculettes et guides pour votre projet immobilier',
+    description: 'Simulez gratuitement votre prêt, votre capacité d\'emprunt et la rentabilité d\'un investissement locatif. Guides et actualités pour acheter, investir et vendre en toute sérénité.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/images/hero-real-estate.jpg',
         width: 1200,
         height: 630,
-        alt: 'Immonova - Expert Immobilier Paris',
+        alt: 'Immonova - Calculettes et guides immobiliers',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Immonova - Votre Expert Immobilier à Paris',
-    description: 'Immonova, votre expert immobilier à Paris. Estimation gratuite, accompagnement personnalisé pour l\'achat et la vente de biens immobiliers.',
-    images: ['/twitter-image.jpg'],
+    title: 'Immonova - Calculettes et guides pour votre projet immobilier',
+    description: 'Simulez gratuitement votre prêt, votre capacité d\'emprunt et la rentabilité d\'un investissement locatif.',
+    images: ['/images/hero-real-estate.jpg'],
   },
   robots: {
     index: true,
@@ -50,6 +50,6 @@ export const defaultMetadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://immonova.org',
+    canonical: './',
   },
 } 
