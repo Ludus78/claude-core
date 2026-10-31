@@ -48,6 +48,7 @@ Idées du 2026-10-31, à trier avec `docs/audit-site.md`. Chaque choix est à va
 
 - [x] Trancher le positionnement : boîte à outils nationale, public primo-accédants et investisseurs locatifs, moins de 3 h par semaine, pas de revenu pour l'instant, décisions dans `docs/produit.md` (2026-10-31)
 - [x] Réécrire titre, description et partage pour un public national (`app/metadata.ts`, canonical par page, image de partage = `hero-real-estate.jpg`) ; le texte de l'accueil reste à revoir (2026-11-01)
+- [x] Consentement PostHog : bandeau Accepter/Refuser, rien (ni requête, ni cookie) avant l'accord, lien « Gérer les cookies » en pied de page, vérifié en local sur le build (2026-11-01). Reste : page de politique de confidentialité à écrire (à valider, texte juridique)
 - [x] Sitemap sans `/dashboard`, `/inscription`, `/reset-password` (2026-11-01)
 - [ ] Mécanisme de retour : newsletter ou alertes (taux, prix) liées au compte Kinde, avec consentement (validation requise)
 - [ ] Fusionner les calculateurs en un seul parcours avec résultat sauvegardable (validation requise)

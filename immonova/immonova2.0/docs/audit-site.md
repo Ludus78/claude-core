@@ -38,7 +38,11 @@ Lecture du tableau « My App Dashboard » (modèle par défaut), sans modificati
 Conclusion : l'audience est de quelques personnes par semaine, sans habitude de retour. La 2.0 doit d'abord créer du trafic (Instagram avec liens `utm_*`, contenu régulier), puis mesurer ce qui est utile.
 
 ### Réseaux sociaux
-- Aucun lien vers Instagram ni autre réseau sur la page d'accueil.
+- Le pied de page contient déjà des liens vers LinkedIn, GitHub et Instagram (`@ludvicdenis`). Correction du 2026-11-01 : une première version de cet audit disait le contraire, à tort.
+
+## Suivi des corrections (2026-11-01)
+- Fait : positionnement national dans les métadonnées, canonical par page, image de partage, sitemap sans pages privées, consentement PostHog (aucune requête ni cookie avant accord).
+- Reste : texte de l'accueil, page de confidentialité, événements PostHog sur les calculateurs.
 
 ## Pistes pour la 2.0 (à décider)
 
