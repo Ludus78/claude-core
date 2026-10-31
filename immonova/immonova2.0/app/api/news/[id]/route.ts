@@ -5,10 +5,10 @@ import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 // Récupérer une actualité par son ID
 export async function GET(
   request: NextRequest,
-  { params }: any
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const id = params.id;
+    const { id } = await params;
     
     const article = await prisma.newsArticle.findUnique({
       where: { id }
@@ -35,7 +35,7 @@ export async function GET(
 // Mettre à jour une actualité
 export async function PUT(
   request: NextRequest,
-  { params }: any
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     // Vérifier si l'utilisateur est authentifié et est administrateur
@@ -46,7 +46,7 @@ export async function PUT(
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
     
-    const id = params.id;
+    const { id } = await params;
     const { title, excerpt, content, category, imageUrl, isPublished } = await request.json();
     
     // Vérifier si l'article existe
@@ -87,7 +87,7 @@ export async function PUT(
 // Supprimer une actualité
 export async function DELETE(
   request: NextRequest,
-  { params }: any
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     // Vérifier si l'utilisateur est authentifié et est administrateur
@@ -98,7 +98,7 @@ export async function DELETE(
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
     
-    const id = params.id;
+    const { id } = await params;
     
     // Vérifier si l'article existe
     const existingArticle = await prisma.newsArticle.findUnique({

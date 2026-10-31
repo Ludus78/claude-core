@@ -10,13 +10,13 @@ Site d'aide à l'achat et à la gestion immobilière (calculateurs, estimation, 
 
 ## Stack (immonova2.0)
 
-Next.js 15 (App Router, routes en français dans `app/`), React 19, TypeScript, Prisma (modèles `Contact`, `NewsArticle`, `Simulation`, `User`, `RealEstate`), Tailwind 3, déploiement Vercel (`vercel.json`). npm.
+Next.js 16 (App Router, routes en français dans `app/`), React 19, TypeScript, Prisma (modèles `Contact`, `NewsArticle`, `Simulation`, `User`, `RealEstate`), Tailwind 3, déploiement Vercel (`vercel.json`). npm.
 
 ## Commandes (depuis `immonova/immonova2.0/`)
 
 - `npm run dev`
 - `npm run build` : `prisma generate && next build`
-- `npm run lint`
+- `npm test` : Vitest (calcul de prêt). Pas de lint pour l'instant : `next lint` n'existe plus dans Next 16.
 
 ## Règles
 

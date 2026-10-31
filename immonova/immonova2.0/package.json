@@ -8,7 +8,6 @@
     "dev": "next dev",
     "build": "prisma generate && next build",
     "start": "next start",
-    "lint": "next lint",
     "prepare": "husky",
     "export": "next export",
     "test": "vitest run"
@@ -24,7 +23,7 @@
     "clsx": "^2.1.1",
     "html2canvas": "^1.4.1",
     "jspdf": "^4.2.1",
-    "next": "^15.5.28",
+    "next": "^16.4.3",
     "next-sitemap": "^4.2.3",
     "openai": "^4.89.0",
     "posthog-js": "^1.232.6",

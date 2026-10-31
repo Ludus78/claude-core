@@ -24,6 +24,8 @@ Audits en lecture seule d'abord : chacun produit un rapport dans `immonova2.0/do
 - [x] Mettre à jour Next.js 15.2.3 vers 15.5.28 : Vercel bloquait le déploiement (« Vulnerable version of Next.js detected ») (2026-10-31)
 - [x] Audit des dépendances : 29 vulnérabilités ramenées à 11 sans changement majeur, rapport dans `docs/audit-dependances.md` (2026-10-31)
 - [x] Supprimer le code mort de `src/` (`src/app`, `src/lib`, `src/types`) et retirer `next-auth`, `@auth/prisma-adapter`, `bcrypt`, `nodemailer` (2026-10-31)
+- [x] Migrer vers Next.js 16.4.3 : `npm audit` à 0 vulnérabilité. `middleware.ts` est déprécié (renommage en `proxy` à prévoir), à tester à la main : `/dashboard` sans session doit rediriger, `/api/simulations` sans session doit être refusé (2026-10-31)
+- [ ] Remettre un lint : `next lint` n'existe plus dans Next 16 et le script a été retiré ; ESLint serait une nouvelle dépendance (validation requise)
 - [x] Mettre `jspdf` en 4.2.1 : export PDF des calculateurs à tester à la main (2026-10-31)
 - [x] Rétablir un build reproductible : `lib/` et `src/lib/` récupérés depuis l'ancien dépôt `Ludus78/immonova` et versionnés, `.gitignore` corrigé (`/lib/`). Le build passe avec les variables Kinde (`KINDE_*`) définies ; sans elles, il échoue à la collecte des pages (2026-10-31)
 - [ ] Appliquer les corrections issues des audits, une par tâche (validation requise)

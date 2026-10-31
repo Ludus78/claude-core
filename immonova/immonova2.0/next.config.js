@@ -1,9 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  experimental: {
-    turbo: {},
-  },
+  turbopack: {},
   pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
   // Utiliser index.tsx comme page principale au lieu de page.tsx
   trailingSlash: true,
