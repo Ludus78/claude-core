@@ -46,7 +46,8 @@ Audits en lecture seule d'abord : chacun produit un rapport dans `immonova2.0/do
 
 Idées du 2026-10-31, à trier avec `docs/audit-site.md`. Chaque choix est à valider.
 
-- [ ] Trancher le positionnement (national ou Paris, boîte à outils ou média) et réécrire titre, description, accueil (validation requise)
+- [x] Trancher le positionnement : boîte à outils nationale, public primo-accédants et investisseurs locatifs, moins de 3 h par semaine, pas de revenu pour l'instant, décisions dans `docs/produit.md` (2026-10-31)
+- [ ] Réécrire titre, description et accueil pour un public national (validation requise)
 - [ ] Mécanisme de retour : newsletter ou alertes (taux, prix) liées au compte Kinde, avec consentement (validation requise)
 - [ ] Fusionner les calculateurs en un seul parcours avec résultat sauvegardable (validation requise)
 - [ ] Pont Instagram : compte `immonova` à relancer, liens avec paramètres `utm_*` suivis dans PostHog, pages d'atterrissage par contenu (validation requise)

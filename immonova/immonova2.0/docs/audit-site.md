@@ -26,6 +26,17 @@ Audit en lecture seule : page d'accueil et `/actualites` lues en ligne, code lu 
 - Aucun bandeau de consentement trouvé dans `app/` (recherche « cookie / consent / opt_in » sans résultat). PostHog est initialisé sans condition. **Risque RGPD/CNIL** à confirmer dans l'audit RGPD déjà prévu.
 - Aucune Google Search Console ni Google Analytics visible dans le code (à confirmer côté compte).
 
+### Audience réelle (PostHog UE, projet 57808, relevé le 2026-10-31)
+Lecture du tableau « My App Dashboard » (modèle par défaut), sans modification. Le fait que ce projet ne suive que immonova.org est **à confirmer**. Les chiffres viennent du texte de la page, donc approximatifs.
+- **Visiteurs actifs par jour** : entre 0 et 5 en octobre. **Par semaine** : l'échelle monte jusqu'à 14 (août à octobre).
+- **Tunnel de pages vues** : 10 personnes voient une première page, 3 une deuxième (30 %), 1 une troisième (10 %). Les visiteurs repartent presque tous après une page.
+- **Rétention** : cohortes de 2 à 4 personnes, trop petites pour conclure.
+- **Sources (14 jours)** : accès direct et `www.google.com`. Aucune venue visible d'Instagram.
+- **Biais** : les visites du propriétaire et des tests ne sont pas exclues.
+- **Manque** : aucun événement sur l'usage des calculateurs ni sur les envois de contact.
+
+Conclusion : l'audience est de quelques personnes par semaine, sans habitude de retour. La 2.0 doit d'abord créer du trafic (Instagram avec liens `utm_*`, contenu régulier), puis mesurer ce qui est utile.
+
 ### Réseaux sociaux
 - Aucun lien vers Instagram ni autre réseau sur la page d'accueil.
 
