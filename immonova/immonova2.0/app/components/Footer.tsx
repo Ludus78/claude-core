@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ManageCookiesButton } from './CookieConsent';
 
 export default function Footer() {
   return (
@@ -42,6 +43,7 @@ export default function Footer() {
       </div>
       <div className="max-w-7xl mx-auto pt-8 mt-8 border-t border-gray-200 text-center text-gray-500 text-sm">
         © 2024 ImmoNova. Tous droits réservés.
+        <ManageCookiesButton />
       </div>
     </footer>
   );
