@@ -11,7 +11,7 @@ SéanceClub est une plateforme sociale francophone pour cinéphiles : score cin�
   - `apps/realtime` : Node + Socket.IO (phase 4, pas avant).
   - `packages/score` : calcul du score cinéphile, déjà écrit et testé.
   - `db/migrations` : SQL, source de vérité du schéma.
-- PostgreSQL 16, Redis 7, Auth.js (OAuth Google et Discord), Stripe (phase 6), Vitest, Zod.
+- PostgreSQL 16, Redis 7, Kinde (Google, Discord, e-mail), Stripe (phase 6), Vitest, Zod.
 - Accès aux données : `pg` avec requêtes paramétrées uniquement. Pas de Prisma Migrate. Jamais de concaténation de chaînes dans du SQL.
 - Les changements de schéma passent par de nouveaux fichiers `db/migrations/00N_nom.sql`. Ne jamais modifier `001_init.sql`.
 

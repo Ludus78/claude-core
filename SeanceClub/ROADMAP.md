@@ -35,7 +35,8 @@ La base technique est déjà dans ce dossier (`db/`, `packages/score/`, `docker-
 - [x] Créer l'application : `apps/web` (Next.js, TypeScript, Tailwind) (validation requise : nouvelles dépendances) — 2026-10-29
 - [x] Brancher la base (`DATABASE_URL`) et choisir l'accès aux données (validation requise) — 2026-10-29
 - [x] Auth.js : Google, Discord (validation requise) — 2026-10-29
-- [ ] Auth.js : connexion par e-mail (après le choix du service d'e-mails, validation requise)
+- [x] Remplacer Auth.js par Kinde (même stack qu'immonova) : `next-auth` retiré, `@kinde-oss/kinde-auth-nextjs` 2.13.2, route `app/api/auth/[kindeAuth]` — 2026-11-01. Reste côté utilisateur : créer l'application Kinde et activer Google, Discord, e-mail
+- [ ] Lier le compte Kinde à `users` : nouvelle migration (colonne `kinde_id`), puis session côté serveur (validation requise : migration)
 - [ ] Inscription : pseudo unique, date de naissance, consentement ; refus sous 13 ans ; compte `pending_parental` pour moins de 15 ans (fait côté serveur : `server/signup.ts`, `server/users.ts`, `server/parental.ts` ; reste le formulaire, l'écran de saisie de l'e-mail du parent et l'envoi du lien, qui attend le choix du service d'e-mails)
 - [x] Reprendre les couleurs des maquettes : fond `#0E0E10`, texte `#F5F2EC`, accent `#D7263D` — 2026-10-29
 - [ ] Premiers écrans : accueil, inscription, profil

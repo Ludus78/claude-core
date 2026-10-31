@@ -28,7 +28,7 @@ Principes : aucun film n'est hébergé, aucune publicité, modèle freemium. Pub
 | Rencontres en salle | Hors v1 |
 | Messagerie privée entre membres | Non prévue en v1 |
 | Données de films | TMDB pour les films et la classification d'âge (licence commerciale à obtenir). Classification absente : saisie manuelle, sinon traitée comme -16. OMDb envisagé en complément, non tranché. |
-| Authentification | OAuth 2.0 avec Auth.js : Google et Discord, sessions JWT, sans adaptateur (table `auth_accounts` dédiée). |
+| Authentification | Kinde (même stack que immonova) : Google, Discord et e-mail gérés par Kinde. Lien avec la base par l'identifiant Kinde dans `users` (colonne à créer par une nouvelle migration). Changé le 2026-11-01, remplace Auth.js. |
 | Temps réel | Serveur Node séparé avec Socket.IO (pas d'hébergement serverless pour le chat). |
 | Outil de développement | GitHub Copilot dans VS Code, piloté par des fichiers d'instructions. |
 | Effet d'ouverture | Intro « salle de cinéma » à la connexion (faisceau de lumière, « chut », pop-corn), une fois par session, désactivable. |
@@ -83,7 +83,7 @@ Principes : aucun film n'est hébergé, aucune publicité, modèle freemium. Pub
 | Temps réel | Node.js avec Socket.IO, sur un serveur séparé |
 | Base de données | PostgreSQL 16 (le SQL de `db/migrations` fait référence), accès avec `pg` et requêtes paramétrées |
 | Cache et présence | Redis 7 |
-| Authentification | Auth.js v5 (Google, Discord, e-mail plus tard) |
+| Authentification | Kinde (`@kinde-oss/kinde-auth-nextjs`), Google, Discord, e-mail |
 | Validation et tests | Zod, Vitest |
 | Paiement | Stripe (phase 6) |
 | Données de films | TMDB, derrière une interface `FilmProvider` ; cache local |
