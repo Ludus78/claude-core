@@ -22,7 +22,9 @@ Audits en lecture seule d'abord : chacun produit un rapport dans `immonova2.0/do
 - [ ] Audit SEO, performance et accessibilité des pages principales (balises, sitemap, images, contrastes). Rapport dans `docs/audit-seo.md`
 - [ ] Audit RGPD : ce que PostHog, les formulaires (`contact`, `leads`) et les simulations enregistrent, et où figure le consentement. Rapport dans `docs/audit-rgpd.md`
 - [x] Mettre à jour Next.js 15.2.3 vers 15.5.28 : Vercel bloquait le déploiement (« Vulnerable version of Next.js detected ») (2026-10-31)
-- [ ] Audit des dépendances : `npm audit` signale 30 vulnérabilités (8 critiques, 15 élevées) lors de l'installation sur Vercel. Rapport dans `docs/audit-dependances.md`, puis mises à jour une par une (validation requise)
+- [x] Audit des dépendances : 29 vulnérabilités ramenées à 11 sans changement majeur, rapport dans `docs/audit-dependances.md` (2026-10-31)
+- [ ] Supprimer le code mort de `src/` (`src/app`, `src/lib`, `src/types`) et retirer `next-auth`, `@auth/prisma-adapter`, `bcrypt`, `nodemailer` : supprime 8 des 11 vulnérabilités restantes (validation requise : suppression de fichiers et de dépendances)
+- [ ] Mettre `jspdf` en 4.x et tester l'export PDF des calculateurs (validation requise : version majeure)
 - [x] Rétablir un build reproductible : `lib/` et `src/lib/` récupérés depuis l'ancien dépôt `Ludus78/immonova` et versionnés, `.gitignore` corrigé (`/lib/`). Le build passe avec les variables Kinde (`KINDE_*`) définies ; sans elles, il échoue à la collecte des pages (2026-10-31)
 - [ ] Appliquer les corrections issues des audits, une par tâche (validation requise)
 
