@@ -59,4 +59,13 @@ Statuts : `idée` · `étude` · `en cours` · `pause`.
 
 ## Idées en attente
 
-_Aucune pour l'instant. Ajouter ici les idées pas encore devenues des projets._
+Idées du 2026-10-31, par ordre de priorité proposé. Ajouter ici les idées pas encore devenues des projets.
+
+1. **Audit d'immonova.org et cadrage de la 2.0** (objectif : audience récurrente). Fait : `immonova/immonova2.0/docs/audit-site.md`. Suite : phase 2 bis de `immonova/ROADMAP.md`.
+2. **Socle commun à tous les sites** : même stack que immonova (Next.js sur Vercel, Kinde pour l'authentification, PostHog pour la mesure, Prisma). Livrable : un gabarit de démarrage (à rattacher à un dossier ou dépôt, à décider) et une fiche « stack standard ». Les versions et réglages viennent d'`immonova2.0`, déjà durci (Next.js 16, 0 vulnérabilité).
+3. **Reporting multi-sites** : un tableau de bord qui suit l'affluence de chaque site/API (visites, événements clés, demandes de contact), alimenté par PostHog (un projet par site) et par les formulaires Google. À cadrer : source de vérité des chiffres, accès à donner site par site (lecture seule uniquement, jamais de clé dans le dépôt).
+4. **Application d'un ami « Zenhook »** (stats de différentes données) : à étudier comme brique de reporting. Inconnu à ce stade : fonctionnement, accès API ou export, conditions d'usage fixées avec l'ami. À renseigner, rien n'est vérifié.
+5. **Instagram (3 comptes)** : (a) ancien métier de courtier en prêt immobilier, public immobilier ; (b) `immonova`, renommé mais non développé ; (c) deux comptes de tutos web, avec un début d'audience. Idée : chaque compte alimente un site (lien, `utm_*`), et les tutos servent de vitrine aux projets. Nom exact des comptes et chiffres d'audience à renseigner.
+6. **Objectif global** : générer du passage sur les sites/API, puis des revenus ou du flux réorientable. Les modèles économiques sont à choisir par projet (voir phase 3 d'immonova).
+
+Dépendances : 2 et 3 avant de lancer de nouveaux sites ; 5 dépend du cadrage de 1.

@@ -28,6 +28,8 @@ Audits en lecture seule d'abord : chacun produit un rapport dans `immonova2.0/do
 - [ ] Remettre un lint : `next lint` n'existe plus dans Next 16 et le script a été retiré ; ESLint serait une nouvelle dépendance (validation requise)
 - [x] Mettre `jspdf` en 4.2.1 : export PDF des calculateurs à tester à la main (2026-10-31)
 - [x] Rétablir un build reproductible : `lib/` et `src/lib/` récupérés depuis l'ancien dépôt `Ludus78/immonova` et versionnés, `.gitignore` corrigé (`/lib/`). Le build passe avec les variables Kinde (`KINDE_*`) définies ; sans elles, il échoue à la collecte des pages (2026-10-31)
+- [x] Audit du site en ligne (immonova.org) : contenu figé depuis début 2025, sitemap incohérent, images de partage absentes, pas de consentement PostHog, rapport dans `docs/audit-site.md` (2026-10-31)
+- [ ] Corrections rapides issues de `docs/audit-site.md` : images de partage manquantes, sitemap dynamique sans pages privées, consentement avant PostHog (validation requise)
 - [ ] Appliquer les corrections issues des audits, une par tâche (validation requise)
 
 ## Phase 2 : produit (chaque choix est à valider)
@@ -39,6 +41,16 @@ Audits en lecture seule d'abord : chacun produit un rapport dans `immonova2.0/do
 - [ ] Actualités : définir qui alimente `seed-news` et à quel rythme, puis automatiser (validation requise)
 - [ ] Assistant IA (`chat`) : cadrer le coût, les limites d'usage et l'avertissement « pas un conseil » (validation requise)
 - [ ] Mesure : lister les événements PostHog utiles (usage des calculateurs, demandes de contact) (validation requise)
+
+## Phase 2 bis : cadrage de la 2.0 (objectif : audience récurrente)
+
+Idées du 2026-10-31, à trier avec `docs/audit-site.md`. Chaque choix est à valider.
+
+- [ ] Trancher le positionnement (national ou Paris, boîte à outils ou média) et réécrire titre, description, accueil (validation requise)
+- [ ] Mécanisme de retour : newsletter ou alertes (taux, prix) liées au compte Kinde, avec consentement (validation requise)
+- [ ] Fusionner les calculateurs en un seul parcours avec résultat sauvegardable (validation requise)
+- [ ] Pont Instagram : compte `immonova` à relancer, liens avec paramètres `utm_*` suivis dans PostHog, pages d'atterrissage par contenu (validation requise)
+- [ ] Brancher le site sur le reporting commun (voir `_hub/PROJETS.md`, idées en attente) (validation requise)
 
 ## Phase 3 : croissance (à décider après la phase 2)
 
