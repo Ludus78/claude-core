@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
+import { trackEvent } from '../utils/track';
 
 interface CalculatorActionsProps {
   calculatorType: 'achat' | 'locatif' | 'viager' | 'pret';
@@ -11,6 +12,20 @@ interface CalculatorActionsProps {
 export default function CalculatorActions({ calculatorType, calculatorRef }: CalculatorActionsProps) {
   const [isShareModalOpen, setIsShareModalOpen] = useState(false);
   const { user, isAuthenticated } = useKindeBrowserClient();
+
+  // Une visite de calculateur, puis sa première utilisation (une seule fois par visite).
+  // On écoute <main> pour ne pas compter les champs du chat ni de l'en-tête.
+  useEffect(() => {
+    trackEvent('calculator_viewed', { calculator: calculatorType });
+    const main = document.querySelector('main');
+    if (!main) return;
+    const onFirstInput = () => {
+      trackEvent('calculator_used', { calculator: calculatorType });
+      main.removeEventListener('input', onFirstInput);
+    };
+    main.addEventListener('input', onFirstInput);
+    return () => main.removeEventListener('input', onFirstInput);
+  }, [calculatorType]);
 
   const handleExportPDF = async () => {
     if (!calculatorRef.current) return;
@@ -27,6 +42,7 @@ export default function CalculatorActions({ calculatorType, calculatorRef }: Cal
       
       pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
       pdf.save(`simulation-${calculatorType}-${new Date().toISOString().split('T')[0]}.pdf`);
+      trackEvent('calculator_pdf_exported', { calculator: calculatorType });
     } catch (error) {
       console.error('Erreur lors de l\'export PDF:', error);
       alert('Une erreur est survenue lors de l\'export PDF. Veuillez réessayer.');
@@ -36,7 +52,8 @@ export default function CalculatorActions({ calculatorType, calculatorRef }: Cal
   const handleShare = async (platform: 'linkedin' | 'email' | 'copy') => {
     const url = window.location.href;
     const text = `Découvrez ma simulation immobilière sur ImmoNova !`;
-    
+    trackEvent('calculator_shared', { calculator: calculatorType, channel: platform });
+
     if (platform === 'copy') {
       try {
         await navigator.clipboard.writeText(url);
@@ -89,6 +106,7 @@ export default function CalculatorActions({ calculatorType, calculatorRef }: Cal
       });
 
       if (response.ok) {
+        trackEvent('calculator_saved', { calculator: calculatorType });
         alert('Simulation sauvegardée avec succès ! Vous pouvez la retrouver dans votre tableau de bord.');
       } else {
         const errorData = await response.text();
