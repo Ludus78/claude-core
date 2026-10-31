@@ -59,7 +59,7 @@ export default function Home() {
     <>
       <CalculatorPopup />
       {/* Hero Section */}
-      <div className="relative h-[300px] bg-gray-900">
+      <div className="relative min-h-[300px] bg-gray-900">
         {/* Image de fond avec un overlay sombre */}
         <div className="absolute inset-0">
           <Image
@@ -78,10 +78,10 @@ export default function Home() {
           <div className="text-center">
             <h1 className="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl">
               <span className="block">ImmoNova</span>
-              <span className="block text-primary-300">Votre partenaire immobilier</span>
+              <span className="block mt-2 text-2xl sm:text-3xl md:text-4xl text-primary-300">Vos simulations immobilières, sans prise de tête</span>
             </h1>
             <p className="mt-6 max-w-md mx-auto text-base text-gray-200 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-            "Immobilier sans prise de tête, votre projet en toute sérénité"
+              Capacité d&apos;emprunt, mensualités, rentabilité locative : des résultats clairs, gratuits et immédiats pour préparer votre premier achat ou votre investissement.
             </p>
           </div>
         </div>
@@ -91,10 +91,10 @@ export default function Home() {
       <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Nos calculettes immobilières
+            Simulez votre projet
           </h2>
           <p className="mt-4 text-lg text-gray-500">
-            Des outils gratuits pour estimer vos projets immobiliers
+            Gratuit, sans engagement, résultat en quelques secondes
           </p>
         </div>
 
@@ -109,9 +109,9 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className="ml-5">
-                  <h3 className="text-lg font-medium text-gray-900">Calculette d'achat immobilier</h3>
+                  <h3 className="text-lg font-medium text-gray-900">Acheter : combien puis-je emprunter ?</h3>
                   <p className="mt-1 text-sm text-gray-500">
-                    Estimez votre capacité d'emprunt et le prix maximum d'un bien immobilier
+                    Votre capacité d&apos;emprunt, vos mensualités et le prix maximum d&apos;un bien. Idéal pour un premier achat.
                   </p>
                 </div>
               </div>
@@ -136,9 +136,9 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className="ml-5">
-                  <h3 className="text-lg font-medium text-gray-900">Calculette d'investissement locatif</h3>
+                  <h3 className="text-lg font-medium text-gray-900">Investir : quelle rentabilité ?</h3>
                   <p className="mt-1 text-sm text-gray-500">
-                    Calculez la rentabilité de votre investissement locatif
+                    Rentabilité brute et nette, cash-flow mensuel et impact des impôts sur un investissement locatif.
                   </p>
                 </div>
               </div>
@@ -186,10 +186,10 @@ export default function Home() {
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Votre projet immobilier, étape par étape
+            Comprendre avant de se lancer
           </h2>
           <p className="mt-4 text-lg text-gray-500">
-            Des solutions adaptées à vos besoins
+            Des guides pour avancer étape par étape
           </p>
         </div>
 

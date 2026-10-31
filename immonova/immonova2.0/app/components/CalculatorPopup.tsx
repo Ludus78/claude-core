@@ -48,7 +48,7 @@ export default function CalculatorPopup() {
               </h3>
               <div className="mt-2">
                 <p className="text-sm text-gray-500">
-                  Optimisez votre projet d'achat avec notre calculette avancée. Simulation PTZ, graphiques détaillés, export PDF et bien plus encore !
+                  Optimisez votre projet d'achat avec notre calculette avancée. Graphiques détaillés, export PDF et partage de vos résultats !
                 </p>
               </div>
             </div>
