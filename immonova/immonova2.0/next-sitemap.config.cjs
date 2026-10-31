@@ -2,13 +2,13 @@
 module.exports = {
   siteUrl: process.env.SITE_URL || 'https://immonova.org',
   generateRobotsTxt: true,
-  exclude: ['/api/*', '/dashboard/*', '/auth/*'],
+  exclude: ['/api/*', '/dashboard', '/dashboard/*', '/auth/*', '/reset-password', '/inscription'],
   robotsTxtOptions: {
     policies: [
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/*', '/dashboard/*', '/auth/*'],
+        disallow: ['/api/*', '/dashboard/*', '/auth/*', '/reset-password'],
       },
     ],
   },
