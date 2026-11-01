@@ -25,7 +25,7 @@ export const defaultMetadata: Metadata = {
     description: 'Simulez gratuitement votre prêt, votre capacité d\'emprunt et la rentabilité d\'un investissement locatif. Guides et actualités pour acheter, investir et vendre en toute sérénité.',
     images: [
       {
-        url: '/images/maisons/maison-11.jpg',
+        url: '/images/maisons/maison-10.jpg',
         width: 1200,
         height: 630,
         alt: 'Immonova - Calculettes et guides immobiliers',
@@ -36,7 +36,7 @@ export const defaultMetadata: Metadata = {
     card: 'summary_large_image',
     title: 'Immonova - Calculettes et guides pour votre projet immobilier',
     description: 'Simulez gratuitement votre prêt, votre capacité d\'emprunt et la rentabilité d\'un investissement locatif.',
-    images: ['/images/maisons/maison-11.jpg'],
+    images: ['/images/maisons/maison-10.jpg'],
   },
   robots: {
     index: true,

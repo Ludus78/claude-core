@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       keyframes: { fadein: { from: { opacity: '0' }, to: { opacity: '1' } } },
       fontFamily: {
+        display: ['var(--font-display)', 'Georgia', 'serif'],
         sans: ['var(--font-nunito)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       colors: {

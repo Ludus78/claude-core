@@ -61,25 +61,25 @@ export default function Home() {
     <>
       <CalculatorPopup />
 
-      {/* Bannière */}
-      <section className="relative isolate overflow-hidden">
-        <HeroPhoto />
-        <div className="relative mx-auto flex min-h-[250px] max-w-7xl items-center px-4 py-8 sm:min-h-[300px] sm:px-6 sm:py-10 lg:px-8">
-          <div className="max-w-xl">
-            <h1 className="text-2xl font-extrabold leading-snug text-white [text-shadow:0_1px_10px_rgba(0,0,0,0.4)] sm:text-3xl lg:text-4xl">
+      {/* Accueil : message à gauche, maison en entier à droite */}
+      <section className="mx-auto max-w-7xl px-4 pb-2 pt-6 sm:px-6 sm:pt-10 lg:px-8">
+        <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
+          <div>
+            <h1 className="font-display text-3xl font-semibold leading-tight text-forest-800 [text-wrap:balance] sm:text-4xl lg:text-[2.6rem]">
               Immobilier sans prise de tête,
-              <span className="block text-sun-200">votre projet en toute sérénité</span>
+              <span className="block text-primary-600">votre projet en toute sérénité</span>
             </h1>
-            <p className="mt-3 max-w-md text-sm leading-relaxed text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.4)] sm:text-base">
+            <p className="mt-4 max-w-md text-base leading-relaxed text-gray-600 sm:text-lg">
               Le guide de votre premier achat et des calculettes gratuites pour chiffrer votre projet.
             </p>
-            <div className="mt-5 flex flex-wrap gap-3">
-              <Link href="/achat" className="btn btn-primary !px-5 !py-2.5 !text-sm">Je commence mon parcours</Link>
-              <button type="button" onClick={() => handleCalculatorClick("Achat", "/calculateurs")} className="btn bg-white !px-5 !py-2.5 !text-sm text-forest-700 hover:bg-primary-50">
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link href="/achat" className="btn btn-primary !px-5 !py-2.5 !text-sm sm:!text-base">Je commence mon parcours</Link>
+              <button type="button" onClick={() => handleCalculatorClick("Achat", "/calculateurs")} className="btn btn-secondary !px-5 !py-2.5 !text-sm sm:!text-base">
                 Simuler mon prêt
               </button>
             </div>
           </div>
+          <HeroPhoto />
         </div>
       </section>
 

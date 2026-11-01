@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
+import { Nunito, Fraunces } from "next/font/google";
 import "./globals.css";
 import SharedLayout from "./components/SharedLayout";
 import { PostHogProvider } from "./components/PostHogProvider";
@@ -12,13 +12,20 @@ const nunito = Nunito({
   display: "swap",
 });
 
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: "--font-display",
+  display: "swap",
+});
+
 export const metadata: Metadata = defaultMetadata;
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="fr" className={`scroll-smooth ${nunito.variable}`}>
+    <html lang="fr" className={`scroll-smooth ${nunito.variable} ${fraunces.variable}`}>
       <body className="antialiased overflow-y-auto">
         <PostHogProvider>
             <SharedLayout>
