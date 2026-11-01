@@ -76,10 +76,10 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="bg-gradient-to-br from-gray-50 to-white py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-4">
+          <h1 className="text-3xl font-extrabold text-forest-800 sm:text-4xl mb-4">
             Contactez-nous
           </h1>
           <div className="h-1 w-20 bg-primary-600 mx-auto rounded-full mb-6"></div>
@@ -89,19 +89,19 @@ export default function ContactPage() {
         </div>
 
         {submitSuccess ? (
-          <div className="bg-white shadow-xl rounded-xl p-8 md:p-10 text-center max-w-lg mx-auto transform transition-all duration-500 scale-100 translate-y-0 opacity-100">
+          <div className="bg-white shadow-sm rounded-3xl p-8 md:p-10 text-center max-w-lg mx-auto transform transition-all duration-500 scale-100 translate-y-0 opacity-100">
             <div className="w-16 h-16 bg-green-100 mx-auto rounded-full flex items-center justify-center mb-6">
               <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
               </svg>
             </div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Message envoyé avec succès!</h2>
+            <h2 className="text-2xl font-extrabold text-forest-800 mb-4">Message envoyé avec succès!</h2>
             <p className="text-gray-600 mb-6">
               Merci de nous avoir contactés. Notre équipe vous répondra dans les plus brefs délais.
             </p>
             <button
               onClick={() => setSubmitSuccess(false)}
-              className="px-6 py-3 bg-primary-600 text-white rounded-lg shadow-md hover:bg-primary-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+              className="px-6 py-3 bg-primary-600 text-white rounded-full shadow-sm hover:bg-primary-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
             >
               Envoyer un autre message
             </button>
@@ -109,13 +109,13 @@ export default function ContactPage() {
         ) : (
           <form 
             onSubmit={handleSubmit}
-            className="bg-white shadow-xl rounded-xl overflow-hidden transition-all duration-300 transform hover:shadow-2xl"
+            className="bg-white shadow-sm rounded-xl overflow-hidden transition-all duration-300 transform hover:shadow-lg"
           >
             <div className="p-8 md:p-10">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Informations personnelles */}
                 <div className="md:col-span-2">
-                  <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                  <h2 className="text-xl font-extrabold text-forest-800 mb-4 flex items-center">
                     <span className="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center mr-3">
                       <IoPersonOutline className="text-primary-600 w-5 h-5" />
                     </span>
@@ -139,7 +139,7 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="Votre nom"
-                      className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-primary-500 focus:border-primary-500 transition-all duration-200"
+                      className="block w-full pl-10 pr-3 py-3 border border-primary-100 rounded-2xl shadow-sm focus:ring-primary-500 focus:border-primary-500 transition-all duration-200"
                       required
                     />
                   </div>
@@ -161,7 +161,7 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="Votre email"
-                      className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-primary-500 focus:border-primary-500 transition-all duration-200"
+                      className="block w-full pl-10 pr-3 py-3 border border-primary-100 rounded-2xl shadow-sm focus:ring-primary-500 focus:border-primary-500 transition-all duration-200"
                       required
                     />
                   </div>
@@ -183,7 +183,7 @@ export default function ContactPage() {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="Votre téléphone"
-                      className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-primary-500 focus:border-primary-500 transition-all duration-200"
+                      className="block w-full pl-10 pr-3 py-3 border border-primary-100 rounded-2xl shadow-sm focus:ring-primary-500 focus:border-primary-500 transition-all duration-200"
                     />
                   </div>
                 </div>
@@ -204,7 +204,7 @@ export default function ContactPage() {
                       value={formData.subject}
                       onChange={handleChange}
                       placeholder="Sujet de votre message"
-                      className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-primary-500 focus:border-primary-500 transition-all duration-200"
+                      className="block w-full pl-10 pr-3 py-3 border border-primary-100 rounded-2xl shadow-sm focus:ring-primary-500 focus:border-primary-500 transition-all duration-200"
                       required
                     />
                   </div>
@@ -212,7 +212,7 @@ export default function ContactPage() {
                 
                 {/* Informations projet */}
                 <div className="md:col-span-2 mt-4">
-                  <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                  <h2 className="text-xl font-extrabold text-forest-800 mb-4 flex items-center">
                     <span className="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center mr-3">
                       <IoBusinessOutline className="text-primary-600 w-5 h-5" />
                     </span>
@@ -234,7 +234,7 @@ export default function ContactPage() {
                       id="projectType"
                       value={formData.projectType}
                       onChange={handleChange}
-                      className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-primary-500 focus:border-primary-500 transition-all duration-200 appearance-none"
+                      className="block w-full pl-10 pr-3 py-3 border border-primary-100 rounded-2xl shadow-sm focus:ring-primary-500 focus:border-primary-500 transition-all duration-200 appearance-none"
                     >
                       {projectTypes.map(type => (
                         <option key={type.value} value={type.value}>
@@ -266,7 +266,7 @@ export default function ContactPage() {
                       value={formData.budget}
                       onChange={handleChange}
                       placeholder="Votre budget"
-                      className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-primary-500 focus:border-primary-500 transition-all duration-200"
+                      className="block w-full pl-10 pr-3 py-3 border border-primary-100 rounded-2xl shadow-sm focus:ring-primary-500 focus:border-primary-500 transition-all duration-200"
                     />
                   </div>
                 </div>
@@ -283,7 +283,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     placeholder="Décrivez votre projet ou votre demande..."
                     rows={6}
-                    className="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-primary-500 focus:border-primary-500 transition-all duration-200"
+                    className="block w-full px-4 py-3 border border-primary-100 rounded-2xl shadow-sm focus:ring-primary-500 focus:border-primary-500 transition-all duration-200"
                     required
                   ></textarea>
                 </div>
@@ -291,11 +291,11 @@ export default function ContactPage() {
             </div>
             
             {/* Footer with submit button */}
-            <div className="px-8 md:px-10 py-5 bg-gray-50 border-t border-gray-100 flex justify-end">
+            <div className="px-8 md:px-10 py-5 bg-cream-100 border-t border-gray-100 flex justify-end">
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-300 transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-300 transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>

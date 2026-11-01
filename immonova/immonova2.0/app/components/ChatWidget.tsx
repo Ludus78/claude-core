@@ -165,7 +165,7 @@ export default function ChatWidget() {
                     w-20 h-20 
                     bg-primary-600 
                     rounded-full 
-                    shadow-lg 
+                    shadow-sm 
                     flex items-center justify-center 
                     text-white 
                     hover:bg-primary-700 
@@ -201,22 +201,22 @@ export default function ChatWidget() {
 
             {/* Fenêtre de chat */}
             {isOpen && (
-                <div className="absolute bottom-20 right-0 w-96 max-h-[500px] bg-white rounded-lg shadow-xl flex flex-col overflow-hidden border border-gray-200 transition-all duration-300 transform origin-bottom-right">
+                <div className="absolute bottom-20 right-0 w-96 max-h-[500px] bg-white rounded-2xl shadow-sm flex flex-col overflow-hidden border border-primary-100 transition-all duration-300 transform origin-bottom-right">
                     {/* Header du chat */}
                     <div className="bg-primary-600 text-white p-4 flex items-center justify-between">
                         <div className="flex items-center">
                             <div className="h-10 w-10 bg-primary-700 rounded-full flex items-center justify-center mr-3">
-                                <span className="text-lg font-bold">C</span>
+                                <span className="text-lg font-extrabold">C</span>
                             </div>
                             <div>
-                                <h3 className="font-semibold">Claude</h3>
+                                <h3 className="font-extrabold">Claude</h3>
                                 <p className="text-xs text-primary-200">Assistant immobilier ImmoNova</p>
                             </div>
                         </div>
                     </div>
 
                     {/* Corps des messages */}
-                    <div className="flex-grow p-4 overflow-y-auto bg-gray-50" style={{ maxHeight: "300px" }}>
+                    <div className="flex-grow p-4 overflow-y-auto bg-cream-100" style={{ maxHeight: "300px" }}>
                         {messages.length === 0 ? (
                             <div className="text-center text-gray-500 py-8">
                                 <p>Bonjour, je suis Claude, votre assistant immobilier.</p>
@@ -228,10 +228,10 @@ export default function ChatWidget() {
                                     key={index} 
                                     className={`mb-4 flex ${message.isUser ? "justify-end" : "justify-start"}`}
                                 >
-                                    <div className={`max-w-[80%] rounded-lg p-3 ${
+                                    <div className={`max-w-[80%] rounded-2xl p-3 ${
                                         message.isUser 
                                             ? "bg-primary-600 text-white" 
-                                            : "bg-white text-gray-800 border border-gray-200"
+                                            : "bg-white text-gray-800 border border-primary-100"
                                     }`}>
                                         <div className="text-sm whitespace-pre-wrap">{message.content}</div>
                                         <div className={`text-xs mt-1 text-right ${
@@ -247,7 +247,7 @@ export default function ChatWidget() {
                         {/* Indicateur de chargement */}
                         {isLoading && (
                             <div className="flex justify-start mb-4">
-                                <div className="bg-white text-gray-800 border border-gray-200 rounded-lg p-3 flex items-center">
+                                <div className="bg-white text-gray-800 border border-primary-100 rounded-3xl p-3 flex items-center">
                                     <div className="flex space-x-1">
                                         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: "0ms" }}></div>
                                         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: "150ms" }}></div>
@@ -261,7 +261,7 @@ export default function ChatWidget() {
                     </div>
 
                     {/* Zone de saisie */}
-                    <div className="border-t border-gray-200 p-3 bg-white">
+                    <div className="border-t border-primary-100 p-3 bg-white">
                         <div className="flex items-center">
                             <input
                                 ref={inputRef}
@@ -270,7 +270,7 @@ export default function ChatWidget() {
                                 onChange={(e) => setInputValue(e.target.value)}
                                 onKeyPress={handleKeyPress}
                                 placeholder="Écrivez votre message..."
-                                className="flex-grow px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-1 focus:ring-primary-500 focus:border-primary-500"
+                                className="flex-grow px-3 py-2 border border-primary-100 rounded-l-md focus:outline-none focus:ring-1 focus:ring-primary-500 focus:border-primary-500"
                                 disabled={isLoading}
                             />
                             <button

@@ -147,10 +147,10 @@ export default function Documents() {
   }));
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-cream-100 py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">Documents essentiels</h1>
+          <h1 className="text-3xl font-extrabold text-forest-800">Documents essentiels</h1>
           <p className="mt-2 text-gray-600">
             Sélectionnez les documents nécessaires pour votre projet immobilier
           </p>
@@ -163,10 +163,10 @@ export default function Documents() {
               <Tab
                 className={({ selected }) =>
                   classNames(
-                    'w-full rounded-lg py-2.5 text-sm font-medium leading-5',
+                    'w-full rounded-2xl py-2.5 text-sm font-medium leading-5',
                     'ring-white ring-opacity-60 ring-offset-2 ring-offset-primary-400 focus:outline-none focus:ring-2',
                     selected
-                      ? 'bg-white text-primary-700 shadow'
+                      ? 'bg-white text-primary-700 shadow-sm'
                       : 'text-gray-600 hover:bg-white/[0.12] hover:text-primary-600'
                   )
                 }
@@ -177,10 +177,10 @@ export default function Documents() {
               <Tab
                 className={({ selected }) =>
                   classNames(
-                    'w-full rounded-lg py-2.5 text-sm font-medium leading-5',
+                    'w-full rounded-2xl py-2.5 text-sm font-medium leading-5',
                     'ring-white ring-opacity-60 ring-offset-2 ring-offset-primary-400 focus:outline-none focus:ring-2',
                     selected
-                      ? 'bg-white text-primary-700 shadow'
+                      ? 'bg-white text-primary-700 shadow-sm'
                       : 'text-gray-600 hover:bg-white/[0.12] hover:text-primary-600'
                   )
                 }
@@ -195,9 +195,9 @@ export default function Documents() {
         {/* Liste des documents par catégorie */}
         <div className="space-y-6">
           {documentsByCategory.map(({ category, documents }) => documents.length > 0 && (
-            <div key={category} className="bg-white shadow rounded-lg overflow-hidden">
-              <div className="bg-gray-50 px-6 py-4 border-b">
-                <h2 className="text-lg font-semibold text-gray-900">{category}</h2>
+            <div key={category} className="bg-white shadow-sm rounded-2xl overflow-hidden">
+              <div className="bg-cream-100 px-6 py-4 border-b">
+                <h2 className="text-lg font-extrabold text-gray-900">{category}</h2>
               </div>
               <div className="divide-y divide-gray-200">
                 {documents.map((doc) => (
@@ -209,7 +209,7 @@ export default function Documents() {
                           type="checkbox"
                           checked={selectedDocuments.includes(doc.id)}
                           onChange={() => toggleDocument(doc.id)}
-                          className="h-4 w-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500"
+                          className="h-4 w-4 text-primary-600 border-primary-100 rounded-xl focus:ring-primary-500"
                         />
                       </div>
                       <div className="ml-3">
@@ -228,8 +228,8 @@ export default function Documents() {
 
         {/* Résumé des documents sélectionnés */}
         {selectedDocuments.length > 0 && (
-          <div className="mt-8 bg-primary-50 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-primary-900 mb-4">
+          <div className="mt-8 bg-primary-50 rounded-2xl p-6">
+            <h3 className="text-lg font-extrabold text-primary-900 mb-4">
               Documents sélectionnés ({selectedDocuments.length})
             </h3>
             <ul className="space-y-2">

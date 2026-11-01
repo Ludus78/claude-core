@@ -7,7 +7,7 @@ interface PersonaProps {
 
 const PersonaCard = ({ role, description }: PersonaProps) => {
   return (
-    <div className="bg-[#1e1e24] p-5 rounded-lg text-white mb-5 max-w-md w-full shadow-lg hover:bg-[#24242c] transition-colors duration-200">
+    <div className="bg-[#1e1e24] p-5 rounded-2xl text-white mb-5 max-w-md w-full shadow-sm hover:bg-[#24242c] transition-colors duration-200">
       <p className="text-sm leading-relaxed font-medium">{description}</p>
     </div>
   );
@@ -39,7 +39,7 @@ export default function UserPersonas() {
 
   return (
     <div className="flex flex-col items-center w-full max-w-lg mx-auto">
-      <h2 className="text-2xl font-bold mb-8 text-center">Besoins utilisateurs</h2>
+      <h2 className="text-2xl font-extrabold mb-8 text-center">Besoins utilisateurs</h2>
       <div className="grid gap-4 w-full">
         {personas.map((persona, index) => (
           <PersonaCard key={index} role={persona.role} description={persona.description} />

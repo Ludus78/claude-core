@@ -8,7 +8,7 @@ export default function ProfileImage() {
         alt="Ludovic DENIS - Expert immobilier"
         fill
         sizes="200px"
-        className="object-cover rounded-lg shadow-md"
+        className="object-cover rounded-2xl shadow-sm"
         priority
       />
     </div>

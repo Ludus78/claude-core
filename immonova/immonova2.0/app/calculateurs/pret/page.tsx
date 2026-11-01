@@ -102,10 +102,10 @@ export default function LoanCalculator() {
   };
 
   return (
-    <div ref={calculatorRef} className="min-h-screen bg-gray-50 py-8">
+    <div ref={calculatorRef} className="min-h-screen bg-cream-100 py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">Simulateur de prêt immobilier</h1>
+          <h1 className="text-3xl font-extrabold text-forest-800">Simulateur de prêt immobilier</h1>
           <p className="mt-2 text-gray-600">
             Calculez votre capacité d'emprunt et simulez votre prêt immobilier en quelques clics
           </p>
@@ -114,8 +114,8 @@ export default function LoanCalculator() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Panneau de configuration */}
           <div className="lg:col-span-1 space-y-6">
-            <div className="bg-white rounded-lg shadow p-6">
-              <h2 className="text-lg font-semibold text-gray-900 mb-4">Votre projet</h2>
+            <div className="bg-white rounded-3xl shadow-sm p-6">
+              <h2 className="text-lg font-extrabold text-gray-900 mb-4">Votre projet</h2>
               
               {/* Prix du bien */}
               <div className="mb-4">
@@ -130,7 +130,7 @@ export default function LoanCalculator() {
                     step="5000"
                     value={purchasePrice}
                     onChange={(e) => setPurchasePrice(Number(e.target.value))}
-                    className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                    className="w-full h-2 bg-gray-200 rounded-2xl appearance-none cursor-pointer"
                   />
                   <span className="ml-2 w-24 text-sm text-gray-600">
                     {formatNumber(purchasePrice)} €
@@ -151,7 +151,7 @@ export default function LoanCalculator() {
                     step="1000"
                     value={downPayment}
                     onChange={(e) => setDownPayment(Number(e.target.value))}
-                    className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                    className="w-full h-2 bg-gray-200 rounded-2xl appearance-none cursor-pointer"
                   />
                   <span className="ml-2 w-24 text-sm text-gray-600">
                     {formatNumber(downPayment)} €
@@ -172,7 +172,7 @@ export default function LoanCalculator() {
                     step="1"
                     value={loanTerm}
                     onChange={(e) => setLoanTerm(Number(e.target.value))}
-                    className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                    className="w-full h-2 bg-gray-200 rounded-2xl appearance-none cursor-pointer"
                   />
                   <span className="ml-2 w-24 text-sm text-gray-600">
                     {loanTerm} ans
@@ -193,7 +193,7 @@ export default function LoanCalculator() {
                     step="0.1"
                     value={interestRate}
                     onChange={(e) => setInterestRate(Number(e.target.value))}
-                    className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                    className="w-full h-2 bg-gray-200 rounded-2xl appearance-none cursor-pointer"
                   />
                   <span className="ml-2 w-24 text-sm text-gray-600">
                     {interestRate}%
@@ -214,7 +214,7 @@ export default function LoanCalculator() {
                     step="100"
                     value={monthlyIncome}
                     onChange={(e) => setMonthlyIncome(Number(e.target.value))}
-                    className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                    className="w-full h-2 bg-gray-200 rounded-2xl appearance-none cursor-pointer"
                   />
                   <span className="ml-2 w-24 text-sm text-gray-600">
                     {formatNumber(monthlyIncome)}€
@@ -231,7 +231,7 @@ export default function LoanCalculator() {
                       type="checkbox"
                       checked={isFirstTimeBuyer}
                       onChange={(e) => setIsFirstTimeBuyer(e.target.checked)}
-                      className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
+                      className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-primary-100 rounded-xl"
                     />
                     <span className="ml-2 text-sm text-gray-600">
                       Primo-accédant (PTZ)
@@ -245,18 +245,18 @@ export default function LoanCalculator() {
           {/* Résultats et visualisations */}
           <div className="lg:col-span-2 space-y-6">
             {/* Résumé */}
-            <div className="bg-white rounded-lg shadow p-6">
+            <div className="bg-white rounded-3xl shadow-sm p-6">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center">
                   <div className="text-sm font-medium text-gray-500">Mensualité</div>
-                  <div className="mt-1 text-3xl font-semibold text-primary-600">
+                  <div className="mt-1 text-3xl font-extrabold text-primary-600">
                     {formatNumber(loanDetails.monthlyPayment)} €
                   </div>
                   <div className="mt-1 text-xs text-gray-500">Assurance incluse</div>
                 </div>
                 <div className="text-center">
                   <div className="text-sm font-medium text-gray-500">Taux d'endettement</div>
-                  <div className="mt-1 text-3xl font-semibold text-primary-600">
+                  <div className="mt-1 text-3xl font-extrabold text-primary-600">
                     {Math.round(loanDetails.debtRatio)}%
                   </div>
                   <div className="mt-1 text-xs text-gray-500">
@@ -265,7 +265,7 @@ export default function LoanCalculator() {
                 </div>
                 <div className="text-center">
                   <div className="text-sm font-medium text-gray-500">Reste à vivre</div>
-                  <div className="mt-1 text-3xl font-semibold text-primary-600">
+                  <div className="mt-1 text-3xl font-extrabold text-primary-600">
                     {formatNumber(loanDetails.remainingForLife)}€
                   </div>
                   <div className="mt-1 text-xs text-gray-500">Par mois</div>
@@ -274,19 +274,19 @@ export default function LoanCalculator() {
             </div>
 
             {/* Graphiques */}
-            <div className="bg-white rounded-lg shadow p-6">
+            <div className="bg-white rounded-3xl shadow-sm p-6">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold text-gray-900">Répartition du coût total</h3>
+                <h3 className="text-lg font-extrabold text-gray-900">Répartition du coût total</h3>
                 <div className="flex space-x-2">
                   <button
                     onClick={() => setDisplayMode('graph')}
-                    className={`p-2 rounded-md ${displayMode === 'graph' ? 'bg-primary-100 text-primary-600' : 'text-gray-400 hover:text-gray-500'}`}
+                    className={`p-2 rounded-2xl ${displayMode === 'graph' ? 'bg-primary-100 text-primary-600' : 'text-gray-400 hover:text-gray-500'}`}
                   >
                     <ChartPieIcon className="h-5 w-5" />
                   </button>
                   <button
                     onClick={() => setDisplayMode('table')}
-                    className={`p-2 rounded-md ${displayMode === 'table' ? 'bg-primary-100 text-primary-600' : 'text-gray-400 hover:text-gray-500'}`}
+                    className={`p-2 rounded-2xl ${displayMode === 'table' ? 'bg-primary-100 text-primary-600' : 'text-gray-400 hover:text-gray-500'}`}
                   >
                     <TableCellsIcon className="h-5 w-5" />
                   </button>
@@ -306,7 +306,7 @@ export default function LoanCalculator() {
               ) : (
                 <div className="overflow-x-auto">
                   <table className="min-w-full divide-y divide-gray-200">
-                    <thead className="bg-gray-50">
+                    <thead className="bg-cream-100">
                       <tr>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                           Composant
@@ -353,13 +353,13 @@ export default function LoanCalculator() {
         </div>
 
         <div className="mt-8 text-center space-y-4">
-          <Link href="/calculette" className="block text-indigo-600 hover:text-indigo-800 font-medium">
+          <Link href="/calculette" className="block text-primary-600 hover:text-primary-800 font-medium">
             Revenir à la version classique →
           </Link>
-          <Link href="/calculette-locative" className="block text-indigo-600 hover:text-indigo-800 font-medium">
+          <Link href="/calculette-locative" className="block text-primary-600 hover:text-primary-800 font-medium">
             Voir aussi notre calculette d'investissement locatif →
           </Link>
-          <Link href="/calculette-viager" className="block text-indigo-600 hover:text-indigo-800 font-medium">
+          <Link href="/calculette-viager" className="block text-primary-600 hover:text-primary-800 font-medium">
             Découvrez notre calculette d'investissement en viager →
           </Link>
         </div>

@@ -72,9 +72,9 @@ export default function SavedSimulations() {
       {simulations.map((simulation) => (
         <div
           key={simulation.id}
-          className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 hover:shadow-md transition-shadow"
+          className="bg-white rounded-3xl shadow-sm border border-primary-100 p-4 hover:shadow-lg transition-shadow"
         >
-          <h3 className="font-semibold text-gray-900 mb-2">
+          <h3 className="font-extrabold text-gray-900 mb-2">
             {getSimulationTitle(simulation.type)}
           </h3>
           <p className="text-sm text-gray-500 mb-4">

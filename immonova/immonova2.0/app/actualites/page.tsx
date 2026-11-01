@@ -117,7 +117,7 @@ export default function ActualitesPage() {
   return (
     <div className="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
       <div className="mb-10">
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">Actualités immobilières</h1>
+        <h1 className="text-3xl font-extrabold text-forest-800 mb-4">Actualités immobilières</h1>
         <p className="text-lg text-gray-600">Restez informé des dernières tendances du marché immobilier et des conseils d'experts.</p>
       </div>
 
@@ -129,26 +129,26 @@ export default function ActualitesPage() {
         <>
           {/* Filtres par catégorie */}
           <Tabs defaultValue="all" onValueChange={handleTabChange} className="mb-8">
-            <TabsList className="flex space-x-2 mb-6 bg-gray-100 p-1 rounded-lg overflow-x-auto">
-              <TabsTrigger value="all" className="flex-1 py-2 px-4 rounded-md">
+            <TabsList className="flex space-x-2 mb-6 bg-gray-100 p-1 rounded-2xl overflow-x-auto">
+              <TabsTrigger value="all" className="flex-1 py-2 px-4 rounded-2xl">
                 <span className="flex items-center justify-center">
                   <NewspaperIcon className="h-5 w-5 mr-2" />
                   Toutes les actualités
                 </span>
               </TabsTrigger>
-              <TabsTrigger value="tendances" className="flex-1 py-2 px-4 rounded-md">
+              <TabsTrigger value="tendances" className="flex-1 py-2 px-4 rounded-2xl">
                 <span className="flex items-center justify-center">
                   <HomeIcon className="h-5 w-5 mr-2" />
                   Tendances du marché
                 </span>
               </TabsTrigger>
-              <TabsTrigger value="financement" className="flex-1 py-2 px-4 rounded-md">
+              <TabsTrigger value="financement" className="flex-1 py-2 px-4 rounded-2xl">
                 <span className="flex items-center justify-center">
                   <BanknotesIcon className="h-5 w-5 mr-2" />
                   Financement
                 </span>
               </TabsTrigger>
-              <TabsTrigger value="conseils" className="flex-1 py-2 px-4 rounded-md">
+              <TabsTrigger value="conseils" className="flex-1 py-2 px-4 rounded-2xl">
                 <span className="flex items-center justify-center">
                   <HomeIcon className="h-5 w-5 mr-2" />
                   Conseils pratiques
@@ -195,14 +195,14 @@ export default function ActualitesPage() {
 function ArticleCard({ article }: { article: Article }) {
   return (
     <Link href={`/actualites/${article.id}`}>
-      <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
+      <div className="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
         <div className="relative h-48 overflow-hidden">
           <img
             src={article.image}
             alt={article.title}
             className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
           />
-          <div className="absolute top-4 right-4 bg-primary-600 text-white text-xs font-semibold py-1 px-2 rounded">
+          <div className="absolute top-4 right-4 bg-primary-600 text-white text-xs font-extrabold py-1 px-2 rounded-full">
             {article.category === 'tendances' ? 'Tendances marché' : 
              article.category === 'financement' ? 'Financement' : 'Conseils pratiques'}
           </div>
@@ -212,7 +212,7 @@ function ArticleCard({ article }: { article: Article }) {
             <CalendarIcon className="h-4 w-4 mr-1" />
             <span>{article.date}</span>
           </div>
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">{article.title}</h3>
+          <h3 className="text-lg font-extrabold text-gray-900 mb-2">{article.title}</h3>
           <p className="text-gray-600 text-sm mb-4 flex-grow">{article.excerpt}</p>
           <div className="flex justify-between items-center mt-auto">
             <span className="text-xs text-gray-500">Par {article.author}</span>

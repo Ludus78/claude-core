@@ -7,6 +7,7 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: { fadein: { from: { opacity: '0' }, to: { opacity: '1' } } },
       fontFamily: {
         sans: ['var(--font-nunito)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },

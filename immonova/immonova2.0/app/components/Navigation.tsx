@@ -12,13 +12,13 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="bg-[var(--nav-bg)] shadow-md sticky top-0 z-50">
+    <nav className="bg-[var(--nav-bg)] shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image src="/logo.svg" alt="ImmoNova" width={40} height={40} className="mr-3" />
-            <span className="text-white text-2xl font-bold font-['Montserrat']">ImmoNova</span>
+            <span className="text-white text-2xl font-extrabold font-['Montserrat']">ImmoNova</span>
           </Link>
 
           {/* Mobile menu button */}
@@ -88,7 +88,7 @@ function MobileNavLink({ href, onClick, children }: { href: string; onClick: () 
   return (
     <Link 
       href={href} 
-      className="py-2 px-3 text-white font-['Nunito'] hover:bg-white/10 rounded transition-colors block"
+      className="py-2 px-3 text-white font-['Nunito'] hover:bg-white/10 rounded-xl transition-colors block"
       onClick={onClick}
     >
       {children}

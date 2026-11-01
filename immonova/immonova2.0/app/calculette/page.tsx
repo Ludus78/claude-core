@@ -76,12 +76,12 @@ export default function CalculetteAchat() {
 
   return (
     <div ref={calculatorRef} className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-2">Simulateur de prêt immobilier</h1>
+      <h1 className="text-3xl font-extrabold mb-2">Simulateur de prêt immobilier</h1>
       <p className="text-gray-600 mb-8">Calculez votre capacité d'emprunt et simulez votre prêt immobilier en quelques clics</p>
       
       <div className="grid md:grid-cols-2 gap-8">
         <div>
-          <h2 className="text-xl font-semibold mb-4 text-gray-800">Paramètres d'achat</h2>
+          <h2 className="text-xl font-extrabold mb-4 text-forest-800">Paramètres d'achat</h2>
           <div className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -91,7 +91,7 @@ export default function CalculetteAchat() {
                 type="number"
                 value={prixAchat || ''}
                 onChange={(e) => setPrixAchat(Number(e.target.value))}
-                className="w-full p-2 border border-gray-300 rounded focus:ring focus:ring-indigo-200 focus:border-indigo-500"
+                className="w-full p-2 border border-primary-100 rounded-xl focus:ring focus:ring-primary-200 focus:border-primary-500"
               />
             </div>
             
@@ -103,7 +103,7 @@ export default function CalculetteAchat() {
                 type="number"
                 value={apport || ''}
                 onChange={(e) => setApport(Number(e.target.value))}
-                className="w-full p-2 border border-gray-300 rounded focus:ring focus:ring-indigo-200 focus:border-indigo-500"
+                className="w-full p-2 border border-primary-100 rounded-xl focus:ring focus:ring-primary-200 focus:border-primary-500"
               />
             </div>
             
@@ -115,7 +115,7 @@ export default function CalculetteAchat() {
                 type="number"
                 value={revenusMensuels || ''}
                 onChange={(e) => setRevenusMensuels(Number(e.target.value))}
-                className="w-full p-2 border border-gray-300 rounded focus:ring focus:ring-indigo-200 focus:border-indigo-500"
+                className="w-full p-2 border border-primary-100 rounded-xl focus:ring focus:ring-primary-200 focus:border-primary-500"
               />
             </div>
             
@@ -127,7 +127,7 @@ export default function CalculetteAchat() {
                 type="number"
                 value={chargesMensuelles || ''}
                 onChange={(e) => setChargesMensuelles(Number(e.target.value))}
-                className="w-full p-2 border border-gray-300 rounded focus:ring focus:ring-indigo-200 focus:border-indigo-500"
+                className="w-full p-2 border border-primary-100 rounded-xl focus:ring focus:ring-primary-200 focus:border-primary-500"
               />
             </div>
             
@@ -136,7 +136,7 @@ export default function CalculetteAchat() {
                 type="checkbox"
                 checked={estPrimoAccedant}
                 onChange={(e) => setEstPrimoAccedant(e.target.checked)}
-                className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+                className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-primary-100 rounded-xl"
               />
               <label className="ml-2 block text-sm text-gray-700">
                 Primo-accédant (éligible au PTZ)
@@ -144,7 +144,7 @@ export default function CalculetteAchat() {
             </div>
           </div>
           
-          <h2 className="text-xl font-semibold mt-6 mb-4 text-gray-800">Paramètres du financement</h2>
+          <h2 className="text-xl font-extrabold mt-6 mb-4 text-forest-800">Paramètres du financement</h2>
           <div className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -157,7 +157,7 @@ export default function CalculetteAchat() {
                 step="1"
                 value={duree}
                 onChange={(e) => setDuree(Number(e.target.value))}
-                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                className="w-full h-2 bg-gray-200 rounded-2xl appearance-none cursor-pointer"
               />
               <div className="text-sm text-gray-600 mt-1">{duree} ans</div>
             </div>
@@ -171,7 +171,7 @@ export default function CalculetteAchat() {
                 step="0.1"
                 value={tauxInteret}
                 onChange={(e) => setTauxInteret(Number(e.target.value))}
-                className="w-full p-2 border border-gray-300 rounded focus:ring focus:ring-indigo-200 focus:border-indigo-500"
+                className="w-full p-2 border border-primary-100 rounded-xl focus:ring focus:ring-primary-200 focus:border-primary-500"
               />
             </div>
             
@@ -184,31 +184,31 @@ export default function CalculetteAchat() {
                 step="0.01"
                 value={tauxAssurance}
                 onChange={(e) => setTauxAssurance(Number(e.target.value))}
-                className="w-full p-2 border border-gray-300 rounded focus:ring focus:ring-indigo-200 focus:border-indigo-500"
+                className="w-full p-2 border border-primary-100 rounded-xl focus:ring focus:ring-primary-200 focus:border-primary-500"
               />
             </div>
           </div>
         </div>
 
         <div>
-          <div className="bg-gray-50 rounded-lg p-6 mb-6">
-            <h3 className="text-lg font-semibold mb-4 text-gray-800">Résumé du financement</h3>
+          <div className="bg-cream-100 rounded-2xl p-6 mb-6">
+            <h3 className="text-lg font-extrabold mb-4 text-gray-800">Résumé du financement</h3>
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <p className="text-sm text-gray-600">Mensualité totale</p>
-                <p className="text-2xl font-bold text-indigo-600">{formatNumber(mensualites.total)} €</p>
+                <p className="text-2xl font-extrabold text-primary-600">{formatNumber(mensualites.total)} €</p>
                 <p className="text-xs text-gray-500">dont {formatNumber(mensualites.assurance)} € d'assurance</p>
               </div>
               <div>
                 <p className="text-sm text-gray-600">Taux d'endettement</p>
-                <p className="text-2xl font-bold text-indigo-600">{Math.round(tauxEndettement)} %</p>
+                <p className="text-2xl font-extrabold text-primary-600">{Math.round(tauxEndettement)} %</p>
                 <p className="text-xs text-gray-500">{tauxEndettement <= 35 ? 'Acceptable' : 'Trop élevé'}</p>
               </div>
             </div>
           </div>
 
-          <div className="bg-gray-50 rounded-lg p-6">
-            <h3 className="text-lg font-semibold mb-4 text-gray-800">Détails du projet</h3>
+          <div className="bg-cream-100 rounded-2xl p-6">
+            <h3 className="text-lg font-extrabold mb-4 text-gray-800">Détails du projet</h3>
             <div className="space-y-4">
               <div>
                 <h4 className="text-sm font-medium text-gray-700 mb-2">Coût total du projet</h4>
@@ -262,13 +262,13 @@ export default function CalculetteAchat() {
 
           {/* Liens vers les autres calculettes */}
           <div className="mt-8 text-center space-y-4">
-            <Link href="/calculateurs/pret" className="block text-indigo-600 hover:text-indigo-800 font-medium">
+            <Link href="/calculateurs/pret" className="block text-primary-600 hover:text-primary-800 font-medium">
               Essayer la version avancée →
             </Link>
-            <Link href="/calculette-locative" className="block text-indigo-600 hover:text-indigo-800 font-medium">
+            <Link href="/calculette-locative" className="block text-primary-600 hover:text-primary-800 font-medium">
               Voir aussi notre calculette d'investissement locatif →
             </Link>
-            <Link href="/calculette-viager" className="block text-indigo-600 hover:text-indigo-800 font-medium">
+            <Link href="/calculette-viager" className="block text-primary-600 hover:text-primary-800 font-medium">
               Découvrez notre calculette d'investissement en viager →
             </Link>
           </div>

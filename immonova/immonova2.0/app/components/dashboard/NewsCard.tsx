@@ -6,9 +6,9 @@ import { NewsArticle } from '@/app/hooks/useNews';
 
 // Définition des couleurs de catégories
 const categoryColors: Record<string, string> = {
-  'marché': 'bg-blue-100 text-blue-800',
+  'marché': 'bg-primary-100 text-primary-800',
   'financement': 'bg-green-100 text-green-800',
-  'législation': 'bg-purple-100 text-purple-800',
+  'législation': 'bg-primary-100 text-primary-800',
   'tendances': 'bg-orange-100 text-orange-800',
   'conseils': 'bg-teal-100 text-teal-800',
   'default': 'bg-gray-100 text-gray-800'
@@ -30,7 +30,7 @@ export default function NewsCard({ article, isAdmin, onEdit, onDelete }: NewsCar
   const displayDate = formattedDate || (article.publishedAt ? new Date(article.publishedAt).toLocaleDateString('fr-FR') : 'Date inconnue');
   
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+    <div className="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
       {/* Image d'en-tête */}
       <div className="relative h-48 w-full">
         <Image
@@ -55,7 +55,7 @@ export default function NewsCard({ article, isAdmin, onEdit, onDelete }: NewsCar
         </div>
         
         {/* Titre */}
-        <h3 className="text-lg font-semibold text-gray-800 mb-2 line-clamp-2">{title}</h3>
+        <h3 className="text-lg font-extrabold text-gray-800 mb-2 line-clamp-2">{title}</h3>
         
         {/* Résumé */}
         <p className="text-sm text-gray-600 mb-4 line-clamp-3">{excerpt}</p>
@@ -73,13 +73,13 @@ export default function NewsCard({ article, isAdmin, onEdit, onDelete }: NewsCar
             <div className="flex space-x-2">
               <button
                 onClick={() => onEdit && onEdit(id)}
-                className="text-xs bg-blue-50 text-blue-700 py-1 px-2 rounded hover:bg-blue-100"
+                className="text-xs bg-primary-50 text-primary-700 py-1 px-2 rounded-xl hover:bg-primary-100"
               >
                 Modifier
               </button>
               <button
                 onClick={() => onDelete && onDelete(id)}
-                className="text-xs bg-red-50 text-red-700 py-1 px-2 rounded hover:bg-red-100"
+                className="text-xs bg-red-50 text-red-700 py-1 px-2 rounded-xl hover:bg-red-100"
               >
                 Supprimer
               </button>

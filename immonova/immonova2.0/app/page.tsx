@@ -7,6 +7,7 @@ import { CalculatorIcon, ChartBarIcon, BanknotesIcon, ArrowRightIcon } from '@he
 import EmailPopup from './components/EmailPopup';
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import CalculatorPopup from './components/CalculatorPopup';
+import HeroPhoto from './components/HeroPhoto';
 import { ETAPES } from './achat/etapes';
 
 export default function Home() {
@@ -60,24 +61,24 @@ export default function Home() {
     <>
       <CalculatorPopup />
 
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-sun-200" aria-hidden="true" />
-        <div className="pointer-events-none absolute right-24 top-44 hidden h-24 w-24 rounded-full bg-primary-200 sm:block" aria-hidden="true" />
-        <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-20 lg:px-8">
-          <div className="max-w-2xl">
-            <span className="inline-block rounded-full bg-primary-100 px-4 py-1.5 text-sm font-extrabold text-forest-700">
+      {/* Bannière */}
+      <section className="relative isolate overflow-hidden">
+        <HeroPhoto />
+        <div className="relative mx-auto flex min-h-[420px] max-w-7xl items-center px-4 py-14 sm:min-h-[520px] sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <span className="inline-block rounded-full bg-white/90 px-4 py-1.5 text-sm font-extrabold text-forest-700">
               Pour les futurs propriétaires
             </span>
-            <h1 className="mt-5 text-4xl font-extrabold leading-tight text-forest-800 sm:text-5xl lg:text-6xl">
-              Votre premier achat, sans prise de tête.
+            <h1 className="mt-5 text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
+              Immobilier sans prise de tête,
+              <span className="block text-sun-200">votre projet en toute sérénité</span>
             </h1>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-gray-600 sm:text-xl">
-              On vous explique chaque étape simplement, et on calcule avec vous ce que vous pouvez vraiment emprunter. Gratuit, sans engagement.
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/90 sm:text-xl">
+              Un guide pas à pas pour votre premier achat et des calculettes gratuites pour chiffrer votre projet.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/achat" className="btn btn-primary">Je commence mon parcours</Link>
-              <button type="button" onClick={() => handleCalculatorClick("Achat", "/calculateurs")} className="btn btn-secondary">
+              <button type="button" onClick={() => handleCalculatorClick("Achat", "/calculateurs")} className="btn bg-white text-forest-700 hover:bg-primary-50">
                 Simuler mon prêt
               </button>
             </div>

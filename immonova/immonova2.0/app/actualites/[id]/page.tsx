@@ -168,7 +168,7 @@ export default function ArticleDetail() {
   if (isLoading) {
     return (
       <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="bg-white rounded-lg shadow-md p-8 text-center">
+        <div className="bg-white rounded-3xl shadow-sm p-8 text-center">
           <p className="text-gray-500">Chargement de l'article...</p>
         </div>
       </div>
@@ -178,8 +178,8 @@ export default function ArticleDetail() {
   if (error || !article) {
     return (
       <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="bg-white rounded-lg shadow-md p-8">
-          <h1 className="text-2xl font-bold text-red-600 mb-4">Article introuvable</h1>
+        <div className="bg-white rounded-3xl shadow-sm p-8">
+          <h1 className="text-2xl font-extrabold text-red-600 mb-4">Article introuvable</h1>
           <p className="text-gray-600 mb-6">{error || "L'article que vous recherchez n'existe pas ou a été supprimé."}</p>
           <Link 
             href="/dashboard?tab=actualites" 
@@ -195,12 +195,12 @@ export default function ArticleDetail() {
   
   // Définition des couleurs de catégories
   const categoryColors: Record<string, string> = {
-    'marché': 'bg-blue-100 text-blue-800',
+    'marché': 'bg-primary-100 text-primary-800',
     'financement': 'bg-green-100 text-green-800',
-    'législation': 'bg-purple-100 text-purple-800',
-    'réglementation': 'bg-purple-100 text-purple-800',
+    'législation': 'bg-primary-100 text-primary-800',
+    'réglementation': 'bg-primary-100 text-primary-800',
     'tendances': 'bg-orange-100 text-orange-800',
-    'investissement': 'bg-amber-100 text-amber-800', 
+    'investissement': 'bg-sun-100 text-sun-800', 
     'conseils': 'bg-teal-100 text-teal-800',
     'default': 'bg-gray-100 text-gray-800'
   };
@@ -220,7 +220,7 @@ export default function ArticleDetail() {
         </Link>
       </div>
       
-      <article className="bg-white rounded-lg shadow-md overflow-hidden">
+      <article className="bg-white rounded-2xl shadow-sm overflow-hidden">
         {/* Image d'en-tête */}
         <div className="relative h-64 w-full overflow-hidden">
           <img
@@ -259,7 +259,7 @@ export default function ArticleDetail() {
           </div>
           
           {/* Titre */}
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{article.title}</h1>
+          <h1 className="text-2xl md:text-3xl font-extrabold text-forest-800 mb-4">{article.title}</h1>
           
           {/* Résumé */}
           <div className="text-lg text-gray-700 font-medium mb-6 italic">
@@ -277,17 +277,17 @@ export default function ArticleDetail() {
           
           {/* Actions admin */}
           {isAdmin && (
-            <div className="mt-8 pt-6 border-t border-gray-200">
+            <div className="mt-8 pt-6 border-t border-primary-100">
               <div className="flex justify-end space-x-4">
                 <Link
                   href={`/dashboard?tab=actualites&edit=${article.id}`}
-                  className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  className="px-4 py-2 bg-primary-600 text-white rounded-full hover:bg-primary-700 transition-colors"
                 >
                   Modifier l'article
                 </Link>
                 <button
                   onClick={handleDelete}
-                  className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+                  className="px-4 py-2 bg-red-600 text-white rounded-2xl hover:bg-red-700 transition-colors"
                 >
                   Supprimer
                 </button>
@@ -299,12 +299,12 @@ export default function ArticleDetail() {
 
       {/* Articles connexes */}
       {relatedArticles.length > 0 && (
-        <div className="border-t border-gray-200 pt-10">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Articles connexes</h2>
+        <div className="border-t border-primary-100 pt-10">
+          <h2 className="text-2xl font-extrabold text-forest-800 mb-6">Articles connexes</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {relatedArticles.map((relatedArticle) => (
               <Link key={relatedArticle.id} href={`/actualites/${relatedArticle.id}`}>
-                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
+                <div className="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
                   <div className="relative h-40 overflow-hidden">
                     <img
                       src={relatedArticle.imageUrl || '/images/default-news.jpg'}
@@ -313,7 +313,7 @@ export default function ArticleDetail() {
                     />
                   </div>
                   <div className="p-4 flex-grow">
-                    <h3 className="text-md font-semibold text-gray-900 mb-2">{relatedArticle.title}</h3>
+                    <h3 className="text-md font-extrabold text-gray-900 mb-2">{relatedArticle.title}</h3>
                     <p className="text-gray-500 text-xs">{relatedArticle.formattedDate || 
                      (typeof relatedArticle.publishedAt === 'string' 
                       ? new Date(relatedArticle.publishedAt).toLocaleDateString('fr-FR') 

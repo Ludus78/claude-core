@@ -1,4 +1,3 @@
-import Navigation from "../components/Navigation";
 
 export default function Diagnostics() {
   const diagnostics = [
@@ -54,40 +53,39 @@ export default function Diagnostics() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#131316] text-white">
-      <Navigation />
+    <div className="min-h-screen text-[#2B2B2B]">
       
       <div className="pt-20 p-8 sm:p-20">
         <section className="max-w-5xl mx-auto mt-10">
-          <h1 className="text-4xl font-bold mb-6 text-center">Diagnostics Techniques Obligatoires</h1>
-          <p className="text-xl text-gray-300 text-center mb-12">
+          <h1 className="text-4xl font-extrabold mb-6 text-center">Diagnostics Techniques Obligatoires</h1>
+          <p className="text-xl text-gray-600 text-center mb-12">
             Découvrez les diagnostics obligatoires pour la vente de votre bien, leurs délais de validité et leurs coûts moyens.
           </p>
           
           <div className="space-y-6">
             {diagnostics.map((diagnostic, index) => (
-              <div key={index} className="bg-[#1e1e24] p-6 rounded-lg">
-                <h3 className="text-2xl font-bold mb-2 text-blue-400">{diagnostic.name}</h3>
+              <div key={index} className="bg-white p-6 rounded-2xl">
+                <h3 className="text-2xl font-extrabold mb-2 text-primary-400">{diagnostic.name}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
                   <div>
-                    <p className="mb-1"><span className="font-bold text-gray-300">Validité:</span> {diagnostic.validity}</p>
-                    <p className="mb-1"><span className="font-bold text-gray-300">Coût moyen:</span> {diagnostic.cost}</p>
-                    <p className="mb-1"><span className="font-bold text-gray-300">Obligatoire:</span> {diagnostic.required}</p>
+                    <p className="mb-1"><span className="font-extrabold text-gray-600">Validité:</span> {diagnostic.validity}</p>
+                    <p className="mb-1"><span className="font-extrabold text-gray-600">Coût moyen:</span> {diagnostic.cost}</p>
+                    <p className="mb-1"><span className="font-extrabold text-gray-600">Obligatoire:</span> {diagnostic.required}</p>
                   </div>
                   <div>
-                    <p className="text-gray-300">{diagnostic.description}</p>
+                    <p className="text-gray-600">{diagnostic.description}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 bg-blue-900 p-6 rounded-lg">
-            <h3 className="text-xl font-bold mb-4">Besoin d'aide pour vos diagnostics ?</h3>
+          <div className="mt-12 bg-primary-900 p-6 rounded-2xl">
+            <h3 className="text-xl font-extrabold mb-4">Besoin d'aide pour vos diagnostics ?</h3>
             <p className="mb-4">
               Nous pouvons vous mettre en relation avec des diagnostiqueurs certifiés dans votre région.
             </p>
-            <button className="bg-white text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-200 transition">
+            <button className="bg-white text-primary-900 px-6 py-3 rounded-2xl font-extrabold hover:bg-gray-200 transition">
               Demander un devis gratuit
             </button>
           </div>

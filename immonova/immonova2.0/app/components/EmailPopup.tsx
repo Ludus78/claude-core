@@ -52,7 +52,7 @@ export default function EmailPopup({ isOpen, onClose, onSubmit, targetCalculator
 
   return (
     <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50 backdrop-blur-sm">
-      <div className="relative top-20 mx-auto p-8 border w-[450px] shadow-2xl rounded-xl bg-white">
+      <div className="relative top-20 mx-auto p-8 border w-[450px] shadow-sm rounded-3xl bg-white">
         {/* Bouton de fermeture */}
         <button
           onClick={onClose}
@@ -63,13 +63,13 @@ export default function EmailPopup({ isOpen, onClose, onSubmit, targetCalculator
 
         <div className="text-center">
           {/* Icône de la calculette */}
-          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100 mb-4">
-            <svg className="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 mb-4">
+            <svg className="h-6 w-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
             </svg>
           </div>
 
-          <h3 className="text-xl font-semibold text-gray-900 mb-2">
+          <h3 className="text-xl font-extrabold text-forest-800 mb-2">
             Accédez à la calculette pour {targetCalculator}
           </h3>
           <p className="text-sm text-gray-500 mb-6">
@@ -77,7 +77,7 @@ export default function EmailPopup({ isOpen, onClose, onSubmit, targetCalculator
           </p>
 
           {error && (
-            <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+            <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-2xl">
               <p className="text-sm text-red-600 font-medium">
                 {error}
               </p>
@@ -92,7 +92,7 @@ export default function EmailPopup({ isOpen, onClose, onSubmit, targetCalculator
                 onChange={handleEmailChange}
                 placeholder="Votre email"
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
+                className="w-full px-4 py-3 border border-primary-100 rounded-2xl shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
                 aria-invalid={!!error}
                 aria-describedby={error ? "email-error" : undefined}
               />
@@ -105,7 +105,7 @@ export default function EmailPopup({ isOpen, onClose, onSubmit, targetCalculator
                   type="checkbox"
                   checked={acceptNewsletter}
                   onChange={(e) => setAcceptNewsletter(e.target.checked)}
-                  className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded cursor-pointer"
+                  className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-primary-100 rounded-xl cursor-pointer"
                 />
               </div>
               <div className="ml-3">
@@ -118,7 +118,7 @@ export default function EmailPopup({ isOpen, onClose, onSubmit, targetCalculator
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full px-4 py-3 text-sm font-medium text-white bg-gradient-to-r from-indigo-500 to-indigo-600 border border-transparent rounded-lg shadow-sm hover:from-indigo-600 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full px-4 py-3 text-sm font-medium text-white bg-primary-500 border border-transparent rounded-full shadow-sm hover:from-primary-600 hover:to-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? (
                 <span className="flex items-center justify-center">
