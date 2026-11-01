@@ -76,7 +76,7 @@ export default function CalculetteAchat() {
 
   return (
     <div ref={calculatorRef} className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-extrabold mb-2">Simulateur de prêt immobilier</h1>
+      <h1 className="text-3xl font-extrabold mb-2 text-forest-800">Simulateur de prêt immobilier</h1>
       <p className="text-gray-600 mb-8">Calculez votre capacité d'emprunt et simulez votre prêt immobilier en quelques clics</p>
       
       <div className="grid md:grid-cols-2 gap-8">
@@ -192,7 +192,7 @@ export default function CalculetteAchat() {
 
         <div>
           <div className="bg-cream-100 rounded-2xl p-6 mb-6">
-            <h3 className="text-lg font-extrabold mb-4 text-gray-800">Résumé du financement</h3>
+            <h3 className="text-lg font-extrabold mb-4 text-forest-800">Résumé du financement</h3>
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <p className="text-sm text-gray-600">Mensualité totale</p>
@@ -208,7 +208,7 @@ export default function CalculetteAchat() {
           </div>
 
           <div className="bg-cream-100 rounded-2xl p-6">
-            <h3 className="text-lg font-extrabold mb-4 text-gray-800">Détails du projet</h3>
+            <h3 className="text-lg font-extrabold mb-4 text-forest-800">Détails du projet</h3>
             <div className="space-y-4">
               <div>
                 <h4 className="text-sm font-medium text-gray-700 mb-2">Coût total du projet</h4>

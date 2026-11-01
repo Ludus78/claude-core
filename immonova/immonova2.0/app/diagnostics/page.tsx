@@ -57,7 +57,7 @@ export default function Diagnostics() {
       
       <div className="pt-20 p-8 sm:p-20">
         <section className="max-w-5xl mx-auto mt-10">
-          <h1 className="text-4xl font-extrabold mb-6 text-center">Diagnostics Techniques Obligatoires</h1>
+          <h1 className="text-4xl font-extrabold mb-6 text-center text-forest-800">Diagnostics Techniques Obligatoires</h1>
           <p className="text-xl text-gray-600 text-center mb-12">
             Découvrez les diagnostics obligatoires pour la vente de votre bien, leurs délais de validité et leurs coûts moyens.
           </p>
@@ -65,7 +65,7 @@ export default function Diagnostics() {
           <div className="space-y-6">
             {diagnostics.map((diagnostic, index) => (
               <div key={index} className="bg-white p-6 rounded-2xl">
-                <h3 className="text-2xl font-extrabold mb-2 text-primary-400">{diagnostic.name}</h3>
+                <h3 className="text-2xl font-extrabold mb-2 text-primary-700">{diagnostic.name}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
                   <div>
                     <p className="mb-1"><span className="font-extrabold text-gray-600">Validité:</span> {diagnostic.validity}</p>

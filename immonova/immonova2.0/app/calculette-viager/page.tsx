@@ -116,7 +116,7 @@ export default function CalculetteViager() {
 
   return (
     <div ref={calculatorRef} className="bg-white rounded-3xl shadow-sm p-6">
-      <h1 className="text-2xl font-extrabold mb-2 text-primary-700">Calculette d'investissement en viager</h1>
+      <h1 className="text-2xl font-extrabold mb-2 text-forest-800">Calculette d'investissement en viager</h1>
       <p className="text-gray-600 mb-6">
         Estimez la rentabilité de votre investissement en viager en tenant compte des spécificités de ce type d'investissement.
       </p>
@@ -326,7 +326,7 @@ export default function CalculetteViager() {
         </div>
         
         <div className="bg-cream-100 p-6 rounded-2xl">
-          <h2 className="text-xl font-extrabold mb-6 text-primary-700">Résultats</h2>
+          <h2 className="text-xl font-extrabold mb-6 text-forest-800">Résultats</h2>
           
           <div className="space-y-6">
             <div>

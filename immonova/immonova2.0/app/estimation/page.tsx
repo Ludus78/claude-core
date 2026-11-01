@@ -5,7 +5,7 @@ export default function Estimation() {
       
       <div className="pt-20 p-8 sm:p-20">
         <section className="max-w-5xl mx-auto mt-10">
-          <h1 className="text-4xl font-extrabold mb-6 text-center">Estimation Détaillée de Votre Bien</h1>
+          <h1 className="text-4xl font-extrabold mb-6 text-center text-forest-800">Estimation Détaillée de Votre Bien</h1>
           <p className="text-xl text-gray-600 text-center mb-12">
             Obtenez une estimation précise basée sur des données du marché et des biens comparables récents.
           </p>

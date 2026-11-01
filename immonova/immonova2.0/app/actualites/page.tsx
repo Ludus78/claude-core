@@ -129,7 +129,7 @@ export default function ActualitesPage() {
         <>
           {/* Filtres par catégorie */}
           <Tabs defaultValue="all" onValueChange={handleTabChange} className="mb-8">
-            <TabsList className="flex space-x-2 mb-6 bg-gray-100 p-1 rounded-2xl overflow-x-auto">
+            <TabsList className="flex space-x-2 mb-6 bg-cream-200 p-1 rounded-2xl overflow-x-auto">
               <TabsTrigger value="all" className="flex-1 py-2 px-4 rounded-2xl">
                 <span className="flex items-center justify-center">
                   <NewspaperIcon className="h-5 w-5 mr-2" />
@@ -212,7 +212,7 @@ function ArticleCard({ article }: { article: Article }) {
             <CalendarIcon className="h-4 w-4 mr-1" />
             <span>{article.date}</span>
           </div>
-          <h3 className="text-lg font-extrabold text-gray-900 mb-2">{article.title}</h3>
+          <h3 className="text-lg font-extrabold text-forest-800 mb-2">{article.title}</h3>
           <p className="text-gray-600 text-sm mb-4 flex-grow">{article.excerpt}</p>
           <div className="flex justify-between items-center mt-auto">
             <span className="text-xs text-gray-500">Par {article.author}</span>

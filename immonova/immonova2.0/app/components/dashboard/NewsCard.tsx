@@ -7,11 +7,11 @@ import { NewsArticle } from '@/app/hooks/useNews';
 // Définition des couleurs de catégories
 const categoryColors: Record<string, string> = {
   'marché': 'bg-primary-100 text-primary-800',
-  'financement': 'bg-green-100 text-green-800',
+  'financement': 'bg-primary-200 text-primary-800',
   'législation': 'bg-primary-100 text-primary-800',
-  'tendances': 'bg-orange-100 text-orange-800',
-  'conseils': 'bg-teal-100 text-teal-800',
-  'default': 'bg-gray-100 text-gray-800'
+  'tendances': 'bg-sun-200 text-sun-700',
+  'conseils': 'bg-cream-200 text-forest-800',
+  'default': 'bg-cream-200 text-forest-800'
 };
 
 interface NewsCardProps {
@@ -55,7 +55,7 @@ export default function NewsCard({ article, isAdmin, onEdit, onDelete }: NewsCar
         </div>
         
         {/* Titre */}
-        <h3 className="text-lg font-extrabold text-gray-800 mb-2 line-clamp-2">{title}</h3>
+        <h3 className="text-lg font-extrabold text-forest-800 mb-2 line-clamp-2">{title}</h3>
         
         {/* Résumé */}
         <p className="text-sm text-gray-600 mb-4 line-clamp-3">{excerpt}</p>

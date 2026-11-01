@@ -19,7 +19,7 @@ export default async function AdminPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 space-y-10">
-      <h1 className="text-3xl font-bold text-gray-900">Administration</h1>
+      <h1 className="text-3xl font-extrabold text-forest-800">Administration</h1>
 
       <div className="grid gap-4 sm:grid-cols-4">
         {[
@@ -28,7 +28,7 @@ export default async function AdminPage() {
           ['Comptes connectés', users.length],
           ['Simulations sauvegardées', simulationCount],
         ].map(([label, value]) => (
-          <div key={label as string} className="bg-white rounded-lg shadow p-4">
+          <div key={label as string} className="bg-white rounded-3xl p-4">
             <div className="text-sm text-gray-500">{label}</div>
             <div className="text-2xl font-semibold">{value}</div>
           </div>
@@ -37,14 +37,14 @@ export default async function AdminPage() {
 
       <section>
         <div className="flex items-center justify-between mb-3">
-          <h2 className="text-xl font-semibold">E-mails du popup</h2>
+          <h2 className="text-xl font-extrabold">E-mails du popup</h2>
           <a href="/api/admin/newsletter" className="text-primary-600 hover:text-primary-800 text-sm">
             Exporter les inscrits newsletter (CSV)
           </a>
         </div>
-        <div className="overflow-x-auto bg-white rounded-lg shadow">
+        <div className="overflow-x-auto bg-white rounded-3xl">
           <table className="min-w-full text-sm">
-            <thead className="bg-gray-50 text-left">
+            <thead className="bg-cream-200 text-left">
               <tr>
                 <th className="p-3">E-mail</th>
                 <th className="p-3">Newsletter</th>
@@ -74,10 +74,10 @@ export default async function AdminPage() {
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold mb-3">Utilisateurs connectés</h2>
-        <div className="overflow-x-auto bg-white rounded-lg shadow">
+        <h2 className="text-xl font-extrabold mb-3">Utilisateurs connectés</h2>
+        <div className="overflow-x-auto bg-white rounded-3xl">
           <table className="min-w-full text-sm">
-            <thead className="bg-gray-50 text-left">
+            <thead className="bg-cream-200 text-left">
               <tr>
                 <th className="p-3">E-mail</th>
                 <th className="p-3">Nom</th>

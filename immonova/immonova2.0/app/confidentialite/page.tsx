@@ -12,12 +12,12 @@ export default function ConfidentialitePage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-10 text-gray-800 space-y-8">
       <header>
-        <h1 className="text-3xl font-bold text-gray-900">Politique de confidentialité</h1>
+        <h1 className="text-3xl font-extrabold text-forest-800">Politique de confidentialité</h1>
         <p className="mt-2 text-sm text-gray-500">Dernière mise à jour : 1er novembre 2026</p>
       </header>
 
       <section className="space-y-2">
-        <h2 className="text-xl font-semibold text-gray-900">Qui est responsable de vos données ?</h2>
+        <h2 className="text-xl font-extrabold text-forest-800">Qui est responsable de vos données ?</h2>
         <p>
           Le site immonova.org est édité par Ludovic Denis, responsable du traitement de vos données.
           Pour toute question : <a className="text-primary-700 underline" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
@@ -25,7 +25,7 @@ export default function ConfidentialitePage() {
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-xl font-semibold text-gray-900">Ce que nous collectons, et pourquoi</h2>
+        <h2 className="text-xl font-extrabold text-forest-800">Ce que nous collectons, et pourquoi</h2>
         <ul className="list-disc pl-6 space-y-3">
           <li>
             <strong>Votre e-mail avant d&apos;ouvrir une calculette.</strong> Nous enregistrons votre adresse, la calculette demandée
@@ -62,7 +62,7 @@ export default function ConfidentialitePage() {
       </section>
 
       <section className="space-y-2">
-        <h2 className="text-xl font-semibold text-gray-900">Mesure d&apos;audience et cookies</h2>
+        <h2 className="text-xl font-extrabold text-forest-800">Mesure d&apos;audience et cookies</h2>
         <p>
           Avec votre accord uniquement, nous utilisons PostHog (hébergé dans l&apos;Union européenne) pour compter les pages vues et
           l&apos;usage des calculettes (ouverture, première saisie, export PDF, partage, sauvegarde). Nous n&apos;envoyons jamais les montants
@@ -74,7 +74,7 @@ export default function ConfidentialitePage() {
       </section>
 
       <section className="space-y-2">
-        <h2 className="text-xl font-semibold text-gray-900">Qui reçoit vos données</h2>
+        <h2 className="text-xl font-extrabold text-forest-800">Qui reçoit vos données</h2>
         <ul className="list-disc pl-6 space-y-1">
           <li>Vercel : hébergement du site.</li>
           <li>Neon : base de données, hébergée en Allemagne (région de Francfort).</li>
@@ -87,7 +87,7 @@ export default function ConfidentialitePage() {
       </section>
 
       <section className="space-y-2">
-        <h2 className="text-xl font-semibold text-gray-900">Combien de temps nous les gardons</h2>
+        <h2 className="text-xl font-extrabold text-forest-800">Combien de temps nous les gardons</h2>
         <ul className="list-disc pl-6 space-y-1">
           <li>E-mails recueillis avant une calculette et inscriptions à la newsletter : 3 ans après votre dernier échange avec nous, ou jusqu&apos;à votre désabonnement.</li>
           <li>Messages du formulaire de contact : 3 ans.</li>
@@ -97,7 +97,7 @@ export default function ConfidentialitePage() {
       </section>
 
       <section className="space-y-2">
-        <h2 className="text-xl font-semibold text-gray-900">Vos droits</h2>
+        <h2 className="text-xl font-extrabold text-forest-800">Vos droits</h2>
         <p>
           Vous pouvez demander l&apos;accès à vos données, leur rectification, leur effacement, la limitation ou l&apos;opposition à leur
           traitement, et leur portabilité. Vous pouvez aussi retirer votre consentement à tout moment. Écrivez-nous à{' '}
@@ -108,7 +108,7 @@ export default function ConfidentialitePage() {
       </section>
 
       <section className="space-y-2">
-        <h2 className="text-xl font-semibold text-gray-900">Modifications</h2>
+        <h2 className="text-xl font-extrabold text-forest-800">Modifications</h2>
         <p>Cette page peut évoluer. La date de dernière mise à jour figure en haut.</p>
       </section>
     </div>

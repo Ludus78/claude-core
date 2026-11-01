@@ -21,7 +21,7 @@ export default function Dashboard() {
   // Outils disponibles sur le site
   const availableTools = [
     { id: 1, title: 'Calculer achat', href: '/calculette', icon: <CalculatorIcon className="h-6 w-6 text-white" />, color: 'bg-primary-600', description: 'Calculez votre capacité d\'emprunt et simulez votre achat immobilier' },
-    { id: 2, title: 'Simuler locatif', href: '/calculette-locative', icon: <ChartBarIcon className="h-6 w-6 text-white" />, color: 'bg-green-600', description: 'Évaluez la rentabilité de votre investissement locatif' },
+    { id: 2, title: 'Simuler locatif', href: '/calculette-locative', icon: <ChartBarIcon className="h-6 w-6 text-white" />, color: 'bg-primary-600', description: 'Évaluez la rentabilité de votre investissement locatif' },
     { id: 3, title: 'Calculer viager', href: '/calculette-viager', icon: <CalculatorIcon className="h-6 w-6 text-white" />, color: 'bg-sun-600', description: 'Estimez les modalités de votre investissement en viager' },
   ];
 
@@ -31,7 +31,7 @@ export default function Dashboard() {
         {/* Header du dashboard - Réduction du padding vertical */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 bg-primary-600 p-4 rounded-full shadow-sm text-white">
           <div>
-            <h1 className="text-3xl font-extrabold">
+            <h1 className="text-3xl font-extrabold text-forest-800">
               Bienvenue, {user?.given_name || 'utilisateur'}
             </h1>
             <p className="mt-2 text-primary-100">
@@ -102,7 +102,7 @@ export default function Dashboard() {
                   <div className={`w-12 h-12 ${tool.color} rounded-2xl flex items-center justify-center mr-4 shadow-sm`}>
                     {tool.icon}
                   </div>
-                  <h3 className="font-extrabold text-gray-900">{tool.title}</h3>
+                  <h3 className="font-extrabold text-forest-800">{tool.title}</h3>
                 </div>
                 <p className="text-gray-600 text-sm mb-4">{tool.description}</p>
                 <Link
@@ -137,7 +137,7 @@ export default function Dashboard() {
                 <div className="p-3 bg-primary-100 rounded-2xl mr-3 shadow-sm">
                   <DocumentTextIcon className="h-6 w-6 text-primary-600" />
                 </div>
-                <h3 className="font-extrabold text-gray-900">Documents essentiels</h3>
+                <h3 className="font-extrabold text-forest-800">Documents essentiels</h3>
               </div>
               <p className="text-gray-600 text-sm mb-4">Accédez aux documents nécessaires pour vos démarches immobilières, incluant modèles de contrats, guides juridiques et fiches pratiques.</p>
               <Link

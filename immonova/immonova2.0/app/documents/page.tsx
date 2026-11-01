@@ -197,7 +197,7 @@ export default function Documents() {
           {documentsByCategory.map(({ category, documents }) => documents.length > 0 && (
             <div key={category} className="bg-white shadow-sm rounded-2xl overflow-hidden">
               <div className="bg-cream-100 px-6 py-4 border-b">
-                <h2 className="text-lg font-extrabold text-gray-900">{category}</h2>
+                <h2 className="text-lg font-extrabold text-forest-800">{category}</h2>
               </div>
               <div className="divide-y divide-gray-200">
                 {documents.map((doc) => (

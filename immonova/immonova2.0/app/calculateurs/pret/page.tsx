@@ -115,7 +115,7 @@ export default function LoanCalculator() {
           {/* Panneau de configuration */}
           <div className="lg:col-span-1 space-y-6">
             <div className="bg-white rounded-3xl shadow-sm p-6">
-              <h2 className="text-lg font-extrabold text-gray-900 mb-4">Votre projet</h2>
+              <h2 className="text-lg font-extrabold text-forest-800 mb-4">Votre projet</h2>
               
               {/* Prix du bien */}
               <div className="mb-4">
@@ -276,7 +276,7 @@ export default function LoanCalculator() {
             {/* Graphiques */}
             <div className="bg-white rounded-3xl shadow-sm p-6">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-extrabold text-gray-900">Répartition du coût total</h3>
+                <h3 className="text-lg font-extrabold text-forest-800">Répartition du coût total</h3>
                 <div className="flex space-x-2">
                   <button
                     onClick={() => setDisplayMode('graph')}

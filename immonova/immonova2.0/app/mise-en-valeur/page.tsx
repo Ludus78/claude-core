@@ -5,7 +5,7 @@ export default function MiseEnValeur() {
       
       <div className="pt-20 p-8 sm:p-20">
         <section className="max-w-5xl mx-auto mt-10">
-          <h1 className="text-4xl font-extrabold mb-6 text-center">Mise en Valeur de Votre Bien</h1>
+          <h1 className="text-4xl font-extrabold mb-6 text-center text-forest-800">Mise en Valeur de Votre Bien</h1>
           <p className="text-xl text-gray-600 text-center mb-12">
             Optimisez l'attractivité de votre bien avec nos conseils personnalisés.
           </p>
@@ -83,7 +83,7 @@ export default function MiseEnValeur() {
               
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-extrabold mb-3 text-primary-400">Préparation générale</h3>
+                  <h3 className="text-xl font-extrabold mb-3 text-primary-700">Préparation générale</h3>
                   <ul className="list-disc pl-5 space-y-2 text-gray-600">
                     <li>Désencombrez toutes les pièces pour maximiser l'espace perçu</li>
                     <li>Effectuez un nettoyage approfondi y compris vitres et luminaires</li>
@@ -93,7 +93,7 @@ export default function MiseEnValeur() {
                 </div>
                 
                 <div>
-                  <h3 className="text-xl font-extrabold mb-3 text-primary-400">Mise en scène</h3>
+                  <h3 className="text-xl font-extrabold mb-3 text-primary-700">Mise en scène</h3>
                   <ul className="list-disc pl-5 space-y-2 text-gray-600">
                     <li>Optimisez la luminosité (ouverture des volets, éclairage indirect)</li>
                     <li>Créez une ambiance chaleureuse avec quelques accessoires déco</li>
@@ -102,7 +102,7 @@ export default function MiseEnValeur() {
                 </div>
                 
                 <div>
-                  <h3 className="text-xl font-extrabold mb-3 text-primary-400">Photos professionnelles</h3>
+                  <h3 className="text-xl font-extrabold mb-3 text-primary-700">Photos professionnelles</h3>
                   <p className="text-gray-600">
                     Investir dans des photos professionnelles peut augmenter le nombre de visites de 30%. 
                     Nous pouvons vous mettre en relation avec un photographe spécialisé.

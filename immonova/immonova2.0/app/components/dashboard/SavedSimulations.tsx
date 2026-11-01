@@ -74,7 +74,7 @@ export default function SavedSimulations() {
           key={simulation.id}
           className="bg-white rounded-3xl shadow-sm border border-primary-100 p-4 hover:shadow-lg transition-shadow"
         >
-          <h3 className="font-extrabold text-gray-900 mb-2">
+          <h3 className="font-extrabold text-forest-800 mb-2">
             {getSimulationTitle(simulation.type)}
           </h3>
           <p className="text-sm text-gray-500 mb-4">

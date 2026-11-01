@@ -43,7 +43,7 @@ export default function CalculatorPopup() {
               </svg>
             </div>
             <div className="mt-3 text-center sm:mt-5">
-              <h3 className="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+              <h3 className="text-lg leading-6 font-medium text-forest-800" id="modal-title">
                 Découvrez notre nouvelle calculette immobilière !
               </h3>
               <div className="mt-2">
