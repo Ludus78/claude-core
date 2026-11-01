@@ -30,7 +30,8 @@ export function CookieBanner() {
         <p className="text-sm text-gray-700">
           Nous mesurons l&apos;audience du site (pages vues, usage des calculettes) avec PostHog pour
           l&apos;améliorer. Aucune mesure n&apos;a lieu sans votre accord, et vous pouvez changer d&apos;avis
-          à tout moment en bas de page.
+          à tout moment en bas de page.{" "}
+          <a href="/confidentialite" className="underline hover:text-gray-900">En savoir plus</a>
         </p>
         <div className="flex shrink-0 gap-3">
           <button

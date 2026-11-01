@@ -43,6 +43,9 @@ export default function Footer() {
       </div>
       <div className="max-w-7xl mx-auto pt-8 mt-8 border-t border-gray-200 text-center text-gray-500 text-sm">
         © 2024 ImmoNova. Tous droits réservés.
+        <Link href="/confidentialite" className="mt-2 block text-sm text-gray-500 underline hover:text-primary-700">
+          Politique de confidentialité
+        </Link>
         <ManageCookiesButton />
       </div>
     </footer>

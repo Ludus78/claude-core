@@ -13,7 +13,7 @@ export default function EmailPopup({ isOpen, onClose, onSubmit, targetCalculator
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
-  const [acceptNewsletter, setAcceptNewsletter] = useState(true);
+  const [acceptNewsletter, setAcceptNewsletter] = useState(false);
 
   // Réinitialiser l'erreur lorsque l'utilisateur modifie l'email
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -135,7 +135,8 @@ export default function EmailPopup({ isOpen, onClose, onSubmit, targetCalculator
           </form>
 
           <p className="mt-4 text-xs text-gray-400">
-            En utilisant nos services, vous acceptez notre politique de confidentialité et nos conditions d'utilisation.
+            Votre e-mail sert à vous donner accès à la calculette. Détails dans notre{' '}
+            <a href="/confidentialite" className="underline hover:text-gray-600">politique de confidentialité</a>.
           </p>
         </div>
       </div>
