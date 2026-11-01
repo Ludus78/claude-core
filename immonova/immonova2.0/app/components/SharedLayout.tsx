@@ -17,22 +17,19 @@ export default function SharedLayout({ children }: SharedLayoutProps) {
   const {isAuthenticated} = useKindeBrowserClient();
 
   return (
-    <div className="flex flex-col min-h-screen overflow-y-auto bg-[#eef6ff] text-black">
+    <div className="flex flex-col min-h-screen overflow-y-auto bg-cream-100 text-[#2B2B2B]">
       {/* Header/Navigation */}
-      <header className="sticky top-0 z-50 bg-white py-4 px-6 shadow-sm">
+      <header className="sticky top-0 z-50 border-b border-primary-100 bg-cream-100/95 px-4 py-3 backdrop-blur sm:px-6">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center hover:opacity-80">
-              <div className="mr-2 text-2xl text-primary-700">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+            <Link href="/" className="flex items-center gap-2 hover:opacity-80 sm:gap-3">
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-primary-500 text-white sm:h-10 sm:w-10" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6">
                   <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
                   <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
                 </svg>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold text-primary-700">ImmoNova</span>
-                <span className="block text-sm text-gray-500">Votre partenaire pour un investissement immobilier réussi</span>
-              </div>
+              </span>
+              <span className="text-xl font-extrabold text-forest-700 sm:text-2xl">immonova</span>
             </Link>
           </div>
           
@@ -44,20 +41,20 @@ export default function SharedLayout({ children }: SharedLayoutProps) {
            <div className="flex items-center space-x-4">
             <Link 
               href="/dashboard" 
-              className="px-4 py-2 font-medium text-primary-700 hover:text-primary-800 transition-colors"
+              className="px-3 py-2 font-bold text-forest-700 hover:text-primary-600 transition-colors"
             >
               Dashboard
             </Link>
-            <LogoutLink className="px-4 py-2 border border-primary-600 rounded-lg font-medium text-primary-700 hover:bg-primary-50 transition-all">
+            <LogoutLink className="btn btn-secondary !px-4 !py-2 !text-sm">
               Déconnexion
             </LogoutLink>
            </div>
           ) : (
-         <div className="flex items-center space-x-3">
-           <LoginLink className="px-4 py-2 font-medium text-primary-700 hover:text-primary-800 transition-colors">
+         <div className="flex items-center gap-1 sm:gap-3">
+           <LoginLink className="px-2 py-2 text-sm font-bold text-forest-700 hover:text-primary-600 transition-colors sm:px-3 sm:text-base">
              Connexion
            </LoginLink>
-           <RegisterLink className="px-4 py-2 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors">
+           <RegisterLink className="btn btn-primary !px-3 !py-2 !text-sm sm:!px-4">
              Inscription
            </RegisterLink>
          </div>   

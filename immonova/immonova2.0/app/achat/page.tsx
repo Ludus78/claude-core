@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 export default function AchatPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-10">
-      <Link href="/" className="text-sm text-primary-700 hover:underline">← Retour à l&apos;accueil</Link>
+      <Link href="/" className="text-sm font-bold text-primary-700 hover:underline">← Retour à l&apos;accueil</Link>
 
       <header className="mt-4">
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900">Acheter son premier bien, pas à pas</h1>
-        <p className="mt-3 text-lg text-gray-600">
+        <h1 className="text-3xl sm:text-5xl font-extrabold leading-tight text-forest-800">Acheter son premier bien, pas à pas</h1>
+        <p className="mt-3 max-w-2xl text-lg text-gray-600">
           Huit étapes pour comprendre ce qui vous attend, dans l&apos;ordre, avec les pièges à éviter et les outils pour chiffrer votre projet.
         </p>
       </header>
@@ -25,17 +25,17 @@ export default function AchatPage() {
           const contenu = (
             <div className="flex items-start gap-4">
               <div
-                className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-lg font-bold ${
-                  etape.publiee ? 'bg-primary-600 text-white' : 'bg-gray-200 text-gray-500'
+                className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-extrabold ${
+                  etape.publiee ? 'bg-primary-500 text-white' : 'bg-cream-200 text-gray-500'
                 }`}
               >
                 {etape.numero}
               </div>
               <div className="min-w-0">
-                <h2 className="text-lg font-semibold text-gray-900">
+                <h2 className="text-lg font-extrabold text-forest-800">
                   {etape.titre}
                   {!etape.publiee && (
-                    <span className="ml-2 align-middle rounded-full bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-500">
+                    <span className="ml-2 align-middle rounded-full bg-sun-100 px-2.5 py-0.5 text-xs font-extrabold text-sun-700">
                       Bientôt
                     </span>
                   )}
@@ -51,12 +51,12 @@ export default function AchatPage() {
               {etape.publiee ? (
                 <Link
                   href={`/achat/${etape.slug}`}
-                  className="block rounded-xl bg-white p-5 shadow transition-shadow hover:shadow-lg"
+                  className="block rounded-3xl bg-white p-5 transition-shadow hover:shadow-lg"
                 >
                   {contenu}
                 </Link>
               ) : (
-                <div className="rounded-xl bg-white/60 p-5 shadow-sm">{contenu}</div>
+                <div className="rounded-3xl bg-white/60 p-5">{contenu}</div>
               )}
             </li>
           );

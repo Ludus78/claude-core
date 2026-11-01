@@ -67,7 +67,8 @@ Idées du 2026-10-31, à trier avec `docs/audit-site.md`. Chaque choix est à va
 - [x] Guide primo-accédant : étapes 5 (compromis) et 6 (prêt) rédigées, **à relire et valider** avant publication (2026-11-01)
 - [x] Guide primo-accédant : étapes 7 (acte chez le notaire) et 8 (après l'achat) rédigées, **à relire et valider** avant publication ; les 8 étapes existent (2026-11-01)
 - [ ] Guide primo-accédant : glossaire de l'immobilier et listes à imprimer, liens entre étapes et calculettes (validation requise)
-- [ ] Refonte du design : deux directions à proposer (sobre et professionnelle, chaleureuse), logo et effets à trier (validation requise)
+- [x] Refonte du design, direction B « chaleureuse » choisie (crème, vert, jaune doux, police Nunito, pilules et grands arrondis) : base (Tailwind, `globals.css`, bloc `@theme` invalide retiré, mode sombre retiré), en-tête, pied de page, accueil, sommaire et pages du guide, vérifiés sur téléphone et ordinateur ; **à relire avant publication** (2026-11-01)
+- [ ] Refonte du design, suite : calculettes (achat, locatif, viager, prêt), estimation, actualités, contact, tableau de bord, popups (promo calculette, e-mail, cookies : trois fenêtres qui s'empilent, à simplifier), `app/head.tsx` inutilisé (validation requise)
 - [ ] Assistant en ligne : le rendre bien plus fiable (modèle récent, appui sur le contenu du guide, limites de débit et de coût, avertissement « pas un conseil ») (validation requise)
 
 ## Phase 3 : croissance (à décider après la phase 2)
