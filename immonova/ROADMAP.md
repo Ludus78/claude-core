@@ -63,7 +63,8 @@ Idées du 2026-10-31, à trier avec `docs/audit-site.md`. Chaque choix est à va
 - [ ] Brancher le site sur le reporting commun (voir `_hub/PROJETS.md`, idées en attente) (validation requise)
 
 - [x] Guide primo-accédant, ossature : sommaire `/achat` et une page par étape `/achat/[etape]` (contenu dans `app/achat/etapes.ts`, plan dans `docs/guide-primo-accedant.md`) ; étapes 1 (budget) et 2 (financement) rédigées, **à relire et valider** avant publication (2026-11-01)
-- [ ] Guide primo-accédant : écrire les étapes 3 à 8 (recherche, offre, compromis, prêt, acte, après l'achat), une par tâche, chacune à valider
+- [x] Guide primo-accédant : étapes 3 (recherche et visite) et 4 (offre) rédigées, **à relire et valider** avant publication (2026-11-01)
+- [ ] Guide primo-accédant : écrire les étapes 5 à 8 (compromis, prêt, acte, après l'achat), chacune à valider
 - [ ] Refonte du design : deux directions à proposer (sobre et professionnelle, chaleureuse), logo et effets à trier (validation requise)
 - [ ] Assistant en ligne : le rendre bien plus fiable (modèle récent, appui sur le contenu du guide, limites de débit et de coût, avertissement « pas un conseil ») (validation requise)
 

@@ -208,9 +208,99 @@ export const ETAPES: Etape[] = [
     titre: 'Chercher et visiter un bien',
     resume: 'Critères, DPE, visite, copropriété : comment repérer un bon bien et éviter les mauvaises surprises.',
     duree: 'Quelques semaines à quelques mois',
-    publiee: false,
-    blocs: [],
-    sources: [],
+    publiee: true,
+    misAJour: '2026-11-01',
+    blocs: [
+      { type: 'titre', texte: 'Triez vos critères : indispensable ou souhaitable' },
+      {
+        type: 'texte',
+        texte:
+          'Séparez ce que vous ne négocierez jamais (le quartier, le nombre de chambres, le budget maximum) de ce qui serait un plus (un balcon, un étage élevé, une cave). Un bien qui coche tous les indispensables est déjà rare : inutile de viser la perfection.',
+      },
+      { type: 'titre', texte: 'Où chercher' },
+      {
+        type: 'liste',
+        items: [
+          'Les sites d\'annonces et les alertes par e-mail, pour être prévenu dès la mise en ligne.',
+          'Les agences de votre secteur : dites-leur précisément ce que vous cherchez, certains biens ne passent jamais en annonce.',
+          'Les notaires, qui vendent aussi des biens.',
+          'Votre entourage et les panneaux dans la rue du quartier visé.',
+        ],
+      },
+      {
+        type: 'encadre',
+        variante: 'piege',
+        titre: 'Prix affiché : avec ou sans honoraires ?',
+        texte:
+          'Un prix peut inclure les honoraires de l\'agence (charge vendeur) ou non (charge acquéreur). Regardez toujours la mention dans l\'annonce : la différence se chiffre en milliers d\'euros.',
+      },
+      { type: 'titre', texte: 'Savoir si le prix est cohérent' },
+      {
+        type: 'texte',
+        texte:
+          'Comparez avec les ventes réellement conclues dans le quartier, pas seulement avec les annonces. Les « demandes de valeurs foncières » (DVF) sont une base publique qui liste les ventes passées avec leur prix et leur surface. Gardez en tête qu\'un bien peut valoir plus ou moins cher selon son état, son étage ou sa luminosité.',
+      },
+      { type: 'titre', texte: 'Le DPE et les diagnostics' },
+      {
+        type: 'texte',
+        texte:
+          'Le diagnostic de performance énergétique (DPE) classe le logement de A (très économe) à G (très énergivore). Il se traduit directement en factures de chauffage et en travaux possibles. Le vendeur doit aussi fournir un dossier de diagnostics (amiante, plomb, électricité, gaz, risques, selon l\'âge du bien et sa situation).',
+      },
+      {
+        type: 'encadre',
+        variante: 'verifier',
+        titre: 'À vérifier à la source',
+        texte:
+          'Des règles limitent progressivement la location des logements les plus énergivores, et le calendrier ainsi que la méthode du DPE ont déjà évolué. Si vous pensez louer le bien un jour, contrôlez l\'état actuel de la réglementation avant d\'acheter.',
+      },
+      { type: 'titre', texte: 'La visite : ce qu\'il faut regarder' },
+      {
+        type: 'liste',
+        items: [
+          'Humidité : taches, odeurs de moisi, peinture qui cloque, surtout autour des fenêtres et dans les angles.',
+          'Fenêtres et isolation : double vitrage, courants d\'air, état des volets.',
+          'Électricité : tableau récent ou ancien, prises suffisantes, disjoncteurs.',
+          'Plomberie : ouvrez les robinets, testez la pression, regardez sous les éviers.',
+          'Chauffage : type, âge de la chaudière ou des radiateurs, factures du vendeur.',
+          'Lumière et bruit : visitez à plusieurs moments de la journée, fenêtres ouvertes.',
+          'Parties communes, entrée, ascenseur, local à vélos, état général de l\'immeuble.',
+        ],
+      },
+      { type: 'titre', texte: 'Les questions à poser' },
+      {
+        type: 'liste',
+        items: [
+          'Depuis quand le bien est-il en vente, et pourquoi le vendeur vend-il ?',
+          'Quel est le montant des charges et de la taxe foncière ?',
+          'Des travaux ont-ils été réalisés ou votés dans l\'immeuble ? Qui les a payés ?',
+          'Y a-t-il eu des sinistres, des litiges avec des voisins ou la copropriété ?',
+        ],
+      },
+      { type: 'titre', texte: 'En copropriété : demandez ces documents' },
+      {
+        type: 'liste',
+        items: [
+          'Les procès-verbaux des dernières assemblées générales, pour repérer des travaux votés, des impayés ou des conflits.',
+          'Le montant des charges des derniers exercices et le budget prévisionnel.',
+          'Le règlement de copropriété, qui dit ce que vous avez le droit de faire.',
+          'Le carnet d\'entretien de l\'immeuble.',
+          'Les documents liés aux travaux à venir et au fonds de travaux, selon l\'âge et la taille de l\'immeuble (à vérifier).',
+        ],
+      },
+      {
+        type: 'encadre',
+        variante: 'astuce',
+        titre: 'Astuce',
+        texte:
+          'Faites une deuxième visite avant de décider, de préférence avec une personne de confiance ou un artisan pour estimer les travaux. Prenez des photos et des mesures pour prévoir l\'aménagement.',
+      },
+      { type: 'calculette', label: 'Estimer le budget et les frais', href: '/frais-annexes' },
+    ],
+    sources: [
+      { label: 'Demandes de valeurs foncières (DVF)', url: 'https://app.dvf.etalab.gouv.fr/' },
+      { label: 'ANIL : conseils sur le logement', url: 'https://www.anil.org/' },
+      { label: 'Service-public.fr : diagnostics immobiliers', url: 'https://www.service-public.fr/' },
+    ],
   },
   {
     slug: 'offre',
@@ -218,9 +308,83 @@ export const ETAPES: Etape[] = [
     titre: 'Faire une offre',
     resume: 'Négocier le prix et formuler une offre d\'achat écrite.',
     duree: 'Quelques jours',
-    publiee: false,
-    blocs: [],
-    sources: [],
+    publiee: true,
+    misAJour: '2026-11-01',
+    blocs: [
+      { type: 'titre', texte: 'Avant d\'offrir : vérifiez vos fondations' },
+      {
+        type: 'liste',
+        items: [
+          'Vous avez visité le bien au moins deux fois et regardé les diagnostics.',
+          'Vous connaissez votre budget total, frais compris (étape 1).',
+          'Vous avez un accord de principe de votre banque ou de votre courtier. Ce n\'est pas un engagement de prêt, mais cela montre que votre projet tient la route.',
+        ],
+      },
+      { type: 'titre', texte: 'Négocier le prix' },
+      {
+        type: 'texte',
+        texte:
+          'Une négociation se prépare avec des arguments, pas avec un pourcentage arbitraire. Les marges varient énormément selon le marché local et la durée de mise en vente.',
+      },
+      {
+        type: 'liste',
+        items: [
+          'Les ventes récentes du quartier : un prix demandé supérieur aux ventes conclues est un argument.',
+          'Les travaux à prévoir et un DPE faible : chiffrez-les, idéalement avec un devis.',
+          'La durée de mise en vente : un bien en vente depuis longtemps laisse en général plus de marge.',
+          'Les défauts constatés à la visite et dans les documents de copropriété.',
+        ],
+      },
+      {
+        type: 'encadre',
+        variante: 'piege',
+        titre: 'Piège classique',
+        texte:
+          'Annoncer son budget maximum. Gardez-le pour vous : votre offre doit se justifier par le bien, pas par ce que vous pouvez payer.',
+      },
+      { type: 'titre', texte: 'L\'offre d\'achat écrite' },
+      {
+        type: 'texte',
+        texte:
+          'Une offre se fait par écrit, auprès de l\'agence ou directement du vendeur. Elle précise au minimum :',
+      },
+      {
+        type: 'liste',
+        items: [
+          'le bien concerné, avec son adresse et sa description ;',
+          'le prix proposé, et qui paie les honoraires de l\'agence ;',
+          'les conditions, en particulier l\'obtention d\'un prêt (condition suspensive) ;',
+          'la durée pendant laquelle l\'offre reste valable, par exemple quelques jours ;',
+          'la date et votre signature.',
+        ],
+      },
+      {
+        type: 'encadre',
+        variante: 'piege',
+        titre: 'Une offre acceptée peut vous engager',
+        texte:
+          'Si le vendeur accepte votre offre par écrit dans le délai, vous pouvez être tenu de poursuivre. Ne signez rien à la légère sous la pression (« un autre acheteur attend »), et ajoutez toujours la condition de financement.',
+      },
+      { type: 'titre', texte: 'Et ensuite ?' },
+      {
+        type: 'texte',
+        texte:
+          'Si l\'offre est acceptée, le bien est en général retiré de la vente et l\'on prépare le compromis de vente. Vous avez le droit de choisir votre notaire, sans que cela augmente vos frais : le vendeur a le sien, et les deux se partagent la rémunération.',
+      },
+      {
+        type: 'encadre',
+        variante: 'verifier',
+        titre: 'À vérifier à la source',
+        texte:
+          'La valeur juridique d\'une offre d\'achat dépend de sa rédaction et de ce qui a été accepté. En cas de doute, faites relire le texte par un notaire ou par un conseiller de l\'ADIL avant de signer.',
+      },
+      { type: 'calculette', label: 'Simuler votre prêt avec ce prix', href: '/calculette' },
+    ],
+    sources: [
+      { label: 'Service-public.fr : acheter un logement', url: 'https://www.service-public.fr/' },
+      { label: 'ANIL / ADIL : conseil juridique gratuit sur le logement', url: 'https://www.anil.org/' },
+      { label: 'Notaires de France', url: 'https://www.notaires.fr/' },
+    ],
   },
   {
     slug: 'compromis',
