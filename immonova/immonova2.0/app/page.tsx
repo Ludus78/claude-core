@@ -64,21 +64,18 @@ export default function Home() {
       {/* Bannière */}
       <section className="relative isolate overflow-hidden">
         <HeroPhoto />
-        <div className="relative mx-auto flex min-h-[420px] max-w-7xl items-center px-4 py-14 sm:min-h-[520px] sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <span className="inline-block rounded-full bg-white/90 px-4 py-1.5 text-sm font-extrabold text-forest-700">
-              Pour les futurs propriétaires
-            </span>
-            <h1 className="mt-5 text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
+        <div className="relative mx-auto flex min-h-[250px] max-w-7xl items-center px-4 py-8 sm:min-h-[300px] sm:px-6 sm:py-10 lg:px-8">
+          <div className="max-w-xl">
+            <h1 className="text-2xl font-extrabold leading-snug text-white [text-shadow:0_1px_10px_rgba(0,0,0,0.4)] sm:text-3xl lg:text-4xl">
               Immobilier sans prise de tête,
               <span className="block text-sun-200">votre projet en toute sérénité</span>
             </h1>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/90 sm:text-xl">
-              Un guide pas à pas pour votre premier achat et des calculettes gratuites pour chiffrer votre projet.
+            <p className="mt-3 max-w-md text-sm leading-relaxed text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.4)] sm:text-base">
+              Le guide de votre premier achat et des calculettes gratuites pour chiffrer votre projet.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/achat" className="btn btn-primary">Je commence mon parcours</Link>
-              <button type="button" onClick={() => handleCalculatorClick("Achat", "/calculateurs")} className="btn bg-white text-forest-700 hover:bg-primary-50">
+            <div className="mt-5 flex flex-wrap gap-3">
+              <Link href="/achat" className="btn btn-primary !px-5 !py-2.5 !text-sm">Je commence mon parcours</Link>
+              <button type="button" onClick={() => handleCalculatorClick("Achat", "/calculateurs")} className="btn bg-white !px-5 !py-2.5 !text-sm text-forest-700 hover:bg-primary-50">
                 Simuler mon prêt
               </button>
             </div>
@@ -87,7 +84,7 @@ export default function Home() {
       </section>
 
       {/* Calculettes */}
-      <section className="mx-auto max-w-7xl px-4 pb-6 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-7xl px-4 pb-6 pt-10 sm:px-6 sm:pt-14 lg:px-8">
         <h2 className="text-2xl font-extrabold text-forest-800 sm:text-3xl">Chiffrez votre projet</h2>
         <p className="mt-1 text-gray-600">Gratuit, sans engagement, résultat en quelques secondes.</p>
 
