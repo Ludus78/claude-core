@@ -234,3 +234,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Dépôt public : jamais de données ni de clés
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+*.pem
+*.key
+*.p12
+service-account*.json

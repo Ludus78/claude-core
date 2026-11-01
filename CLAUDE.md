@@ -17,6 +17,7 @@ Monorepo de projets personnels. **Un dossier = un projet indépendant** (son pro
 - Git : on travaille directement sur `main`, sans branche `feat/` ni pull request. Commits petits, une tâche = un commit, message court en français. On pousse sur `main` seulement si les tests et le build du projet passent ; sinon on ne pousse pas et on explique pourquoi. **Jamais de force push ni de réécriture d'historique.**
 - Demander confirmation avant : suppression de fichiers, migration, nouvelle dépendance, tout ce qui touche un secret ou une vraie donnée.
 - Jamais de secret (`.env`, clés, tokens) dans un fichier, un commit ou une réponse. Ne pas lire `.env`.
+- **Le dépôt GitHub est public** : aucune donnée réelle (e-mails, bases `.db`, exports) ni clé dans un commit, l'historique ne se réécrit pas. Avant de pousser, lancer `bash scripts/scan-secrets.sh`.
 - Réponses courtes : ce qui a été fait, le résultat des vérifications, les points à contrôler.
 - Tout fait technique non vérifié (quota, licence, API) est signalé « à vérifier à la source ».
 - Ne pas proposer d'écrire ou de lancer des tests à chaque échange. Tests seulement sur demande explicite, ou après l'ajout d'une fonctionnalité importante.
