@@ -2,7 +2,7 @@
 
 Registre des projets de `claude-core`. Mis à jour par la commande `/status` (voir `_hub/CLAUDE.md`).
 
-**Dernière mise à jour : 2026-11-01** (immonova en ligne avec base et `/admin`, SeanceClub passé sur Kinde).
+**Dernière mise à jour : 2026-11-01 (suite du travail notée pour le 2026-11-02)** (immonova en ligne avec base et `/admin`, SeanceClub passé sur Kinde).
 Statuts : `idée` · `étude` · `en cours` · `pause`.
 
 ## Vue d'ensemble
@@ -30,7 +30,7 @@ Statuts : `idée` · `étude` · `en cours` · `pause`.
 - **État** (2026-11-01) : en ligne sur Vercel, Next.js 16, Kinde, base Postgres Neon. Positionnement national décidé (`docs/produit.md`), accueil réécrit, consentement PostHog, événements des calculateurs, e-mails du popup et connexions enregistrés, page `/admin` et export CSV newsletter vérifiés. Audit : `docs/audit-site.md`.
 - **Roadmap** : `immonova/ROADMAP.md`
 - **Reste à faire** : page de confidentialité, popup e-mail avant les calculateurs (à trancher), outil de newsletter, fusion des calculateurs, lien Instagram avec suivi, événements contact et inscription, audits restants (pages, API, RGPD complet).
-- **Prochaine action** : écrire la page de confidentialité (validation requise), puis choisir l'outil de newsletter.
+- **Prochaine action** (2026-11-02) : actualités hebdomadaires en brouillons, cadrées dans `immonova2.0/docs/actualites-hebdo.md`. À faire par le propriétaire : dire « oui, migre » pour le champ `sourceUrl`, ajouter dans Vercel la clé d'API et `CRON_SECRET` (dire si on réutilise la clé de l'assistant). Ensuite construction : migration, sources, route protégée, cron, essai manuel. Puis relire la page de confidentialité et choisir l'outil de newsletter.
 - **À clarifier** : clé PostHog absente de la liste des variables Vercel (à vérifier) ; doublon `next.config.js` / `.mjs` ; `app/head.tsx` inutilisé ; dépôt GitHub public, `dev.db` reste dans l'historique.
 
 ### SeanceClub
