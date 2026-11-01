@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import prisma from '@/lib/prisma';
 import { getAdminUser } from '@/lib/admin';
+import { publierBrouillon, supprimerBrouillon } from './actions';
 
 export const dynamic = 'force-dynamic';
 export const metadata = { title: 'Administration', robots: { index: false, follow: false } };
@@ -10,7 +11,8 @@ const dateFr = (d: Date | null) => (d ? d.toLocaleString('fr-FR', { dateStyle: '
 export default async function AdminPage() {
   if (!(await getAdminUser())) notFound();
 
-  const [leads, users, simulationCount, newsletterCount] = await Promise.all([
+  const [brouillons, leads, users, simulationCount, newsletterCount] = await Promise.all([
+    prisma.newsArticle.findMany({ where: { isPublished: false }, orderBy: { createdAt: 'desc' }, take: 50 }),
     prisma.lead.findMany({ orderBy: { createdAt: 'desc' }, take: 200 }),
     prisma.user.findMany({ orderBy: { lastLoginAt: { sort: 'desc', nulls: 'last' } }, take: 200 }),
     prisma.simulation.count(),
@@ -34,6 +36,36 @@ export default async function AdminPage() {
           </div>
         ))}
       </div>
+
+      <section>
+        <h2 className="text-xl font-extrabold mb-3">Actualités à valider ({brouillons.length})</h2>
+        <div className="space-y-4">
+          {brouillons.length === 0 && (
+            <p className="bg-white rounded-3xl p-4 text-gray-500">Aucun brouillon en attente.</p>
+          )}
+          {brouillons.map((a) => (
+            <article key={a.id} className="bg-white rounded-3xl p-5">
+              <div className="text-xs font-bold uppercase tracking-wide text-primary-700">{a.category}</div>
+              <h3 className="mt-1 text-lg font-extrabold text-forest-800">{a.title}</h3>
+              <p className="mt-1 text-gray-600">{a.excerpt}</p>
+              {a.content && <p className="mt-3 whitespace-pre-line text-sm text-gray-700">{a.content}</p>}
+              <p className="mt-3 text-xs text-gray-500">
+                Brouillon du {dateFr(a.createdAt)}. À relire : chiffres et source à vérifier avant de publier.
+              </p>
+              <div className="mt-4 flex gap-3">
+                <form action={publierBrouillon}>
+                  <input type="hidden" name="id" value={a.id} />
+                  <button type="submit" className="btn btn-primary !py-2 !text-sm">Publier</button>
+                </form>
+                <form action={supprimerBrouillon}>
+                  <input type="hidden" name="id" value={a.id} />
+                  <button type="submit" className="btn btn-secondary !py-2 !text-sm">Supprimer</button>
+                </form>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
 
       <section>
         <div className="flex items-center justify-between mb-3">

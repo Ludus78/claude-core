@@ -118,20 +118,27 @@ export default function ArticleDetail() {
           }
         ];
 
-        const foundArticle = actualites.find(a => a.id === id);
-        
-        if (!foundArticle) {
-          throw new Error("Article non trouvé");
+        // Articles de secours (identifiants 1 à 7) ; sinon l'article vient de la base
+        const secours = actualites.find(a => a.id === id);
+        if (secours) {
+          setArticle(secours);
+          setRelatedArticles(
+            actualites.filter(a => a.category === secours.category && a.id !== secours.id).slice(0, 3)
+          );
+        } else {
+          const reponse = await fetch(`/api/news/${id}`);
+          if (!reponse.ok) throw new Error("Article non trouvé");
+          const depuisBase = await reponse.json();
+          if (!depuisBase.isPublished) throw new Error("Article non publié");
+          depuisBase.formattedDate = new Date(depuisBase.publishedAt).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+          setArticle(depuisBase);
+
+          const memeCategorie = await fetch(`/api/news?limit=4&category=${encodeURIComponent(depuisBase.category)}`);
+          if (memeCategorie.ok) {
+            const liste = await memeCategorie.json();
+            setRelatedArticles(liste.filter((a: NewsArticle) => a.id !== depuisBase.id).slice(0, 3));
+          }
         }
-        
-        setArticle(foundArticle);
-        
-        // Filtrer les articles connexes
-        const relatedArticles = actualites.filter(a => 
-          a.category === foundArticle.category && a.id !== foundArticle.id
-        ).slice(0, 3);
-        
-        setRelatedArticles(relatedArticles);
       } catch (err) {
         console.error("Erreur lors de la récupération de l'article:", err);
         setError("Nous n'avons pas pu charger l'article demandé. Veuillez réessayer plus tard.");

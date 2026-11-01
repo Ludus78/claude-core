@@ -8,7 +8,7 @@ import { NewspaperIcon, HomeIcon, BanknotesIcon, CalendarIcon } from '@heroicons
 
 // Types pour les articles
 interface Article {
-  id: number;
+  id: number | string;
   title: string;
   excerpt: string;
   content: string;
@@ -100,8 +100,35 @@ export default function ActualitesPage() {
       }
     ];
 
-    setArticles(actualites);
-    setIsLoading(false);
+    // Articles publiés en base ; les articles ci-dessus ne servent que de secours tant que la base est vide
+    const chargerDepuisBase = async () => {
+      try {
+        const reponse = await fetch('/api/news?limit=60');
+        if (!reponse.ok) throw new Error('Réponse invalide');
+        const depuisBase = await reponse.json();
+        if (Array.isArray(depuisBase) && depuisBase.length > 0) {
+          const categories = ['tendances', 'financement', 'conseils'];
+          setArticles(
+            depuisBase.map((a: any) => ({
+              id: a.id,
+              title: a.title,
+              excerpt: a.excerpt,
+              content: a.content ?? '',
+              date: new Date(a.publishedAt).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }),
+              author: a.authorName ?? 'ImmoNova',
+              category: categories.includes(a.category) ? a.category : 'tendances',
+              image: a.imageUrl || '/images/news-prices.svg',
+            }))
+          );
+          return;
+        }
+      } catch (erreur) {
+        console.error('Actualités : lecture de la base impossible, articles de secours affichés', erreur);
+      }
+      setArticles(actualites);
+    };
+
+    chargerDepuisBase().finally(() => setIsLoading(false));
   }, []);
 
   // Filtrer les articles en fonction de l'onglet actif

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import prisma from '@/lib/prisma';
+import { getAdminUser } from '@/lib/admin';
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 
 // Récupérer une actualité par son ID
@@ -14,10 +15,11 @@ export async function GET(
       where: { id }
     });
     
-    if (!article) {
+    // Un brouillon n'est visible que par un administrateur
+    if (!article || (!article.isPublished && !(await getAdminUser()))) {
       return NextResponse.json({ error: 'Article not found' }, { status: 404 });
     }
-    
+
     // Formatter la date pour l'affichage
     const publishedDate = new Date(article.publishedAt);
     const formattedArticle = {
