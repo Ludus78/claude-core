@@ -10,7 +10,9 @@ Site d'aide à l'achat et à la gestion immobilière (calculateurs, estimation, 
 
 ## Stack (immonova2.0)
 
-Next.js 16 (App Router, routes en français dans `app/`), React 19, TypeScript, Prisma (modèles `Contact`, `NewsArticle`, `Simulation`, `User`, `RealEstate`), Tailwind 3, déploiement Vercel (`vercel.json`). npm.
+Next.js 16 (App Router, routes en français dans `app/`), React 19, TypeScript, Prisma sur PostgreSQL (Neon, variable `POSTGRES_URL` ; modèles `Contact`, `NewsArticle`, `Simulation`, `User`, `RealEstate`, `Lead`), Kinde pour l'authentification, PostHog (consentement requis), Tailwind 3, déploiement Vercel (`vercel.json`). npm.
+
+Page `/admin` réservée aux e-mails de la variable `ADMIN_EMAILS` (Vercel). Migrations dans `prisma/migrations/` (les anciennes, SQLite, sont archivées dans `prisma/migrations-sqlite-archive/`). Sous PowerShell, utiliser `npx.cmd`.
 
 ## Commandes (depuis `immonova/immonova2.0/`)
 
@@ -28,4 +30,4 @@ Next.js 16 (App Router, routes en français dans `app/`), React 19, TypeScript, 
 ## À clarifier avant d'y toucher
 
 - Doublons de configuration : `next.config.js` et `next.config.mjs`, `next-sitemap.config.js` et `.cjs`, `app/globals.css.save`.
-- Deux systèmes d'authentification présents dans les dépendances (`next-auth` et Kinde) : lequel est réellement utilisé ?
+- `app/head.tsx` est un reste inutilisé (ignoré par Next.js) qui mentionne encore Paris : à supprimer avec accord.

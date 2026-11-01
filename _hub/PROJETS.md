@@ -2,7 +2,7 @@
 
 Registre des projets de `claude-core`. Mis à jour par la commande `/status` (voir `_hub/CLAUDE.md`).
 
-**Dernière mise à jour : 2026-10-29** (synthèse space-atlas intégrée).
+**Dernière mise à jour : 2026-11-01** (immonova en ligne avec base et `/admin`, SeanceClub passé sur Kinde).
 Statuts : `idée` · `étude` · `en cours` · `pause`.
 
 ## Vue d'ensemble
@@ -10,7 +10,7 @@ Statuts : `idée` · `étude` · `en cours` · `pause`.
 | Projet | Chemin | Stack | Statut |
 |---|---|---|---|
 | Confio | `Confio/` | TypeScript, Vite, Vitest | en cours |
-| immonova | `immonova/immonova2.0/` | Next.js 15, React 19, Prisma, Tailwind | en cours (à confirmer) |
+| immonova | `immonova/immonova2.0/` | Next.js 16, React 19, Prisma/Postgres (Neon), Kinde, PostHog, Tailwind | en cours |
 | SeanceClub | `SeanceClub/` | Cible : Next.js, PostgreSQL, Socket.IO | étude (cadrage avancé) |
 | Memories | `Memories/` | Aucune (BD) | étude |
 | space-atlas | `space-atlas/` | Cible : Next.js, TypeScript, Cesium ou Three.js | étude (recherche) |
@@ -27,11 +27,11 @@ Statuts : `idée` · `étude` · `en cours` · `pause`.
 
 ### immonova
 - **Nature** : site d'aide à l'achat et à la gestion immobilière (calculateurs, estimation, actualités, espace utilisateur). `immonova2.0` est la version active, `OldVersion` est figée.
-- **État** : application Next.js avec plusieurs sections (calculateurs, estimation, diagnostics, documents, dashboard, inscription), base Prisma, déploiement Vercel.
+- **État** (2026-11-01) : en ligne sur Vercel, Next.js 16, Kinde, base Postgres Neon. Positionnement national décidé (`docs/produit.md`), accueil réécrit, consentement PostHog, événements des calculateurs, e-mails du popup et connexions enregistrés, page `/admin` et export CSV newsletter vérifiés. Audit : `docs/audit-site.md`.
 - **Roadmap** : `immonova/ROADMAP.md`
-- **Reste à faire** : documenter les routes API, trancher l'authentification, supprimer les doublons de configuration, tests (voir la roadmap). Roadmap produit à définir.
-- **Prochaine action** : documenter les routes API dans `immonova2.0/docs/api.md`.
-- **À clarifier** : deux systèmes d'authentification dans les dépendances (`next-auth` et Kinde) ; fichiers de configuration en double (`next.config.js` et `.mjs`, `next-sitemap.config.js` et `.cjs`).
+- **Reste à faire** : page de confidentialité, popup e-mail avant les calculateurs (à trancher), outil de newsletter, fusion des calculateurs, lien Instagram avec suivi, événements contact et inscription, audits restants (pages, API, RGPD complet).
+- **Prochaine action** : écrire la page de confidentialité (validation requise), puis choisir l'outil de newsletter.
+- **À clarifier** : clé PostHog absente de la liste des variables Vercel (à vérifier) ; doublon `next.config.js` / `.mjs` ; `app/head.tsx` inutilisé ; dépôt GitHub public, `dev.db` reste dans l'historique.
 
 ### SeanceClub
 - **Nature** : plateforme sociale francophone pour cinéphiles (score cinéphile, avis, calendrier des sorties, séances avec chat en direct).

@@ -29,7 +29,7 @@ Audits en lecture seule d'abord : chacun produit un rapport dans `immonova2.0/do
 - [x] Mettre `jspdf` en 4.2.1 : export PDF des calculateurs à tester à la main (2026-10-31)
 - [x] Rétablir un build reproductible : `lib/` et `src/lib/` récupérés depuis l'ancien dépôt `Ludus78/immonova` et versionnés, `.gitignore` corrigé (`/lib/`). Le build passe avec les variables Kinde (`KINDE_*`) définies ; sans elles, il échoue à la collecte des pages (2026-10-31)
 - [x] Audit du site en ligne (immonova.org) : contenu figé depuis début 2025, sitemap incohérent, images de partage absentes, pas de consentement PostHog, rapport dans `docs/audit-site.md` (2026-10-31)
-- [ ] Corrections rapides issues de `docs/audit-site.md` : images de partage manquantes, sitemap dynamique sans pages privées, consentement avant PostHog (validation requise)
+- [x] Corrections rapides issues de `docs/audit-site.md` : images de partage, sitemap sans pages privées, consentement avant PostHog (2026-11-01)
 - [ ] Appliquer les corrections issues des audits, une par tâche (validation requise)
 
 ## Phase 2 : produit (chaque choix est à valider)

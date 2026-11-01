@@ -42,7 +42,8 @@ Conclusion : l'audience est de quelques personnes par semaine, sans habitude de 
 
 ## Suivi des corrections (2026-11-01)
 - Fait : positionnement national dans les métadonnées, canonical par page, image de partage, sitemap sans pages privées, consentement PostHog (aucune requête ni cookie avant accord).
-- Reste : texte de l'accueil, page de confidentialité, événements PostHog sur les calculateurs.
+- Fait aussi : accueil réécrit, événements PostHog des calculateurs, e-mails du popup et connexions enregistrés en base (page `/admin`), `dev.db` retiré du suivi git.
+- Reste : page de confidentialité, choix du popup e-mail avant les calculateurs, outil de newsletter, fusion des calculateurs, événements contact et inscription, vérification de la clé PostHog sur Vercel.
 
 ## Pistes pour la 2.0 (à décider)
 
