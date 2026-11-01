@@ -112,16 +112,17 @@ export default function CalculetteLocative() {
   const rendementNet = ((revenuLocatifAnnuel - chargesAnnuelles - mensualitePret * 12) / apport) * 100;
 
   return (
-    <div ref={calculatorRef} className="bg-white rounded-3xl shadow-sm p-6">
+    <div ref={calculatorRef} className="bg-white rounded-3xl shadow-sm p-6 xl:mx-auto xl:my-4 xl:max-w-[1800px]">
       <h1 className="text-2xl font-extrabold mb-2 text-forest-800">Calculette d'investissement locatif</h1>
       <p className="text-gray-600 mb-6">
         Estimez la rentabilité et le cash-flow de votre futur investissement locatif.
       </p>
       
-      <div className="grid md:grid-cols-2 gap-8">
-        <div>
+      <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-8">
+        <div className="xl:col-span-3 xl:grid xl:grid-cols-3 xl:gap-6">
+          <div>
           <h2 className="text-xl font-extrabold mb-4 text-forest-800">Paramètres d'achat</h2>
-          <div className="space-y-4">
+          <div className="space-y-4 xl:space-y-2.5">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Prix d'achat du bien (€)
@@ -186,9 +187,11 @@ export default function CalculetteLocative() {
               />
             </div>
           </div>
+          </div>
           
-          <h2 className="text-xl font-extrabold mt-6 mb-4 text-forest-800">Paramètres du financement</h2>
-          <div className="space-y-4">
+          <div>
+          <h2 className="text-xl font-extrabold mt-6 mb-4 text-forest-800 xl:mt-0">Paramètres du financement</h2>
+          <div className="space-y-4 xl:space-y-2.5">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Durée du prêt (années)
@@ -250,9 +253,11 @@ export default function CalculetteLocative() {
               />
             </div>
           </div>
+          </div>
           
-          <h2 className="text-xl font-extrabold mt-6 mb-4 text-forest-800">Paramètres locatifs</h2>
-          <div className="space-y-4">
+          <div>
+          <h2 className="text-xl font-extrabold mt-6 mb-4 text-forest-800 xl:mt-0">Paramètres locatifs</h2>
+          <div className="space-y-4 xl:space-y-2.5">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Loyer mensuel (€)
@@ -331,15 +336,16 @@ export default function CalculetteLocative() {
               />
             </div>
           </div>
+          </div>
         </div>
         
-        <div className="bg-cream-100 p-6 rounded-2xl">
-          <h2 className="text-xl font-extrabold mb-6 text-forest-800">Résultats</h2>
+        <div className="bg-cream-100 p-6 rounded-2xl xl:col-span-2 xl:p-4">
+          <h2 className="text-xl font-extrabold mb-6 text-forest-800 xl:mb-3">Résultats</h2>
           
-          <div className="space-y-6">
+          <div className="space-y-6 xl:grid xl:grid-cols-3 xl:gap-x-4 xl:gap-y-3 xl:space-y-0">
             <div>
               <h3 className="font-medium text-gray-700 mb-2">Investissement total</h3>
-              <div className="text-3xl font-extrabold text-primary-700">
+              <div className="text-3xl xl:text-2xl font-extrabold text-primary-700">
                 {new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(investissement.totalInvestissement)}
               </div>
               <p className="text-sm text-gray-500 mt-1">
@@ -349,7 +355,7 @@ export default function CalculetteLocative() {
             
             <div>
               <h3 className="font-medium text-gray-700 mb-2">Montant emprunté</h3>
-              <div className="text-3xl font-extrabold text-primary-600">
+              <div className="text-3xl xl:text-2xl font-extrabold text-primary-600">
                 {new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(montantEmprunt)}
               </div>
               <p className="text-sm text-gray-500 mt-1">
@@ -389,7 +395,7 @@ export default function CalculetteLocative() {
             
             <div className="border-t border-primary-100 pt-4 mt-4">
               <h3 className="font-medium text-gray-700 mb-2">Rentabilité brute</h3>
-              <div className="text-3xl font-extrabold text-primary-700">
+              <div className="text-3xl xl:text-2xl font-extrabold text-primary-700">
                 {rentabiliteBrute.toFixed(2)}%
               </div>
               <p className="text-sm text-gray-500 mt-1">
@@ -399,7 +405,7 @@ export default function CalculetteLocative() {
             
             <div>
               <h3 className="font-medium text-gray-700 mb-2">Rentabilité nette</h3>
-              <div className="text-3xl font-extrabold text-primary-700">
+              <div className="text-3xl xl:text-2xl font-extrabold text-primary-700">
                 {rentabiliteNette.toFixed(2)}%
               </div>
               <p className="text-sm text-gray-500 mt-1">
@@ -409,7 +415,7 @@ export default function CalculetteLocative() {
             
             <div>
               <h3 className="font-medium text-gray-700 mb-2">Rendement de l'apport</h3>
-              <div className="text-3xl font-extrabold text-primary-700">
+              <div className="text-3xl xl:text-2xl font-extrabold text-primary-700">
                 {rendementNet.toFixed(2)}%
               </div>
               <p className="text-sm text-gray-500 mt-1">
@@ -419,7 +425,7 @@ export default function CalculetteLocative() {
             
             <div className="border-t border-primary-100 pt-4 mt-4">
               <h3 className="font-medium text-gray-700 mb-2">Cash-flow mensuel</h3>
-              <div className={`text-3xl font-extrabold ${cashFlowMensuelAvantImpots >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+              <div className={`text-3xl xl:text-2xl font-extrabold ${cashFlowMensuelAvantImpots >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                 {new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(cashFlowMensuelAvantImpots)}
               </div>
               <p className="text-sm text-gray-500 mt-1">
@@ -429,7 +435,7 @@ export default function CalculetteLocative() {
             
             <div>
               <h3 className="font-medium text-gray-700 mb-2">Cash-flow mensuel après impôts</h3>
-              <div className={`text-3xl font-extrabold ${cashFlowMensuelApresImpots >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+              <div className={`text-3xl xl:text-2xl font-extrabold ${cashFlowMensuelApresImpots >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                 {new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(cashFlowMensuelApresImpots)}
               </div>
               <p className="text-sm text-gray-500 mt-1">
@@ -438,7 +444,7 @@ export default function CalculetteLocative() {
             </div>
           </div>
           
-          <div className="mt-8 p-4 bg-primary-50 rounded-2xl border border-primary-100">
+          <div className="mt-8 p-4 bg-primary-50 rounded-2xl border border-primary-100 xl:mt-4">
             <h3 className="font-medium text-primary-700 mb-2">Conseil ImmoNova</h3>
             <p className="text-sm text-primary-600">
               {cashFlowMensuelApresImpots >= 0 
@@ -448,7 +454,7 @@ export default function CalculetteLocative() {
             </p>
           </div>
           
-          <div className="mt-8 text-center space-y-4">
+          <div className="mt-8 text-center space-y-4 xl:mt-4">
             <Link href="/calculette" className="block text-primary-600 hover:text-primary-800 font-medium">
               Voir aussi notre calculette d'achat immobilier →
             </Link>
