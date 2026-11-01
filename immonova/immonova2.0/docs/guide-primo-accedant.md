@@ -8,8 +8,8 @@ Décisions du 2026-11-01 : parcours en étapes (une page par étape), contenu r�
 | 2 | Comprendre le financement | types de prêts, PTZ, TAEG, assurance, garantie, courtier, dossier | rédigée, **à valider** |
 | 3 | Chercher et visiter un bien | critères, DPE, checklist de visite, copropriété (PV d'assemblée, charges, travaux votés), prix du marché | rédigée, **à valider** |
 | 4 | Faire une offre | négocier, offre écrite, durée de validité | rédigée, **à valider** |
-| 5 | Signer le compromis | clauses suspensives, délai de rétractation, dépôt de garantie | à écrire |
-| 6 | Obtenir son prêt | dossier bancaire, offre de prêt, délai de réflexion, assurance | à écrire |
+| 5 | Signer le compromis | clauses suspensives, délai de rétractation, dépôt de garantie | rédigée, **à valider** |
+| 6 | Obtenir son prêt | dossier bancaire, offre de prêt, délai de réflexion, assurance | rédigée, **à valider** |
 | 7 | Signer l'acte chez le notaire | délais, pièces, visite avant acte, frais | à écrire |
 | 8 | Après l'achat | assurance habitation, taxe foncière, charges, travaux | à écrire |
 

@@ -392,9 +392,77 @@ export const ETAPES: Etape[] = [
     titre: 'Signer le compromis de vente',
     resume: 'Clauses suspensives, délai de rétractation, dépôt de garantie.',
     duree: '1 jour, puis un délai de réflexion',
-    publiee: false,
-    blocs: [],
-    sources: [],
+    publiee: true,
+    misAJour: '2026-11-01',
+    blocs: [
+      { type: 'titre', texte: 'Ce qu\'est le compromis' },
+      {
+        type: 'texte',
+        texte:
+          'Le compromis de vente (ou promesse de vente) est le contrat signé entre vous et le vendeur une fois l\'offre acceptée. Il fixe le prix, les conditions et la date limite pour signer l\'acte définitif chez le notaire. Il est rédigé par l\'agence ou par un notaire, et il vous engage : lisez-le avec attention.',
+      },
+      { type: 'titre', texte: 'Ce qu\'on y trouve' },
+      {
+        type: 'liste',
+        items: [
+          'L\'identité du vendeur et de l\'acheteur, la description précise du bien.',
+          'Le prix, la répartition des honoraires de l\'agence, le mode de paiement.',
+          'Les conditions suspensives, c\'est-à-dire les événements dont dépend la vente.',
+          'Le dépôt de garantie versé à la signature.',
+          'La date limite de signature de l\'acte authentique.',
+          'Les diagnostics et documents de copropriété remis par le vendeur.',
+        ],
+      },
+      { type: 'titre', texte: 'Le délai de rétractation de 10 jours' },
+      {
+        type: 'texte',
+        texte:
+          'Après la signature, un acheteur particulier dispose de 10 jours pour changer d\'avis, sans avoir à se justifier ni à payer de pénalité. Le délai court à partir du lendemain de la remise du compromis, en main propre ou par courrier recommandé, selon le cas. Si vous vous rétractez dans ce délai, le dépôt de garantie vous est rendu.',
+      },
+      {
+        type: 'encadre',
+        variante: 'verifier',
+        titre: 'À vérifier à la source',
+        texte:
+          'Le point de départ exact du délai et le délai de restitution du dépôt dépendent de la façon dont le compromis vous est notifié. Regardez la mention dans votre contrat et vérifiez sur service-public.fr.',
+      },
+      { type: 'titre', texte: 'Le dépôt de garantie' },
+      {
+        type: 'texte',
+        texte:
+          'Son montant est libre, souvent entre 5 et 10 % du prix. Il est bloqué chez le notaire ou l\'agence, puis déduit du prix à la signature de l\'acte. Si vous renoncez après le délai de rétractation sans motif prévu par le contrat, le vendeur peut le conserver.',
+      },
+      { type: 'titre', texte: 'Les conditions suspensives qui vous protègent' },
+      {
+        type: 'liste',
+        items: [
+          'L\'obtention du prêt : si la banque refuse dans les conditions prévues (montant, durée, taux maximum, délai), la vente tombe et vous récupérez le dépôt. Le délai est souvent d\'environ 45 à 60 jours.',
+          'Le droit de préemption de la commune : elle peut acheter à votre place dans certaines zones, dans un délai de deux mois.',
+          'La vente de votre bien actuel, si vous devez vendre pour acheter.',
+          'L\'absence de servitude ou de problème d\'urbanisme non annoncé.',
+        ],
+      },
+      {
+        type: 'encadre',
+        variante: 'piege',
+        titre: 'Piège classique',
+        texte:
+          'Déposer une demande de prêt qui ne correspond pas aux conditions du compromis, ou trop tard. Si votre refus de prêt ne respecte pas les conditions du contrat, le vendeur peut garder le dépôt. Gardez les refus de la banque par écrit.',
+      },
+      {
+        type: 'encadre',
+        variante: 'astuce',
+        titre: 'Astuce',
+        texte:
+          'Demandez le projet de compromis quelques jours avant la signature, et faites-le relire par une personne de confiance ou un notaire. Vérifiez que le prêt mentionné correspond à votre vrai projet de financement.',
+      },
+      { type: 'calculette', label: 'Vérifier vos conditions de prêt', href: '/calculateurs/pret' },
+    ],
+    sources: [
+      { label: 'Service-public.fr : délai de rétractation', url: 'https://www.service-public.fr/' },
+      { label: 'ANIL / ADIL : conseil juridique gratuit', url: 'https://www.anil.org/' },
+      { label: 'Notaires de France : l\'avant-contrat', url: 'https://www.notaires.fr/' },
+    ],
   },
   {
     slug: 'pret',
@@ -402,9 +470,72 @@ export const ETAPES: Etape[] = [
     titre: 'Obtenir son prêt',
     resume: 'Du dossier bancaire à l\'offre de prêt acceptée.',
     duree: '1 à 2 mois',
-    publiee: false,
-    blocs: [],
-    sources: [],
+    publiee: true,
+    misAJour: '2026-11-01',
+    blocs: [
+      { type: 'titre', texte: 'Déposez votre dossier sans attendre' },
+      {
+        type: 'texte',
+        texte:
+          'Le délai de la condition suspensive court dès la signature du compromis. Déposez votre dossier dans les jours qui suivent, auprès de votre banque ou de plusieurs banques, ou confiez-le à un courtier. Utilisez l\'accord de principe obtenu plus tôt comme point de départ.',
+      },
+      { type: 'titre', texte: 'Les grandes étapes' },
+      {
+        type: 'liste',
+        items: [
+          'Étude du dossier par la banque, qui peut demander des pièces complémentaires.',
+          'Accord de la banque, puis émission de l\'offre de prêt officielle.',
+          'Votre acceptation de l\'offre, après un délai de réflexion obligatoire.',
+          'Mise en place de l\'assurance et de la garantie.',
+          'Déblocage des fonds chez le notaire le jour de la signature de l\'acte.',
+        ],
+      },
+      { type: 'titre', texte: 'L\'offre de prêt : le délai de réflexion' },
+      {
+        type: 'texte',
+        texte:
+          'Une fois l\'offre reçue, la loi vous impose un délai de réflexion de 10 jours avant de pouvoir l\'accepter : vous ne pouvez pas la signer le jour même. L\'offre reste valable au moins 30 jours. Profitez de ce temps pour la relire à tête reposée et la comparer.',
+      },
+      { type: 'titre', texte: 'Ce qu\'il faut vérifier dans l\'offre' },
+      {
+        type: 'liste',
+        items: [
+          'Le montant emprunté, la durée, le taux et le TAEG.',
+          'Le coût de l\'assurance et la possibilité de la changer.',
+          'La garantie retenue (caution ou hypothèque) et son coût.',
+          'Les conditions de remboursement anticipé : les indemnités sont plafonnées par la loi (à vérifier), mais les modalités varient.',
+          'La possibilité de moduler les mensualités ou de reporter une échéance.',
+          'La date limite d\'acceptation, à respecter avant l\'échéance de votre condition suspensive.',
+        ],
+      },
+      {
+        type: 'encadre',
+        variante: 'piege',
+        titre: 'Piège classique',
+        texte:
+          'Changer de situation entre l\'accord et la signature : un nouveau crédit, un changement d\'emploi ou un gros achat peut pousser la banque à retirer son accord. Gardez votre situation stable jusqu\'au déblocage des fonds.',
+      },
+      {
+        type: 'encadre',
+        variante: 'astuce',
+        titre: 'Astuce',
+        texte:
+          'Mettez en concurrence l\'assurance de la banque avec une assurance externe : à garanties équivalentes, l\'écart peut représenter plusieurs milliers d\'euros sur la durée du prêt. Demandez le détail du coût total de chaque contrat.',
+      },
+      {
+        type: 'encadre',
+        variante: 'verifier',
+        titre: 'À vérifier à la source',
+        texte:
+          'Les règles sur le délai de réflexion, la durée de validité de l\'offre et les indemnités de remboursement anticipé sont fixées par la loi et peuvent évoluer. Vérifiez-les sur service-public.fr ou auprès de votre banque.',
+      },
+      { type: 'calculette', label: 'Comparer des scénarios de prêt', href: '/calculateurs/pret' },
+    ],
+    sources: [
+      { label: 'Service-public.fr : offre de prêt immobilier', url: 'https://www.service-public.fr/' },
+      { label: 'Banque de France : crédit immobilier', url: 'https://www.banque-france.fr/' },
+      { label: 'ANIL : financer son logement', url: 'https://www.anil.org/' },
+    ],
   },
   {
     slug: 'acte',
