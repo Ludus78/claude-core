@@ -61,30 +61,26 @@ export default function Home() {
     <>
       <CalculatorPopup />
 
-      {/* Accueil : message à gauche, maison en entier à droite */}
-      <section className="mx-auto max-w-7xl px-4 pb-2 pt-6 sm:px-6 sm:pt-10 lg:px-8">
-        <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
-          <div>
-            <h1 className="font-display text-3xl font-semibold leading-tight text-forest-800 [text-wrap:balance] sm:text-4xl lg:text-[2.6rem]">
-              Immobilier sans prise de tête,
-              <span className="block text-primary-600">votre projet en toute sérénité</span>
+      {/* Bandeau d'accueil : mêmes dimensions que l'original (300 px), photo de maison tirée au hasard */}
+      <div className="relative h-[300px] bg-gray-900">
+        <HeroPhoto />
+
+        {/* Contenu du bandeau */}
+        <div className="relative max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="font-display text-4xl font-semibold text-white sm:text-5xl md:text-6xl">
+              <span className="block">ImmoNova</span>
+              <span className="block text-primary-300">Votre partenaire immobilier</span>
             </h1>
-            <p className="mt-4 max-w-md text-base leading-relaxed text-gray-600 sm:text-lg">
-              Le guide de votre premier achat et des calculettes gratuites pour chiffrer votre projet.
+            <p className="mt-6 max-w-md mx-auto text-base text-gray-200 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+              &quot;Immobilier sans prise de tête, votre projet en toute sérénité&quot;
             </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link href="/achat" className="btn btn-primary !px-5 !py-2.5 !text-sm sm:!text-base">Je commence mon parcours</Link>
-              <button type="button" onClick={() => handleCalculatorClick("Achat", "/calculateurs")} className="btn btn-secondary !px-5 !py-2.5 !text-sm sm:!text-base">
-                Simuler mon prêt
-              </button>
-            </div>
           </div>
-          <HeroPhoto />
         </div>
-      </section>
+      </div>
 
       {/* Calculettes */}
-      <section className="mx-auto max-w-7xl px-4 pb-6 pt-10 sm:px-6 sm:pt-14 lg:px-8">
+      <section className="mx-auto max-w-7xl px-4 pb-6 pt-10 sm:px-6 sm:pt-12 lg:px-8">
         <h2 className="text-2xl font-extrabold text-forest-800 sm:text-3xl">Chiffrez votre projet</h2>
         <p className="mt-1 text-gray-600">Gratuit, sans engagement, résultat en quelques secondes.</p>
 
