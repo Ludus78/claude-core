@@ -75,12 +75,13 @@ export default function CalculetteAchat() {
   const coutTotalCredit = (mensualites.total * duree * 12) - montantEmprunt;
 
   return (
-    <div ref={calculatorRef} className="max-w-4xl mx-auto p-6">
+    <div ref={calculatorRef} className="max-w-4xl mx-auto p-6 xl:max-w-[1500px]">
       <h1 className="text-3xl font-extrabold mb-2 text-forest-800">Simulateur de prêt immobilier</h1>
       <p className="text-gray-600 mb-8">Calculez votre capacité d'emprunt et simulez votre prêt immobilier en quelques clics</p>
       
-      <div className="grid md:grid-cols-2 gap-8">
-        <div>
+      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="xl:col-span-2 xl:grid xl:grid-cols-2 xl:gap-8">
+          <div>
           <h2 className="text-xl font-extrabold mb-4 text-forest-800">Paramètres d'achat</h2>
           <div className="space-y-4">
             <div>
@@ -143,8 +144,10 @@ export default function CalculetteAchat() {
               </label>
             </div>
           </div>
+          </div>
           
-          <h2 className="text-xl font-extrabold mt-6 mb-4 text-forest-800">Paramètres du financement</h2>
+          <div>
+          <h2 className="text-xl font-extrabold mt-6 mb-4 text-forest-800 xl:mt-0">Paramètres du financement</h2>
           <div className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -187,6 +190,7 @@ export default function CalculetteAchat() {
                 className="w-full p-2 border border-primary-100 rounded-xl focus:ring focus:ring-primary-200 focus:border-primary-500"
               />
             </div>
+          </div>
           </div>
         </div>
 

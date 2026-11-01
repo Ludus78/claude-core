@@ -115,16 +115,17 @@ export default function CalculetteViager() {
   const renteAnnuelleIndexee = renteMensuelle * 12 * (1 + inflation / 100);
 
   return (
-    <div ref={calculatorRef} className="bg-white rounded-3xl shadow-sm p-6">
+    <div ref={calculatorRef} className="bg-white rounded-3xl shadow-sm p-6 xl:mx-auto xl:my-4 xl:max-w-[1800px]">
       <h1 className="text-2xl font-extrabold mb-2 text-forest-800">Calculette d'investissement en viager</h1>
       <p className="text-gray-600 mb-6">
         Estimez la rentabilité de votre investissement en viager en tenant compte des spécificités de ce type d'investissement.
       </p>
       
-      <div className="grid md:grid-cols-2 gap-8">
-        <div>
+      <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-8">
+        <div className="xl:col-span-3 xl:grid xl:grid-cols-2 xl:gap-x-6 xl:gap-y-4">
+          <div>
           <h2 className="text-xl font-extrabold mb-4 text-forest-800">Paramètres du bien</h2>
-          <div className="space-y-4">
+          <div className="space-y-4 xl:space-y-2.5">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Valeur totale du bien (€)
@@ -177,9 +178,11 @@ export default function CalculetteViager() {
               />
             </div>
           </div>
+          </div>
           
-          <h2 className="text-xl font-extrabold mt-6 mb-4 text-forest-800">Paramètres du viager</h2>
-          <div className="space-y-4">
+          <div>
+          <h2 className="text-xl font-extrabold mt-6 mb-4 text-forest-800 xl:mt-0">Paramètres du viager</h2>
+          <div className="space-y-4 xl:space-y-2.5">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Bouquet (€)
@@ -218,9 +221,11 @@ export default function CalculetteViager() {
               </select>
             </div>
           </div>
+          </div>
           
-          <h2 className="text-xl font-extrabold mt-6 mb-4 text-forest-800">Paramètres du vendeur</h2>
-          <div className="space-y-4">
+          <div>
+          <h2 className="text-xl font-extrabold mt-6 mb-4 text-forest-800 xl:mt-0">Paramètres du vendeur</h2>
+          <div className="space-y-4 xl:space-y-2.5">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Âge du vendeur
@@ -277,9 +282,11 @@ export default function CalculetteViager() {
               </select>
             </div>
           </div>
+          </div>
           
-          <h2 className="text-xl font-extrabold mt-6 mb-4 text-forest-800">Paramètres financiers</h2>
-          <div className="space-y-4">
+          <div>
+          <h2 className="text-xl font-extrabold mt-6 mb-4 text-forest-800 xl:mt-0">Paramètres financiers</h2>
+          <div className="space-y-4 xl:space-y-2.5">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Taux de rendement attendu (%)
@@ -323,15 +330,16 @@ export default function CalculetteViager() {
               />
             </div>
           </div>
+          </div>
         </div>
         
-        <div className="bg-cream-100 p-6 rounded-2xl">
-          <h2 className="text-xl font-extrabold mb-6 text-forest-800">Résultats</h2>
+        <div className="bg-cream-100 p-6 rounded-2xl xl:col-span-2 xl:p-4">
+          <h2 className="text-xl font-extrabold mb-6 text-forest-800 xl:mb-3">Résultats</h2>
           
-          <div className="space-y-6">
+          <div className="space-y-6 xl:grid xl:grid-cols-3 xl:gap-x-4 xl:gap-y-3 xl:space-y-0">
             <div>
               <h3 className="font-medium text-gray-700 mb-2">Investissement total</h3>
-              <div className="text-3xl font-extrabold text-primary-700">
+              <div className="text-3xl xl:text-2xl font-extrabold text-primary-700">
                 {new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(investissement.totalInvestissement)}
               </div>
               <p className="text-sm text-gray-500 mt-1">
@@ -371,7 +379,7 @@ export default function CalculetteViager() {
             
             <div className="border-t border-primary-100 pt-4 mt-4">
               <h3 className="font-medium text-gray-700 mb-2">Rentabilité brute</h3>
-              <div className="text-3xl font-extrabold text-primary-700">
+              <div className="text-3xl xl:text-2xl font-extrabold text-primary-700">
                 {rentabiliteBrute.toFixed(2)}%
               </div>
               <p className="text-sm text-gray-500 mt-1">
@@ -381,7 +389,7 @@ export default function CalculetteViager() {
             
             <div>
               <h3 className="font-medium text-gray-700 mb-2">Rentabilité nette</h3>
-              <div className="text-3xl font-extrabold text-primary-700">
+              <div className="text-3xl xl:text-2xl font-extrabold text-primary-700">
                 {rentabiliteNette.toFixed(2)}%
               </div>
               <p className="text-sm text-gray-500 mt-1">
@@ -391,7 +399,7 @@ export default function CalculetteViager() {
             
             <div>
               <h3 className="font-medium text-gray-700 mb-2">Rendement sur le bouquet</h3>
-              <div className="text-3xl font-extrabold text-primary-700">
+              <div className="text-3xl xl:text-2xl font-extrabold text-primary-700">
                 {rendementBouquet.toFixed(2)}%
               </div>
               <p className="text-sm text-gray-500 mt-1">
@@ -401,7 +409,7 @@ export default function CalculetteViager() {
             
             <div>
               <h3 className="font-medium text-gray-700 mb-2">Temps de récupération du bouquet</h3>
-              <div className="text-3xl font-extrabold text-primary-700">
+              <div className="text-3xl xl:text-2xl font-extrabold text-primary-700">
                 {tempsRecuperationBouquet.toFixed(1)} ans
               </div>
               <p className="text-sm text-gray-500 mt-1">
@@ -410,7 +418,7 @@ export default function CalculetteViager() {
             </div>
           </div>
           
-          <div className="mt-8 p-4 bg-primary-50 rounded-2xl border border-primary-100">
+          <div className="mt-8 p-4 bg-primary-50 rounded-2xl border border-primary-100 xl:mt-4">
             <h3 className="font-medium text-primary-700 mb-2">Conseil ImmoNova</h3>
             <p className="text-sm text-primary-600">
               {rentabiliteNette >= tauxRendement 
