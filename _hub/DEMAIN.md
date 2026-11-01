@@ -2,10 +2,10 @@
 
 Légende : **Toi** = action que seul toi peux faire (comptes, secrets). **Claude** = ce que je fais ensuite.
 
-## Avant tout : débloquer le push
-Le dépôt a **3 commits locaux non poussés** (2 d'immonova, 1 de SeanceClub). Les pousser avant que la base d'immonova ait ses tables casserait le popup e-mail en ligne.
+## Push
+Fait le 2026-11-01 : tout est poussé, la base d'immonova a ses tables.
 
-## immonova (priorité 1)
+## immonova (priorité 1) : points 1 à 4 FAITS le 2026-11-01 (tables créées, `/admin` et popup vérifiés). Reste le point 5 et Instagram.
 1. **Toi** : créer le fichier `immonova/immonova2.0/.env` avec la ligne `POSTGRES_URL=...`, copiée depuis Vercel (projet `immonova-omnb`, Storage, base `immonova`, section `.env.local`). Ne jamais la coller dans le chat.
 2. **Toi** : dans Vercel, Settings, Environment Variables, ajouter `ADMIN_EMAILS` (ton e-mail Kinde). Vérifier aussi si `NEXT_PUBLIC_POSTHOG_KEY` existe : je ne l'ai pas vue dans la liste.
 3. **Claude** : créer les tables dans la base Neon existante (migration `20261101000000_init_postgres`), s'arrêter si des tables du même nom existent, tester l'enregistrement d'un e-mail, puis pousser les 3 commits.
