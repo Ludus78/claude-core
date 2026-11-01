@@ -10,8 +10,8 @@ Décisions du 2026-11-01 : parcours en étapes (une page par étape), contenu r�
 | 4 | Faire une offre | négocier, offre écrite, durée de validité | rédigée, **à valider** |
 | 5 | Signer le compromis | clauses suspensives, délai de rétractation, dépôt de garantie | rédigée, **à valider** |
 | 6 | Obtenir son prêt | dossier bancaire, offre de prêt, délai de réflexion, assurance | rédigée, **à valider** |
-| 7 | Signer l'acte chez le notaire | délais, pièces, visite avant acte, frais | à écrire |
-| 8 | Après l'achat | assurance habitation, taxe foncière, charges, travaux | à écrire |
+| 7 | Signer l'acte chez le notaire | délais, pièces, visite avant acte, frais | rédigée, **à valider** |
+| 8 | Après l'achat | assurance habitation, taxe foncière, charges, travaux | rédigée, **à valider** |
 
 Idées pour la suite : glossaire de l'immobilier, listes à imprimer (documents du dossier, visite), lien entre chaque étape et la calculette adaptée, assistant en ligne qui s'appuie sur ces pages.
 

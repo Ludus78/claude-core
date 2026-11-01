@@ -543,9 +543,70 @@ export const ETAPES: Etape[] = [
     titre: 'Signer l\'acte chez le notaire',
     resume: 'La dernière ligne droite avant d\'avoir les clés.',
     duree: '2 à 3 mois après le compromis',
-    publiee: false,
-    blocs: [],
-    sources: [],
+    publiee: true,
+    misAJour: '2026-11-01',
+    blocs: [
+      { type: 'titre', texte: 'Ce que fait le notaire entre les deux signatures' },
+      {
+        type: 'texte',
+        texte:
+          'Pendant que vous obtenez votre prêt, le notaire prépare l\'acte définitif. Il vérifie que le vendeur est bien propriétaire, que le bien n\'a pas de dette ou de charge cachée, que le droit de préemption de la commune a été purgé, puis calcule les frais et rédige l\'acte. Le délai habituel entre le compromis et l\'acte est de deux à trois mois, avec une date limite inscrite dans le compromis.',
+      },
+      { type: 'titre', texte: 'D\'où viennent les « frais de notaire »' },
+      {
+        type: 'texte',
+        texte:
+          'Ce nom est trompeur. La grande majorité de la somme correspond à des taxes reversées à l\'État et aux collectivités (les droits de mutation). Une petite partie seulement rémunère le notaire, selon un barème réglementé, et le reste couvre des frais engagés pour votre dossier. Le détail figure dans le décompte que le notaire vous envoie avant la signature.',
+      },
+      { type: 'titre', texte: 'Avant la signature : ce que vous devez préparer' },
+      {
+        type: 'liste',
+        items: [
+          'Vos pièces d\'identité et d\'état civil, ainsi que le justificatif de domicile.',
+          'L\'offre de prêt acceptée et les informations de la banque.',
+          'Une attestation d\'assurance habitation, souvent demandée pour la remise des clés.',
+          'Le virement de l\'apport et des frais sur le compte du notaire, quelques jours avant. Utilisez un virement, jamais un règlement en espèces.',
+        ],
+      },
+      { type: 'titre', texte: 'La visite avant la signature' },
+      {
+        type: 'texte',
+        texte:
+          'Quelques jours avant l\'acte, refaites une visite du bien. Contrôlez qu\'il est dans l\'état où vous l\'avez acheté, que les équipements prévus sont présents, que le vendeur a libéré les lieux et qu\'aucun dégât n\'est apparu. Signalez tout problème au notaire ou à l\'agence avant de signer.',
+      },
+      {
+        type: 'encadre',
+        variante: 'piege',
+        titre: 'Piège classique',
+        texte:
+          'Bâcler cette dernière visite. Après la signature, il est bien plus difficile de faire corriger un défaut ou un manque. Prenez des photos et vérifiez point par point.',
+      },
+      { type: 'titre', texte: 'Le jour de la signature' },
+      {
+        type: 'texte',
+        texte:
+          'Le notaire lit l\'acte avec vous, répond à vos questions, puis tout le monde signe. La signature peut se faire sur place, avec une procuration ou par voie électronique selon les cas. La banque débloque les fonds, le notaire règle le vendeur, et vous recevez les clés, souvent le jour même ou peu après.',
+      },
+      { type: 'titre', texte: 'Après la signature' },
+      {
+        type: 'texte',
+        texte:
+          'Le notaire enregistre la vente et fait publier votre acquisition. Vous recevez d\'abord une attestation de propriété, puis une copie de l\'acte quelques mois plus tard. Conservez ces documents toute votre vie.',
+      },
+      {
+        type: 'encadre',
+        variante: 'verifier',
+        titre: 'À vérifier à la source',
+        texte:
+          'Les modalités de signature (procuration, signature électronique), les délais de publication et la répartition des frais évoluent. Demandez le détail à votre notaire et consultez notaires.fr.',
+      },
+      { type: 'calculette', label: 'Revoir vos frais annexes', href: '/frais-annexes' },
+    ],
+    sources: [
+      { label: 'Notaires de France : la vente immobilière', url: 'https://www.notaires.fr/' },
+      { label: 'Service-public.fr : acheter un logement', url: 'https://www.service-public.fr/' },
+      { label: 'ANIL : conseils sur le logement', url: 'https://www.anil.org/' },
+    ],
   },
   {
     slug: 'apres',
@@ -553,9 +614,67 @@ export const ETAPES: Etape[] = [
     titre: 'Après l\'achat',
     resume: 'Assurances, impôts, charges et premiers travaux.',
     duree: 'Les premiers mois',
-    publiee: false,
-    blocs: [],
-    sources: [],
+    publiee: true,
+    misAJour: '2026-11-01',
+    blocs: [
+      { type: 'titre', texte: 'Le jour des clés' },
+      {
+        type: 'liste',
+        items: [
+          'Relevez les compteurs d\'eau, d\'électricité et de gaz, avec une photo datée.',
+          'Ouvrez ou transférez vos contrats d\'énergie, d\'eau et d\'internet.',
+          'Vérifiez que vous avez toutes les clés, les badges, les télécommandes et les codes.',
+          'Faites une première inspection de l\'état du logement et notez ce qui doit être traité.',
+        ],
+      },
+      { type: 'titre', texte: 'Les assurances' },
+      {
+        type: 'texte',
+        texte:
+          'L\'assurance habitation est indispensable. Pour un propriétaire occupant en copropriété, elle est de plus obligatoire pour la responsabilité civile, et la banque l\'exige souvent. Elle doit être active dès la remise des clés. Pensez aussi à comparer votre assurance de prêt : la loi permet de la changer en cours de prêt, à garanties équivalentes.',
+      },
+      { type: 'titre', texte: 'Les impôts et les charges' },
+      {
+        type: 'liste',
+        items: [
+          'Taxe foncière : elle est due chaque année par le propriétaire. Son montant varie fortement d\'une commune à l\'autre, regardez celui de l\'année précédente.',
+          'La taxe d\'habitation ne concerne plus les résidences principales, mais elle existe encore pour les résidences secondaires.',
+          'Charges de copropriété : appelées chaque trimestre, elles comprennent souvent une cotisation au fonds de travaux.',
+        ],
+      },
+      {
+        type: 'encadre',
+        variante: 'verifier',
+        titre: 'À vérifier à la source',
+        texte:
+          'Les exonérations temporaires de taxe foncière pour un logement neuf, les déclarations à faire auprès des impôts après un achat et les aides locales dépendent de votre situation et de votre commune. Renseignez-vous sur impots.gouv.fr et auprès de votre mairie.',
+      },
+      { type: 'titre', texte: 'Dans le neuf : les garanties' },
+      {
+        type: 'texte',
+        texte:
+          'Un logement neuf est couvert par des garanties légales : la garantie de parfait achèvement pendant un an, la garantie des équipements pendant deux ans et la garantie décennale pour les gros ouvrages pendant dix ans. Signalez rapidement tout défaut, par écrit, pour ne pas perdre vos droits.',
+      },
+      { type: 'titre', texte: 'Budgétez l\'entretien' },
+      {
+        type: 'texte',
+        texte:
+          'Un logement coûte de l\'argent après l\'achat : réparations, entretien, remplacement d\'équipements. Un repère souvent cité est de mettre de côté chaque année environ 1 % de la valeur du bien, mais ce n\'est pas une règle : un logement récent en demandera moins qu\'un logement ancien.',
+      },
+      {
+        type: 'encadre',
+        variante: 'astuce',
+        titre: 'Astuce',
+        texte:
+          'Créez un dossier, papier ou numérique, avec l\'acte, les diagnostics, les factures de travaux, les garanties et les contrats d\'assurance. Vous en aurez besoin pour une revente, un sinistre ou une aide à la rénovation.',
+      },
+      { type: 'calculette', label: 'Faire le point sur votre budget', href: '/calculette' },
+    ],
+    sources: [
+      { label: 'Service-public.fr : propriétaire, impôts locaux', url: 'https://www.service-public.fr/' },
+      { label: 'Impots.gouv.fr', url: 'https://www.impots.gouv.fr/' },
+      { label: 'ANIL : conseils sur le logement', url: 'https://www.anil.org/' },
+    ],
   },
 ];
 
