@@ -1,6 +1,14 @@
 # Actualités : rafraîchissement hebdomadaire
 
-Cadrage du 2026-11-01. **Rien n'est construit.** Chaque point marqué « à décider » attend une réponse du propriétaire.
+Cadrage du 2026-11-01. Construction commencée le 2026-11-02 (voir « État de la construction » en bas).
+
+## État de la construction (2026-11-02)
+
+- Fait : migration `sourceUrl` (appliquée sur Neon), lien de la source dans l'article et dans `/admin`, module `lib/actualites/sources.ts`, route `/api/cron/actualites` (401 sans le secret, vérifié).
+- **Sources** : seule la Banque de France est active (réutilisation autorisée avec citation de la source et de la date, lu sur banque-france.fr/fr/infos-legales le 2026-11-02, à revérifier). **Notaires de France désactivée** : leurs mentions légales exigent une autorisation écrite du webmestre pour toute reproduction hors usage privé et interdisent la réutilisation commerciale. À reprendre si l'autorisation est obtenue.
+- Le cron n'est **pas** activé : pas de ligne `crons` dans `vercel.json` tant que l'essai manuel n'est pas fait.
+- Reste : clé d'API et modèle (reportés par le propriétaire ; la route lit `CLAUDE_API_KEY` et `NEWS_MODEL`, modèle par défaut `claude-sonnet-5-5`), `CRON_SECRET` dans Vercel, essai manuel, puis la ligne `crons`.
+- Limite connue : un brouillon supprimé dans `/admin` ne laisse pas de trace, la même publication serait retraitée la semaine suivante.
 
 ## Où on en est
 
