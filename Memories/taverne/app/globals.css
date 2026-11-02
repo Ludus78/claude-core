@@ -1,17 +1,17 @@
+/* Ambiance : un pub, un mur de briques, une guirlande lumineuse, des ardoises écrites à la craie. */
 :root {
-  --nuit: #0e0b0a;
-  --nuit-clair: #1a1411;
-  --carte: #1c1613;
-  --carte-haut: #241b16;
-  --filet: rgba(214, 168, 92, 0.28);
-  --or: #d9ab5f;
-  --or-clair: #f0cd8c;
-  --braise: #e8742a;
-  --texte: #eadfca;
-  --texte-doux: #ab9c84;
-  --sang: #c4472f;
-  --champ: #110d0b;
-  --champ-bord: #4b3c2c;
+  --brique: #3a1d15;
+  --craie: #f6efdc;
+  --craie-douce: #b9b3a2;
+  --jaune: #ffd36b;
+  --rose: #f6b0c8;
+  --bleu: #9fd8e8;
+  --vert: #a8dca0;
+  --rouge: #ff8a7a;
+  --ardoise: #212a2b;
+  --ardoise-haut: #2c3736;
+  --bois: #7a4a24;
+  --bois-fonce: #4a2a12;
 }
 
 * {
@@ -19,176 +19,223 @@
 }
 
 html {
-  background: var(--nuit);
+  background: var(--brique);
+  color-scheme: dark;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  color: var(--texte);
-  font-family: var(--police-texte), Georgia, serif;
-  font-size: 1.125rem;
-  line-height: 1.65;
-  background:
-    radial-gradient(ellipse 60% 38% at 50% 108%, rgba(232, 116, 42, 0.3), transparent 70%),
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(217, 171, 95, 0.1), transparent 70%),
-    var(--nuit);
-  background-attachment: fixed;
-}
-
-/* Voile sombre sur les bords, comme la lumière d'une seule torche */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background: radial-gradient(ellipse at center, transparent 45%, rgba(0, 0, 0, 0.6) 100%);
+  color: var(--craie);
+  font-family: var(--police-texte), "Comic Sans MS", cursive;
+  font-size: 1.2rem;
+  line-height: 1.55;
+  background-color: var(--brique);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='36'><rect width='64' height='36' fill='%233a1d15'/><rect x='1' y='1' width='30' height='16' fill='%235a2a1e'/><rect x='33' y='1' width='30' height='16' fill='%2352261b'/><rect x='-15' y='19' width='30' height='16' fill='%2352261b'/><rect x='17' y='19' width='30' height='16' fill='%235a2a1e'/><rect x='49' y='19' width='30' height='16' fill='%2352261b'/></svg>");
+  background-size: 64px 36px;
 }
 
 h1,
 h2,
 h3 {
-  font-family: var(--police-titre), Georgia, serif;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  line-height: 1.25;
+  font-family: var(--police-titre), "Comic Sans MS", cursive;
+  font-weight: 400;
+  line-height: 1.1;
 }
 
 a {
-  color: var(--or-clair);
+  color: var(--jaune);
 }
 
-.page {
-  max-width: 44rem;
-  margin: 0 auto;
-  padding: 3rem 1rem 5rem;
+/* ------------------------------------------------------------------ */
+/* Décor                                                               */
+/* ------------------------------------------------------------------ */
+
+.ambiance {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
 }
 
-/* L'enseigne */
-.enseigne {
-  text-align: center;
-  margin-bottom: 2.5rem;
+.guirlande {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: clamp(5rem, 11vw, 8rem);
 }
 
-.enseigne h1 {
-  margin: 0.5rem 0 0.9rem;
-  font-size: clamp(2rem, 6.5vw, 3.2rem);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  background: linear-gradient(180deg, var(--or-clair), var(--or) 55%, #a8772f);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  filter: drop-shadow(0 0 18px rgba(232, 116, 42, 0.35));
+.ampoule {
+  animation: scintille 3.2s ease-in-out infinite;
 }
 
-.enseigne p {
-  margin: 0 auto;
-  max-width: 32rem;
-  color: var(--texte-doux);
-  font-style: italic;
-}
-
-/* Filet orné sous l'enseigne */
-.enseigne p::after {
-  content: "";
-  display: block;
-  width: 9rem;
-  height: 1px;
-  margin: 1.6rem auto 0;
-  background: linear-gradient(90deg, transparent, var(--or), transparent);
-}
-
-/* Le foyer : une braise qui vacille doucement */
-.foyer {
-  position: relative;
-  width: 3.4rem;
-  height: 3.4rem;
-  margin: 0 auto;
-  border-radius: 50%;
-  background: radial-gradient(circle, var(--or-clair) 0%, var(--braise) 35%, rgba(232, 116, 42, 0) 70%);
-  box-shadow: 0 0 60px 12px rgba(232, 116, 42, 0.28);
-  animation: vacille 3.4s ease-in-out infinite;
-}
-
-@keyframes vacille {
+@keyframes scintille {
   0%,
   100% {
-    opacity: 0.95;
-    transform: scale(1);
-  }
-  35% {
-    opacity: 0.7;
-    transform: scale(0.93);
-  }
-  62% {
     opacity: 1;
-    transform: scale(1.06);
   }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Lumière du pub : coins sombres, centre chaud */
+.voile {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 30%, rgba(255, 190, 90, 0.16), transparent 70%),
+    radial-gradient(ellipse at center, transparent 40%, rgba(10, 4, 2, 0.7) 100%);
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .ampoule,
   .foyer {
     animation: none;
   }
 }
 
-/* Les cartes (anciennement parchemins) : verre sombre, filet doré */
-.parchemin {
+/* ------------------------------------------------------------------ */
+/* Page et enseigne                                                    */
+/* ------------------------------------------------------------------ */
+
+.page {
   position: relative;
-  margin-bottom: 1.5rem;
-  padding: 1.75rem 1.5rem 1.6rem;
-  color: var(--texte);
-  background: linear-gradient(180deg, var(--carte-haut), var(--carte));
-  border: 1px solid var(--filet);
-  border-radius: 0.9rem;
-  box-shadow:
-    0 18px 40px rgba(0, 0, 0, 0.55),
-    inset 0 1px 0 rgba(240, 205, 140, 0.08);
+  z-index: 1;
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 7.5rem 1rem 6rem;
 }
 
+/* L'enseigne : une planche de bois suspendue */
+.enseigne {
+  position: relative;
+  margin: 0 auto 2.4rem;
+  padding: 1.1rem 1.25rem 1.2rem;
+  text-align: center;
+  background:
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.12) 0 2px, transparent 2px 70px),
+    linear-gradient(180deg, #8a5a2c, #6a4020);
+  border: 4px solid var(--bois-fonce);
+  border-radius: 6px;
+  box-shadow:
+    0 14px 24px rgba(0, 0, 0, 0.55),
+    inset 0 2px 0 rgba(255, 220, 160, 0.25);
+}
+
+.enseigne::before,
+.enseigne::after {
+  content: "";
+  position: absolute;
+  top: -26px;
+  width: 4px;
+  height: 24px;
+  background: #1a0d05;
+}
+
+.enseigne::before {
+  left: 16%;
+}
+
+.enseigne::after {
+  right: 16%;
+}
+
+.enseigne h1 {
+  margin: 0.2rem 0 0.4rem;
+  font-size: clamp(2.3rem, 8vw, 3.6rem);
+  color: #fff3d4;
+  text-shadow: 2px 3px 0 #3a1d0a;
+}
+
+.enseigne p {
+  margin: 0 auto;
+  max-width: 32rem;
+  color: #f1dcb6;
+  font-size: 1.15rem;
+}
+
+/* Petite braise au-dessus du titre, cachée : la guirlande suffit */
+.foyer {
+  display: none;
+}
+
+/* ------------------------------------------------------------------ */
+/* Ardoises (anciennement parchemins)                                  */
+/* ------------------------------------------------------------------ */
+
+.parchemin {
+  position: relative;
+  margin-bottom: 1.6rem;
+  padding: 1.5rem 1.4rem 1.6rem;
+  color: var(--craie);
+  background: linear-gradient(160deg, var(--ardoise-haut), var(--ardoise));
+  border: 12px solid var(--bois);
+  border-image: linear-gradient(135deg, #9a6330, #5a3418) 1;
+  box-shadow:
+    0 16px 28px rgba(0, 0, 0, 0.6),
+    inset 0 0 36px rgba(0, 0, 0, 0.55);
+}
+
+/* Traces de chiffon sur l'ardoise */
 .parchemin::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 1.5rem;
-  right: 1.5rem;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--or), transparent);
-  opacity: 0.55;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.1;
+  background:
+    radial-gradient(ellipse 60% 14% at 28% 18%, #fff, transparent),
+    radial-gradient(ellipse 50% 10% at 72% 68%, #fff, transparent);
+}
+
+.parchemin > * {
+  position: relative;
 }
 
 .parchemin h2 {
-  margin: 0 0 0.35rem;
-  font-size: 1.15rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--or);
+  margin: 0 0 0.3rem;
+  font-size: 2rem;
+  color: #fff6d8;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.6);
+}
+
+/* Trait de craie pointillé sous les titres */
+.parchemin h2::after {
+  content: "";
+  display: block;
+  height: 8px;
+  margin-top: 0.35rem;
+  background: radial-gradient(circle, var(--jaune) 0 2px, transparent 2.6px) left center / 12px 8px repeat-x;
+  opacity: 0.85;
 }
 
 .parchemin .aide {
-  margin: 0 0 1.1rem;
-  color: var(--texte-doux);
-  font-size: 1rem;
-  font-style: italic;
+  margin: 0.8rem 0 1rem;
+  color: var(--craie-douce);
+  font-size: 1.1rem;
 }
 
-/* Formulaire */
+/* ------------------------------------------------------------------ */
+/* Formulaire                                                          */
+/* ------------------------------------------------------------------ */
+
 label {
   display: block;
-  margin-top: 1.15rem;
-  font-weight: 600;
-  color: var(--texte);
+  margin-top: 1.3rem;
+  font-family: var(--police-craie), cursive;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  color: var(--jaune);
 }
 
 .champ-aide {
   display: block;
-  font-weight: 400;
-  font-size: 0.95rem;
-  color: var(--texte-doux);
+  margin-top: 0.15rem;
+  font-family: var(--police-texte), cursive;
+  font-size: 1.05rem;
+  color: var(--craie-douce);
 }
 
 input[type="text"],
@@ -197,17 +244,18 @@ select,
 textarea {
   display: block;
   width: 100%;
-  min-height: 2.9rem;
-  margin-top: 0.4rem;
-  padding: 0.6rem 0.8rem;
+  min-height: 3rem;
+  margin-top: 0.45rem;
+  padding: 0.55rem 0.9rem;
   font: inherit;
-  color: var(--texte);
-  background: var(--champ);
-  border: 1px solid var(--champ-bord);
-  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--craie);
+  background: rgba(255, 255, 255, 0.04);
+  border: 2px dashed rgba(246, 239, 220, 0.72);
+  border-radius: 10px 14px 10px 16px;
   transition:
     border-color 0.15s ease,
-    box-shadow 0.15s ease;
+    background 0.15s ease;
 }
 
 select {
@@ -216,17 +264,17 @@ select {
 
 input::placeholder,
 textarea::placeholder {
-  color: #6d604e;
+  color: #7a8180;
 }
 
 input:hover,
 select:hover,
 textarea:hover {
-  border-color: #6b563d;
+  background: rgba(255, 255, 255, 0.07);
 }
 
 textarea {
-  min-height: 7rem;
+  min-height: 7.5rem;
   resize: vertical;
 }
 
@@ -234,114 +282,144 @@ input:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  border-color: var(--or);
-  box-shadow: 0 0 0 3px rgba(217, 171, 95, 0.2);
+  border-style: solid;
+  border-color: var(--jaune);
+  background: rgba(255, 211, 107, 0.06);
 }
 
 button:focus-visible,
 a:focus-visible {
-  outline: 2px solid var(--or-clair);
-  outline-offset: 3px;
+  outline: 2px dashed var(--jaune);
+  outline-offset: 4px;
 }
 
 fieldset {
-  margin: 1.15rem 0 0;
+  margin: 1.3rem 0 0;
   padding: 0;
   border: 0;
 }
 
 legend {
   padding: 0;
-  font-weight: 600;
+  font-family: var(--police-craie), cursive;
+  font-size: 0.95rem;
+  color: var(--jaune);
 }
 
 .choix {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem 1.75rem;
-  margin-top: 0.4rem;
+  gap: 0.6rem;
+  margin-top: 0.55rem;
+}
+
+/* Homme / Femme : deux étiquettes tracées à la craie */
+.choix .case {
+  margin-top: 0;
+  padding: 0.35rem 1.1rem 0.35rem 0.8rem;
+  border: 2px dashed rgba(246, 239, 220, 0.6);
+  border-radius: 999px;
+  color: var(--craie);
+  font-family: var(--police-texte), cursive;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.choix .case:hover,
+.choix .case:has(input:checked) {
+  border-style: solid;
+  border-color: var(--jaune);
 }
 
 .case {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.65rem;
   min-height: 2.75rem;
-  margin-top: 0.5rem;
-  font-weight: 400;
+  margin-top: 0.7rem;
+  font-family: var(--police-texte), cursive;
+  font-size: 1.15rem;
+  color: var(--craie);
 }
 
 .case input {
+  flex: none;
   width: 1.3rem;
   height: 1.3rem;
-  margin-top: 0.3rem;
-  accent-color: var(--or);
+  margin: 0;
+  accent-color: var(--rose);
 }
 
-/* Bouton : or sur fond sombre, la braise s'allume au survol */
+fieldset > .case,
+.parchemin > form > .case,
+.parchemin > .case {
+  align-items: flex-start;
+}
+
+/* Bouton : rose de craie, légèrement de travers */
 .bouton {
   display: inline-block;
-  min-height: 2.9rem;
-  margin-top: 1.5rem;
-  padding: 0.65rem 1.9rem;
-  font-family: var(--police-titre), Georgia, serif;
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  min-height: 3rem;
+  margin-top: 1.7rem;
+  padding: 0.55rem 1.8rem;
+  font-family: var(--police-titre), cursive;
+  font-size: 1.6rem;
+  line-height: 1.1;
   text-decoration: none;
-  color: #1a0f08;
-  background: linear-gradient(180deg, var(--or-clair), var(--or));
-  border: 1px solid #b5833a;
-  border-radius: 0.5rem;
-  box-shadow: 0 6px 18px rgba(232, 116, 42, 0.22);
+  color: #2a1713;
+  background: var(--rose);
+  border: 0;
+  border-radius: 12px 18px 12px 20px;
+  box-shadow: 3px 4px 0 rgba(246, 239, 220, 0.38);
+  transform: rotate(-1.2deg);
   cursor: pointer;
   transition:
     transform 0.15s ease,
-    box-shadow 0.15s ease,
-    filter 0.15s ease;
+    box-shadow 0.15s ease;
 }
 
 .bouton:hover {
-  filter: brightness(1.08);
-  transform: translateY(-1px);
-  box-shadow: 0 10px 24px rgba(232, 116, 42, 0.35);
+  transform: rotate(0deg) translateY(-2px);
+  box-shadow: 4px 7px 0 rgba(246, 239, 220, 0.38);
 }
 
 .bouton:active {
-  transform: translateY(0);
+  transform: rotate(0deg);
+  box-shadow: 1px 2px 0 rgba(246, 239, 220, 0.38);
 }
 
-/* Messages */
-.alerte {
+/* ------------------------------------------------------------------ */
+/* Messages                                                            */
+/* ------------------------------------------------------------------ */
+
+.alerte,
+.confirmation {
   margin: 0 0 1.5rem;
-  padding: 0.85rem 1.1rem;
-  color: #f6d9d1;
-  background: rgba(196, 71, 47, 0.16);
-  border: 1px solid rgba(196, 71, 47, 0.6);
-  border-left-width: 4px;
-  border-radius: 0.6rem;
+  padding: 0.9rem 1.2rem;
+  background: var(--ardoise);
+  border-radius: 10px 14px 10px 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.alerte {
+  color: #ffe3dc;
+  border: 2px dashed var(--rouge);
 }
 
 .confirmation {
-  margin: 0 0 1.5rem;
-  padding: 0.85rem 1.1rem;
-  color: #e3edcf;
-  background: rgba(120, 156, 70, 0.14);
-  border: 1px solid rgba(140, 178, 84, 0.55);
-  border-left-width: 4px;
-  border-radius: 0.6rem;
+  color: #e8f6e4;
+  border: 2px dashed var(--vert);
 }
 
-/* Fiche et récits */
+/* ------------------------------------------------------------------ */
+/* Fiche et récits                                                     */
+/* ------------------------------------------------------------------ */
+
 .fiche dt {
-  margin-top: 1.1rem;
-  font-family: var(--police-titre), Georgia, serif;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--or);
+  margin-top: 1.2rem;
+  font-family: var(--police-craie), cursive;
+  font-size: 0.9rem;
+  color: var(--jaune);
 }
 
 .fiche dd {
@@ -350,9 +428,9 @@ legend {
 }
 
 .recit h3 {
-  margin: 1.4rem 0 0.3rem;
-  font-size: 1.1rem;
-  color: var(--or-clair);
+  margin: 1.5rem 0 0.2rem;
+  font-size: 1.7rem;
+  color: var(--bleu);
 }
 
 .recit p {
@@ -362,11 +440,15 @@ legend {
 
 .lien-prive {
   word-break: break-all;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 @media (max-width: 30rem) {
+  .page {
+    padding-top: 6.5rem;
+  }
   .parchemin {
-    padding: 1.4rem 1.1rem;
+    padding: 1.2rem 1rem 1.3rem;
+    border-width: 9px;
   }
 }
