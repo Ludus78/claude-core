@@ -11,7 +11,7 @@ Tirée de la synthèse du projet (`memories-synthese.md.py`). Projet sans code :
 
 - [ ] Enregistrer des soirées Discord où chacun raconte ses souvenirs (validation requise : fait par toi)
 - [ ] Créer le document partagé des anecdotes (validation requise)
-- [ ] Remplir une fiche par joueur dans `personnages/` à partir du modèle `_modele.md` (classe, look, défaut, phrase culte, moment de gloire ou de honte)
+- [ ] Remplir une fiche par joueur dans `personnages/` à partir du modèle `_modele.md` (classe, look, défaut, phrase culte, moment de gloire ou de honte) : les 5 fiches existent avec les seuls faits connus de la synthèse (2026-11-02) ; défaut, phrase culte, moments de gloire et de honte, liens et limites restent « à renseigner » par chaque joueur, ainsi que son accord (validation requise : fait par toi et le groupe)
 
 ## Production
 
