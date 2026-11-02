@@ -17,6 +17,7 @@ type NewsArticle = {
   formattedDate?: string;
   authorName?: string;
   imageUrl?: string;
+  sourceUrl?: string | null;
 };
 
 export default function ArticleDetail() {
@@ -281,7 +282,16 @@ export default function ArticleDetail() {
               <p>{article.excerpt}</p>
             )}
           </div>
-          
+
+          {article.sourceUrl && (
+            <p className="mt-6 text-sm text-gray-600">
+              Source :{' '}
+              <a href={article.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-800 break-all">
+                {article.sourceUrl}
+              </a>
+            </p>
+          )}
+
           {/* Actions admin */}
           {isAdmin && (
             <div className="mt-8 pt-6 border-t border-primary-100">

@@ -49,6 +49,14 @@ export default async function AdminPage() {
               <h3 className="mt-1 text-lg font-extrabold text-forest-800">{a.title}</h3>
               <p className="mt-1 text-gray-600">{a.excerpt}</p>
               {a.content && <p className="mt-3 whitespace-pre-line text-sm text-gray-700">{a.content}</p>}
+              {a.sourceUrl && (
+                <p className="mt-3 text-sm">
+                  Source :{' '}
+                  <a href={a.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-800 break-all">
+                    {a.sourceUrl}
+                  </a>
+                </p>
+              )}
               <p className="mt-3 text-xs text-gray-500">
                 Brouillon du {dateFr(a.createdAt)}. À relire : chiffres et source à vérifier avant de publier.
               </p>

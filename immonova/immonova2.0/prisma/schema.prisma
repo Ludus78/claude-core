@@ -37,6 +37,7 @@ model NewsArticle {
     authorName  String?
     publishedAt DateTime  @default(now())
     imageUrl    String?
+    sourceUrl   String?
     isPublished Boolean   @default(true)
 }
 
