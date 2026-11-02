@@ -2,7 +2,7 @@
 
 Registre des projets de `claude-core`. Mis à jour par la commande `/status` (voir `_hub/CLAUDE.md`).
 
-**Dernière mise à jour : 2026-11-01 (suite du travail notée pour le 2026-11-02)** (immonova en ligne avec base et `/admin`, SeanceClub passé sur Kinde).
+**Dernière mise à jour : 2026-11-01 (suite du travail notée pour le 2026-11-02)** (immonova en ligne avec base et `/admin`, SeanceClub passé sur Kinde). Mise à jour du 2026-11-02 : Memories, page de collecte « Taverne des Souvenirs » écrite (pas encore en ligne).
 Statuts : `idée` · `étude` · `en cours` · `pause`.
 
 ## Vue d'ensemble
@@ -12,7 +12,7 @@ Statuts : `idée` · `étude` · `en cours` · `pause`.
 | Confio | `Confio/` | TypeScript, Vite, Vitest | en cours |
 | immonova | `immonova/immonova2.0/` | Next.js 16, React 19, Prisma/Postgres (Neon), Kinde, PostHog, Tailwind | en cours |
 | SeanceClub | `SeanceClub/` | Cible : Next.js, PostgreSQL, Socket.IO | étude (cadrage avancé) |
-| Memories | `Memories/` | Aucune (BD) | étude |
+| Memories | `Memories/` | BD ; page de collecte `taverne/` (Next.js, Prisma/Postgres) | en cours |
 | space-atlas | `space-atlas/` | Cible : Next.js, TypeScript, Cesium ou Three.js | étude (recherche) |
 
 ## Détail
@@ -46,7 +46,8 @@ Statuts : `idée` · `étude` · `en cours` · `pause`.
 - **État** : format retenu (strips et planches), une maquette de planche de 6 cases faite, 5 personnages définis. Aucune vraie anecdote écrite, aucun illustrateur trouvé.
 - **Reste à faire** : collecter les histoires, fiches de personnage, accord du groupe, choix de l'univers (WoW ou monde parodique), description de style commune, choix du dessin, premier script, choix de diffusion.
 - **Roadmap** : `Memories/ROADMAP.md`. Base : dossiers `personnages/`, `anecdotes/`, `style/`, `planches/` avec modèles.
-- **Prochaine action** : collecter les premières anecdotes auprès du groupe.
+- **Taverne des Souvenirs** (`Memories/taverne/`, commit `0dd7bde`) : page de collecte écrite et poussée, pas encore en ligne. Mot de passe d'entrée, fiche d'aventurier (race, classe, « comment tu te vois dans la BD », récits), lien privé pour ajouter des récits, base Postgres/Neon (`Aventurier`, `Recit`). Listes de races et classes dans `src/warcraft.ts` : noms français à confirmer, liste à vérifier à la source. Build OK, rendu à l'écran, base et envoi non testés. Limites : pas de modification d'une fiche après envoi, lien privé affiché une seule fois.
+- **Prochaine action** : mise en ligne de la Taverne (étapes dans `Memories/taverne/README.md` : projet Vercel avec Root Directory `Memories/taverne`, base Neon pour `POSTGRES_URL`, variable `ACCES_TAVERNE`, `npx prisma migrate deploy`), puis tester avec quelques amis et collecter les anecdotes.
 - **À clarifier** : `memories-synthese.md.py` est en réalité du Markdown (ne pas l'exécuter).
 
 ### space-atlas
