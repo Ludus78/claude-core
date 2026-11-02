@@ -1,0 +1,43 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_URL")
+}
+
+// Un aventurier = le personnage décrit par un ami. `token` est la clé de son lien privé.
+model Aventurier {
+  id             String   @id @default(cuid())
+  token          String   @unique
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  joueur         String
+  nom            String
+  race           String
+  sexe           String
+  classe         String
+  apparence      String?
+  representation String?
+  equipement     String?
+  caractere      String?
+  phraseCulte    String?
+  histoire       String?
+  limites        String?
+  accordUsage    Boolean  @default(false)
+  relecture      Boolean  @default(false)
+  recits         Recit[]
+}
+
+// Une histoire vécue ensemble, racontée par un aventurier.
+model Recit {
+  id           String     @id @default(cuid())
+  createdAt    DateTime   @default(now())
+  aventurierId String
+  aventurier   Aventurier @relation(fields: [aventurierId], references: [id], onDelete: Cascade)
+  titre        String
+  texte        String
+
+  @@index([aventurierId])
+}

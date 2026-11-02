@@ -6,7 +6,9 @@ Tirée de la synthèse du projet (`memories-synthese.md.py`). Projet sans code :
 
 - [x] Décider de l'univers : monde fantasy original (nains, elfes), aucun lien avec WoW, visuel plus sombre, humour à la Naheulbeuk (voir `CLAUDE.md`) — 2026-11-02. Reste à trancher : diffusion publique ou privée, après l'accord des amis
 - [x] Rédiger le questionnaire des amis : `questionnaire-amis.md` (30 questions, prêt à copier dans un Google Form) — 2026-11-02
-- [ ] Créer le Google Form à partir de `questionnaire-amis.md` et l'envoyer aux amis (validation requise : fait par toi, les réponses restent hors du dépôt)
+- [x] Page web de collecte `taverne/` (Next.js, Prisma, Neon) : fiche d'aventurier, récits, mot de passe de la porte, ambiance auberge ; build vérifié avec des variables factices, rendu à contrôler à l'écran — 2026-11-02
+- [ ] Mettre la Taverne en ligne : créer la base Neon, projet Vercel (Root Directory `Memories/taverne`), variables `POSTGRES_URL` et `ACCES_TAVERNE`, `npx prisma migrate deploy` (validation requise : fait par toi, voir `taverne/README.md`)
+- [ ] Envoyer le lien et le mot de passe aux amis (validation requise : fait par toi)
 - [ ] Laisser chaque ami choisir sa représentation (qui peut différer de son personnage d'époque) et la noter dans sa fiche (validation requise : fait par toi et le groupe)
 - [ ] Piste : histoires écrites par toi, ou histoire d'origine de chaque personnage, en plus des anecdotes du groupe (validation requise)
 - [ ] Obtenir l'accord de chaque ami pour l'usage de son personnage et de ses traits réels (validation requise)

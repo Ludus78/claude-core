@@ -1,0 +1,265 @@
+:root {
+  --bois: #1b120c;
+  --bois-clair: #2a1b11;
+  --braise: #e8742a;
+  --lueur: #f2b25c;
+  --parchemin: #efe2c3;
+  --parchemin-ombre: #d9c79d;
+  --encre: #2b1d10;
+  --encre-douce: #5a4630;
+  --sang: #8e2a1c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bois);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--parchemin);
+  font-family: var(--police-texte), Georgia, serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  background:
+    radial-gradient(ellipse 70% 45% at 50% 105%, rgba(232, 116, 42, 0.38), transparent 70%),
+    radial-gradient(ellipse 120% 80% at 50% 0%, #2f1f14, var(--bois) 70%);
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--police-titre), Georgia, serif;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.25;
+}
+
+a {
+  color: var(--lueur);
+}
+
+.page {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 5rem;
+}
+
+.enseigne {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.enseigne h1 {
+  margin: 0.25rem 0 0.5rem;
+  font-size: clamp(1.9rem, 6vw, 3rem);
+  color: var(--lueur);
+  text-shadow: 0 0 22px rgba(232, 116, 42, 0.55);
+}
+
+.enseigne p {
+  margin: 0 auto;
+  max-width: 34rem;
+  color: var(--parchemin-ombre);
+  font-style: italic;
+}
+
+/* Le foyer : une lueur qui vacille doucement */
+.foyer {
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--lueur) 0%, var(--braise) 38%, transparent 70%);
+  animation: vacille 3.2s ease-in-out infinite;
+}
+
+@keyframes vacille {
+  0%,
+  100% {
+    opacity: 0.95;
+    transform: scale(1);
+  }
+  35% {
+    opacity: 0.75;
+    transform: scale(0.94);
+  }
+  62% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .foyer {
+    animation: none;
+  }
+}
+
+.parchemin {
+  background: linear-gradient(180deg, var(--parchemin), var(--parchemin-ombre));
+  color: var(--encre);
+  border-radius: 0.75rem;
+  padding: 1.5rem 1.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow:
+    0 0 0 2px #3b2a1a,
+    0 12px 30px rgba(0, 0, 0, 0.55);
+}
+
+.parchemin h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.4rem;
+  color: var(--sang);
+}
+
+.parchemin .aide {
+  margin: 0 0 1rem;
+  color: var(--encre-douce);
+  font-size: 1rem;
+  font-style: italic;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+.champ-aide {
+  display: block;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--encre-douce);
+}
+
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  min-height: 2.75rem;
+  margin-top: 0.35rem;
+  padding: 0.55rem 0.75rem;
+  font: inherit;
+  color: var(--encre);
+  background: #fbf5e4;
+  border: 2px solid #8a6d46;
+  border-radius: 0.4rem;
+}
+
+textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--braise);
+  outline-offset: 2px;
+}
+
+fieldset {
+  margin: 1rem 0 0;
+  padding: 0;
+  border: 0;
+}
+
+legend {
+  padding: 0;
+  font-weight: 700;
+}
+
+.choix {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-top: 0.35rem;
+}
+
+.case {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  min-height: 2.75rem;
+  margin-top: 0.5rem;
+  font-weight: 400;
+}
+
+.case input {
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-top: 0.3rem;
+  accent-color: var(--sang);
+}
+
+.bouton {
+  display: inline-block;
+  min-height: 2.75rem;
+  margin-top: 1.25rem;
+  padding: 0.6rem 1.6rem;
+  font-family: var(--police-titre), Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--parchemin);
+  background: var(--sang);
+  border: 2px solid #5a1a10;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.bouton:hover {
+  background: #a3331f;
+}
+
+.alerte {
+  margin: 0 0 1.5rem;
+  padding: 0.85rem 1rem;
+  color: var(--parchemin);
+  background: rgba(142, 42, 28, 0.85);
+  border: 2px solid var(--sang);
+  border-radius: 0.5rem;
+}
+
+.confirmation {
+  margin: 0 0 1.5rem;
+  padding: 0.85rem 1rem;
+  color: var(--encre);
+  background: #cfe0a8;
+  border: 2px solid #6b8a3a;
+  border-radius: 0.5rem;
+}
+
+.fiche dt {
+  margin-top: 0.9rem;
+  font-weight: 700;
+  color: var(--sang);
+}
+
+.fiche dd {
+  margin: 0.1rem 0 0;
+  white-space: pre-wrap;
+}
+
+.recit h3 {
+  margin: 1.25rem 0 0.25rem;
+}
+
+.recit p {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.lien-prive {
+  word-break: break-all;
+  font-size: 0.95rem;
+}

@@ -1,6 +1,8 @@
 # Questionnaire : ta légende, racontée par toi
 
-À copier tel quel dans un Google Form (voir `ROADMAP.md`). Chaque section correspond à un champ de `personnages/_modele.md` ou d'`anecdotes/_modele.md`.
+> **Remplacé par la page `taverne/` (2026-11-02).** Ce premier jet visait mal : le but est de décrire le héros réellement joué (race, classe, équipement…) puis de recueillir des récits. Il ne reste qu'une réserve d'idées de questions, à puiser au besoin.
+
+Chaque section correspond à un champ de `personnages/_modele.md` ou d'`anecdotes/_modele.md`.
 
 ---
 
