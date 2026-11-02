@@ -48,6 +48,16 @@ export async function createUser(input: CreateUserInput, today = todayUtc()): Pr
   }
 }
 
+// Looks up the member behind a signed-in session. The birth date is never selected.
+export async function findUserByEmail(email: string): Promise<{ id: string; accountStatus: string } | null> {
+  const result = await query<{ id: string; account_status: string }>(
+    "SELECT id, account_status FROM users WHERE email = $1",
+    [email],
+  );
+  const row = result.rows[0];
+  return row ? { id: row.id, accountStatus: row.account_status } : null;
+}
+
 // Translates the database errors the signup can legitimately trigger.
 function toFailure(error: unknown): CreateUserFailure | null {
   if (typeof error !== "object" || error === null) return null;

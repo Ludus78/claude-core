@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi, type Mock } from 'vitest';
 import { query } from './db';
-import { createUser } from './users';
+import { createUser, findUserByEmail } from './users';
 
 vi.mock('./db', () => ({ query: vi.fn() }));
 
@@ -113,5 +113,39 @@ describe('createUser', () => {
     queryMock.mockRejectedValueOnce(error);
 
     await expect(createUser(adult, TODAY)).rejects.toEqual(error);
+  });
+});
+
+describe('findUserByEmail', () => {
+  beforeEach(() => {
+    queryMock.mockReset();
+  });
+
+  it('renvoie le membre trouvé avec son statut de compte', async () => {
+    queryMock.mockResolvedValueOnce({ rows: [{ id: 'u-1', account_status: 'pending_parental' }] });
+
+    const result = await findUserByEmail('a@example.com');
+
+    expect(result).toEqual({ id: 'u-1', accountStatus: 'pending_parental' });
+  });
+
+  it('renvoie null si aucun membre ne correspond', async () => {
+    queryMock.mockResolvedValueOnce({ rows: [] });
+
+    const result = await findUserByEmail('inconnu@example.com');
+
+    expect(result).toBeNull();
+  });
+
+  it('utilise une requête paramétrée et ne sélectionne jamais birth_date', async () => {
+    queryMock.mockResolvedValueOnce({ rows: [] });
+
+    await findUserByEmail("a@example.com' OR '1'='1");
+
+    expect(queryMock).toHaveBeenCalledTimes(1);
+    const [sql, params] = queryMock.mock.calls[0];
+    expect(sql).toContain('SELECT id, account_status FROM users WHERE email = $1');
+    expect(sql).not.toMatch(/birth_date/i);
+    expect(params).toEqual(["a@example.com' OR '1'='1"]);
   });
 });
