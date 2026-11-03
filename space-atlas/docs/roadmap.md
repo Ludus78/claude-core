@@ -41,7 +41,7 @@ La commande `/next space-atlas` ne prend que les tâches **sans** « validation 
 
 - [ ] Choisir le nom définitif du projet (validation requise)
 - [ ] Remplir les 8 fichiers de `research/` selon le plan de recherche (validation requise : menée par toi)
-- [ ] Trancher Cesium ou Three.js dans `research/cesium-vs-threejs.md` (validation requise)
+- [x] Trancher Cesium ou Three.js : Three.js retenu (2026-11-03, D25)
 - [ ] Valider le brouillon du schéma des fiches `data-contract/company.schema.json` (validation requise)
 
 ### Réalisation
@@ -59,7 +59,7 @@ La commande `/next space-atlas` ne prend que les tâches **sans** « validation 
 | Politique d'usage CelesTrak | [celestrak-usage-policy.md](research/celestrak-usage-policy.md) | à remplir |
 | Launch Library 2 | [launch-library-2.md](research/launch-library-2.md) | à remplir |
 | Space-Track | [space-track.md](research/space-track.md) | à remplir |
-| Cesium vs Three.js | [cesium-vs-threejs.md](research/cesium-vs-threejs.md) | à remplir |
+| Cesium vs Three.js | [cesium-vs-threejs.md](research/cesium-vs-threejs.md) | décidé : Three.js (brouillon à compléter) |
 | Familles d'orbites | [orbit-families.md](research/orbit-families.md) | à remplir |
 | Projets existants | [existing-projects.md](research/existing-projects.md) | à remplir |
 | Shortlist d'entreprises | [company-shortlist.md](research/company-shortlist.md) | à remplir |

@@ -56,3 +56,9 @@ L'objectif de recrutement dans le spatial a été **retiré** de ce projet : il 
 | D22 | Aucun squelette de code avant le choix Cesium ou Three.js | Le squelette dépend de ce choix |
 | D23 | `.github/` (CI, modèles de pull request pour les corrections de fiches) reporté à l'observatoire (M6) | Il sortirait de `space-atlas/` : à la racine du dépôt |
 | D24 | Textes en français, nom « space-atlas » provisoire | Le nom définitif reste à choisir |
+
+## Décisions de recherche (2026-11-03)
+
+| # | Décision | Raison |
+|---|---|---|
+| D25 | **Three.js** retenu pour le globe (pas CesiumJS) | Préférence du propriétaire : contrôle visuel total pour la couche pédagogique. Contreparties connues : globe, repères ECI/ECEF et caméra à construire soi-même ; performances à mesurer au prototype (voir `research/cesium-vs-threejs.md`) |
