@@ -40,7 +40,7 @@ La base technique est déjà dans ce dossier (`db/`, `packages/score/`, `docker-
 - [x] Inscription : pseudo unique, date de naissance, consentement ; refus sous 13 ans ; compte `pending_parental` pour moins de 15 ans (côté serveur : `server/signup.ts`, `server/users.ts`, `server/parental.ts` ; formulaire `/inscription` et écran de l'e-mail du parent `/inscription/parent` faits, identité prise dans la session Kinde, jamais dans le formulaire) — 2026-11-02
 - [ ] Inscription, à traiter avant toute ouverture publique (relecture du 2026-11-02, validation requise) : (1) envoi du lien au parent, attend le choix du service d'e-mails : tant qu'il n'est pas branché, un compte de 13-14 ans reste bloqué en `pending_parental` ; (2) le compte est rattaché à l'e-mail de la session sans vérifier que Kinde l'a validé : exiger l'e-mail vérifié (à vérifier à la source, config Kinde) ou lier par l'identifiant Kinde avec la tâche `kinde_id` ci-dessus ; (3) limitation de débit sur `inscrire` et `demanderAccordParent` (chaque demande expire les précédentes) ; (4) page d'erreur `error.tsx` ; (5) tests des actions (sans session, compte non `pending_parental`, jeton non exposé)
 - [x] Reprendre les couleurs des maquettes : fond `#0E0E10`, texte `#F5F2EC`, accent `#D7263D` — 2026-10-29
-- [ ] Premiers écrans : accueil, inscription, profil
+- [x] Premiers écrans : accueil, inscription, profil (accueil et `/profil` ajoutés, sans date de naissance) — 2026-11-04
 
 ## Phases 2 à 6
 

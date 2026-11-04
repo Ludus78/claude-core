@@ -58,6 +58,25 @@ export async function findUserByEmail(email: string): Promise<{ id: string; acco
   return row ? { id: row.id, accountStatus: row.account_status } : null;
 }
 
+export type Profile = {
+  pseudo: string;
+  plan: "free" | "premium";
+  accountStatus: string;
+  createdAt: Date;
+};
+
+// What the profile page shows. The birth date is never selected.
+export async function findProfileByEmail(email: string): Promise<Profile | null> {
+  const result = await query<{ pseudo: string; plan: "free" | "premium"; account_status: string; created_at: Date }>(
+    "SELECT pseudo, plan, account_status, created_at FROM users WHERE email = $1",
+    [email],
+  );
+  const row = result.rows[0];
+  return row
+    ? { pseudo: row.pseudo, plan: row.plan, accountStatus: row.account_status, createdAt: row.created_at }
+    : null;
+}
+
 // Translates the database errors the signup can legitimately trigger.
 function toFailure(error: unknown): CreateUserFailure | null {
   if (typeof error !== "object" || error === null) return null;

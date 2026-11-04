@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi, type Mock } from 'vitest';
 import { query } from './db';
-import { createUser, findUserByEmail } from './users';
+import { createUser, findProfileByEmail, findUserByEmail } from './users';
 
 vi.mock('./db', () => ({ query: vi.fn() }));
 
@@ -147,5 +147,32 @@ describe('findUserByEmail', () => {
     expect(sql).toContain('SELECT id, account_status FROM users WHERE email = $1');
     expect(sql).not.toMatch(/birth_date/i);
     expect(params).toEqual(["a@example.com' OR '1'='1"]);
+  });
+});
+
+describe('findProfileByEmail', () => {
+  beforeEach(() => {
+    queryMock.mockReset();
+  });
+
+  it('renvoie le profil sans date de naissance', async () => {
+    const createdAt = new Date('2026-10-30T10:00:00Z');
+    queryMock.mockResolvedValueOnce({
+      rows: [{ pseudo: 'cinephile', plan: 'free', account_status: 'active', created_at: createdAt }],
+    });
+
+    const result = await findProfileByEmail('a@example.com');
+
+    expect(result).toEqual({ pseudo: 'cinephile', plan: 'free', accountStatus: 'active', createdAt });
+    const [sql, params] = queryMock.mock.calls[0];
+    expect(sql).toContain('WHERE email = $1');
+    expect(sql).not.toMatch(/birth_date/i);
+    expect(params).toEqual(['a@example.com']);
+  });
+
+  it('renvoie null si aucun membre ne correspond', async () => {
+    queryMock.mockResolvedValueOnce({ rows: [] });
+
+    expect(await findProfileByEmail('inconnu@example.com')).toBeNull();
   });
 });
