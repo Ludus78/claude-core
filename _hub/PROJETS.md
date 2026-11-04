@@ -14,7 +14,6 @@ Statuts : `idée` · `étude` · `en cours` · `pause`.
 | SeanceClub | `SeanceClub/` | Cible : Next.js, PostgreSQL, Socket.IO | étude (cadrage avancé) |
 | Memories | `Memories/` | BD ; page de collecte `taverne/` (Next.js, Prisma/Postgres) | en cours |
 | space-atlas | `space-atlas/` | Cible : Next.js, TypeScript, Cesium ou Three.js | étude (recherche) |
-| games (cyclop-studio) | `games/` (sous-module) | Bun, TypeScript, three.js, Cloudflare Workers/Durable Objects | en cours (projet à 3) |
 
 ## Détail
 
@@ -72,9 +71,3 @@ Idées du 2026-10-31, par ordre de priorité proposé. Ajouter ici les idées pa
 
 Dépendances : 2 et 3 avant de lancer de nouveaux sites ; 5 dépend du cadrage de 1.
 
-### games (cyclop-studio)
-- **Nature** : dépôt `github.com/cyclop-studio/games`, développé avec 2 amis. Intégré comme **sous-module git** (`games/`) : le code et l'historique restent chez cyclop-studio, ce dépôt ne garde qu'un pointeur sur un commit (`9b999b2` à l'intégration, 2026-11-04).
-- **État** (README du dépôt) : 3 jeux navigateur (HOLDUP, tir type CS ; CHAINHOLD, arène type WoW ; LASTBRIDGE, MOBA), un donjon (Morrok), un hub, un service de classement partagé (OpenSkill), son et modèles 3D. Gros dépôt : environ 1,5 Go.
-- **Idées du récap d'équipe, à confirmer (absentes du dépôt)** : jeu de cartes PvP 1v1/2v2 avec boosters ; monnaie commune « CYPS » entre les jeux ; cartes crossover ; accueil de jeux et maps de la communauté.
-- **Prochaine action** : à renseigner ; lire `games/README.md`. L'accès en écriture au dépôt (clé SSH) n'est pas configuré : le clonage SSH a échoué, l'HTTPS en lecture marche.
-- **À vérifier** : droits sur les images de référence (WoW, CS) présentes dans `arena/art/references` et `shooter/`.
