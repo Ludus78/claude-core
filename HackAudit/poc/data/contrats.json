@@ -1,0 +1,386 @@
+[
+ {
+  "contract_id": "C-F001-2025",
+  "supplier_id": "F001",
+  "supplier_name": "Nordika Textile",
+  "start": "2025-01-01",
+  "end": "2027-12-31",
+  "payment_terms_days": 30,
+  "validity_clause": {
+   "clause": "Art. 2 - Durée",
+   "page": 2
+  },
+  "price_grid": [
+   {
+    "sku": "F001-A1",
+    "unit_price": 24.97,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   },
+   {
+    "sku": "F001-A2",
+    "unit_price": 92.44,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   },
+   {
+    "sku": "F001-A3",
+    "unit_price": 94.08,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   }
+  ]
+ },
+ {
+  "contract_id": "C-F002-2025",
+  "supplier_id": "F002",
+  "supplier_name": "Logistik Express",
+  "start": "2025-01-01",
+  "end": "2027-12-31",
+  "payment_terms_days": 30,
+  "validity_clause": {
+   "clause": "Art. 2 - Durée",
+   "page": 2
+  },
+  "price_grid": [
+   {
+    "sku": "F002-A1",
+    "unit_price": 155.36,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   },
+   {
+    "sku": "F002-A2",
+    "unit_price": 22.06,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   },
+   {
+    "sku": "F002-A3",
+    "unit_price": 43.3,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   }
+  ]
+ },
+ {
+  "contract_id": "C-F003-2025",
+  "supplier_id": "F003",
+  "supplier_name": "Packaging Ouest",
+  "start": "2025-01-01",
+  "end": "2027-12-31",
+  "payment_terms_days": 30,
+  "validity_clause": {
+   "clause": "Art. 2 - Durée",
+   "page": 2
+  },
+  "price_grid": [
+   {
+    "sku": "F003-A1",
+    "unit_price": 109.78,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   },
+   {
+    "sku": "F003-A2",
+    "unit_price": 101.95,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   },
+   {
+    "sku": "F003-A3",
+    "unit_price": 141.87,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   }
+  ]
+ },
+ {
+  "contract_id": "C-F004-2025",
+  "supplier_id": "F004",
+  "supplier_name": "Digital Ads Europe",
+  "start": "2025-01-01",
+  "end": "2027-12-31",
+  "payment_terms_days": 30,
+  "validity_clause": {
+   "clause": "Art. 2 - Durée",
+   "page": 2
+  },
+  "price_grid": [
+   {
+    "sku": "F004-A1",
+    "unit_price": 100.41,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   },
+   {
+    "sku": "F004-A2",
+    "unit_price": 132.57,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   },
+   {
+    "sku": "F004-A3",
+    "unit_price": 139.19,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   }
+  ]
+ },
+ {
+  "contract_id": "C-F005-2025",
+  "supplier_id": "F005",
+  "supplier_name": "Maison Verte Distribution",
+  "start": "2025-01-01",
+  "end": "2027-12-31",
+  "payment_terms_days": 30,
+  "validity_clause": {
+   "clause": "Art. 2 - Durée",
+   "page": 2
+  },
+  "price_grid": [
+   {
+    "sku": "F005-A1",
+    "unit_price": 136.18,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   },
+   {
+    "sku": "F005-A2",
+    "unit_price": 107.23,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   },
+   {
+    "sku": "F005-A3",
+    "unit_price": 46.23,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   }
+  ]
+ },
+ {
+  "contract_id": "C-F006-2025",
+  "supplier_id": "F006",
+  "supplier_name": "Sportline Import",
+  "start": "2025-01-01",
+  "end": "2027-12-31",
+  "payment_terms_days": 30,
+  "validity_clause": {
+   "clause": "Art. 2 - Durée",
+   "page": 2
+  },
+  "price_grid": [
+   {
+    "sku": "F006-A1",
+    "unit_price": 112.1,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   },
+   {
+    "sku": "F006-A2",
+    "unit_price": 23.49,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   },
+   {
+    "sku": "F006-A3",
+    "unit_price": 147.75,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   }
+  ]
+ },
+ {
+  "contract_id": "C-F007-2025",
+  "supplier_id": "F007",
+  "supplier_name": "Cosmetica France",
+  "start": "2025-01-01",
+  "end": "2027-12-31",
+  "payment_terms_days": 30,
+  "validity_clause": {
+   "clause": "Art. 2 - Durée",
+   "page": 2
+  },
+  "price_grid": [
+   {
+    "sku": "F007-A1",
+    "unit_price": 83.14,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   },
+   {
+    "sku": "F007-A2",
+    "unit_price": 147.4,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   },
+   {
+    "sku": "F007-A3",
+    "unit_price": 124.59,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   }
+  ]
+ },
+ {
+  "contract_id": "C-F008-2025",
+  "supplier_id": "F008",
+  "supplier_name": "TechAccessoires SA",
+  "start": "2025-01-01",
+  "end": "2027-12-31",
+  "payment_terms_days": 30,
+  "validity_clause": {
+   "clause": "Art. 2 - Durée",
+   "page": 2
+  },
+  "price_grid": [
+   {
+    "sku": "F008-A1",
+    "unit_price": 123.57,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   },
+   {
+    "sku": "F008-A2",
+    "unit_price": 41.0,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   },
+   {
+    "sku": "F008-A3",
+    "unit_price": 48.27,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   }
+  ]
+ },
+ {
+  "contract_id": "C-F009-2025",
+  "supplier_id": "F009",
+  "supplier_name": "Boissons du Sud",
+  "start": "2025-01-01",
+  "end": "2027-12-31",
+  "payment_terms_days": 30,
+  "validity_clause": {
+   "clause": "Art. 2 - Durée",
+   "page": 2
+  },
+  "price_grid": [
+   {
+    "sku": "F009-A1",
+    "unit_price": 176.46,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   },
+   {
+    "sku": "F009-A2",
+    "unit_price": 167.56,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   },
+   {
+    "sku": "F009-A3",
+    "unit_price": 145.7,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   }
+  ]
+ },
+ {
+  "contract_id": "C-F010-2025",
+  "supplier_id": "F010",
+  "supplier_name": "Emballages Rhône",
+  "start": "2025-01-01",
+  "end": "2027-12-31",
+  "payment_terms_days": 30,
+  "validity_clause": {
+   "clause": "Art. 2 - Durée",
+   "page": 2
+  },
+  "price_grid": [
+   {
+    "sku": "F010-A1",
+    "unit_price": 179.94,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   },
+   {
+    "sku": "F010-A2",
+    "unit_price": 94.39,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   },
+   {
+    "sku": "F010-A3",
+    "unit_price": 17.43,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   }
+  ]
+ },
+ {
+  "contract_id": "C-F011-2025",
+  "supplier_id": "F011",
+  "supplier_name": "Mobilier Urbain",
+  "start": "2025-01-01",
+  "end": "2027-12-31",
+  "payment_terms_days": 30,
+  "validity_clause": {
+   "clause": "Art. 2 - Durée",
+   "page": 2
+  },
+  "price_grid": [
+   {
+    "sku": "F011-A1",
+    "unit_price": 63.91,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   },
+   {
+    "sku": "F011-A2",
+    "unit_price": 102.11,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   },
+   {
+    "sku": "F011-A3",
+    "unit_price": 55.41,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   }
+  ]
+ },
+ {
+  "contract_id": "C-F012-2025",
+  "supplier_id": "F012",
+  "supplier_name": "Transports Delmas",
+  "start": "2025-01-01",
+  "end": "2026-06-30",
+  "payment_terms_days": 30,
+  "validity_clause": {
+   "clause": "Art. 2 - Durée",
+   "page": 2
+  },
+  "price_grid": [
+   {
+    "sku": "F012-A1",
+    "unit_price": 84.51,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   },
+   {
+    "sku": "F012-A2",
+    "unit_price": 158.26,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   },
+   {
+    "sku": "F012-A3",
+    "unit_price": 127.9,
+    "clause": "Annexe 1 - Grille tarifaire",
+    "page": 4
+   }
+  ]
+ }
+]

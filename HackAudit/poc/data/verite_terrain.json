@@ -1,0 +1,212 @@
+{
+ "INV-0060": {
+  "categorie": "fec_absent"
+ },
+ "INV-0200": {
+  "categorie": "fec_absent"
+ },
+ "INV-0192": {
+  "categorie": "fec_absent"
+ },
+ "INV-0161": {
+  "categorie": "fec_absent"
+ },
+ "INV-0037": {
+  "categorie": "fec_montant"
+ },
+ "INV-0088": {
+  "categorie": "fec_montant"
+ },
+ "INV-0046": {
+  "categorie": "fec_montant"
+ },
+ "INV-0099": {
+  "categorie": "fec_montant"
+ },
+ "INV-0152": {
+  "categorie": "fec_reference"
+ },
+ "INV-0094": {
+  "categorie": "fec_reference"
+ },
+ "INV-0112": {
+  "categorie": "fec_reference"
+ },
+ "INV-0187": {
+  "categorie": "prix_contrat"
+ },
+ "INV-0050": {
+  "categorie": "prix_contrat"
+ },
+ "INV-0166": {
+  "categorie": "prix_contrat"
+ },
+ "INV-0121": {
+  "categorie": "prix_contrat"
+ },
+ "INV-0135": {
+  "categorie": "prix_contrat"
+ },
+ "INV-0036": {
+  "categorie": "qte_recue"
+ },
+ "INV-0120": {
+  "categorie": "qte_recue"
+ },
+ "INV-0102": {
+  "categorie": "qte_recue"
+ },
+ "INV-0178": {
+  "categorie": "qte_recue"
+ },
+ "INV-0009": {
+  "categorie": "sans_reception"
+ },
+ "INV-0165": {
+  "categorie": "sans_reception"
+ },
+ "INV-0131": {
+  "categorie": "sans_reception"
+ },
+ "INV-0035": {
+  "categorie": "qte_commande"
+ },
+ "INV-0025": {
+  "categorie": "qte_commande"
+ },
+ "INV-0151": {
+  "categorie": "qte_commande"
+ },
+ "INV-0104": {
+  "categorie": "cutoff"
+ },
+ "INV-0197": {
+  "categorie": "cutoff"
+ },
+ "INV-0028": {
+  "categorie": "cutoff"
+ },
+ "INV-0045": {
+  "categorie": "contrat_expire"
+ },
+ "INV-0176": {
+  "categorie": "contrat_expire"
+ },
+ "INV-0049": {
+  "categorie": "contrat_expire"
+ },
+ "INV-0136": {
+  "categorie": "arithmetique"
+ },
+ "INV-0089": {
+  "categorie": "arithmetique"
+ },
+ "INV-0103": {
+  "categorie": "arithmetique"
+ },
+ "INV-0016": {
+  "categorie": "extraction"
+ },
+ "INV-0117": {
+  "categorie": "extraction"
+ },
+ "INV-0011": {
+  "categorie": "extraction"
+ },
+ "INV-0129": {
+  "categorie": null,
+  "bruit": "date de comptabilisation décalée de 1 à 3 jours"
+ },
+ "INV-0172": {
+  "categorie": null,
+  "bruit": "date de comptabilisation décalée de 1 à 3 jours"
+ },
+ "INV-0005": {
+  "categorie": null,
+  "bruit": "date de comptabilisation décalée de 1 à 3 jours"
+ },
+ "INV-0032": {
+  "categorie": null,
+  "bruit": "date de comptabilisation décalée de 1 à 3 jours"
+ },
+ "INV-0101": {
+  "categorie": null,
+  "bruit": "date de comptabilisation décalée de 1 à 3 jours"
+ },
+ "INV-0078": {
+  "categorie": null,
+  "bruit": "date de comptabilisation décalée de 1 à 3 jours"
+ },
+ "INV-0069": {
+  "categorie": null,
+  "bruit": "date de comptabilisation décalée de 1 à 3 jours"
+ },
+ "INV-0033": {
+  "categorie": null,
+  "bruit": "date de comptabilisation décalée de 1 à 3 jours"
+ },
+ "INV-0124": {
+  "categorie": null,
+  "bruit": "date de comptabilisation décalée de 1 à 3 jours"
+ },
+ "INV-0023": {
+  "categorie": null,
+  "bruit": "date de comptabilisation décalée de 1 à 3 jours"
+ },
+ "INV-0013": {
+  "categorie": null,
+  "bruit": "date de comptabilisation décalée de 1 à 3 jours"
+ },
+ "INV-0063": {
+  "categorie": null,
+  "bruit": "date de comptabilisation décalée de 1 à 3 jours"
+ },
+ "INV-0044": {
+  "categorie": null,
+  "bruit": "arrondi de 0,01 EUR entre facture et FEC"
+ },
+ "INV-0030": {
+  "categorie": null,
+  "bruit": "arrondi de 0,01 EUR entre facture et FEC"
+ },
+ "INV-0093": {
+  "categorie": null,
+  "bruit": "arrondi de 0,01 EUR entre facture et FEC"
+ },
+ "INV-0183": {
+  "categorie": null,
+  "bruit": "arrondi de 0,01 EUR entre facture et FEC"
+ },
+ "INV-0053": {
+  "categorie": null,
+  "bruit": "arrondi de 0,01 EUR entre facture et FEC"
+ },
+ "INV-0086": {
+  "categorie": null,
+  "bruit": "arrondi de 0,01 EUR entre facture et FEC"
+ },
+ "INV-0043": {
+  "categorie": null,
+  "bruit": "arrondi de 0,01 EUR entre facture et FEC"
+ },
+ "INV-0175": {
+  "categorie": null,
+  "bruit": "arrondi de 0,01 EUR entre facture et FEC"
+ },
+ "INV-0201": {
+  "categorie": "doublon",
+  "original": "INV-0080"
+ },
+ "INV-0202": {
+  "categorie": "doublon",
+  "original": "INV-0109"
+ },
+ "INV-0203": {
+  "categorie": "doublon",
+  "original": "INV-0048"
+ },
+ "INV-0204": {
+  "categorie": "doublon",
+  "original": "INV-0006"
+ }
+}
