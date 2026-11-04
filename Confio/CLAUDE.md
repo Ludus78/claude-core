@@ -24,8 +24,3 @@ TypeScript (ESM), Vite + `@crxjs/vite-plugin`, Vitest, `googleapis`. Gestionnair
 - Toute modification d'un signal ou du scoring s'accompagne d'un test Vitest (`*.test.ts` voisin).
 - Aucun contenu de vrai mail, token OAuth ni clé privée dans le dépôt.
 - Réponses courtes, code direct, pas de fonctionnalité non demandée (voir `.github/copilot-instructions.md`).
-
-## À clarifier avant d'y toucher
-
-- `claudetest.md` contient du code TypeScript (extension probablement erronée).
-- `sersestechestestoile` : fichier au nom inexpliqué.

@@ -9,9 +9,9 @@ Tâches tirées de l'état réel du dépôt (octobre 2026). La commande `/next C
 - [x] Écrire les tests de `src/detection/signals/urgency.ts` (2026-10-29)
 - [x] Écrire les tests de `src/gmail/headers.ts` (2026-10-30)
 - [x] Écrire les tests de `src/gmail/client.ts` (client simulé, jamais de vraie boîte Gmail) (2026-10-30)
-- [ ] Ajouter un script `lint` à `package.json` (validation requise : nouvelle dépendance)
-- [ ] Renommer `claudetest.md` en fichier TypeScript, ou le supprimer (validation requise : il contient du TypeScript)
-- [ ] Identifier le fichier `sersestechestestoile` et le renommer ou le supprimer (validation requise)
+- [x] Ajouter un script `lint` : abandonné, `typescript-eslint` 8.72.1 refuse TypeScript 7 (erreur « does not support TS 7.0 », 2 essais). `tsc --noEmit` du build sert de contrôle ; à reprendre quand `typescript-eslint` supportera TS 7 (à vérifier à la source) (2026-11-04)
+- [x] `claudetest.md` supprimé : ancien script de rejeu du scoring qui importait un `./scoring` inexistant, récupérable dans l'historique git (2026-11-04)
+- [x] `sersestechestestoile` supprimé : ancienne copie de `src/gmail/headers.ts`, accents corrompus, sans les correctifs récents, récupérable dans l'historique git (2026-11-04)
 
 ## Phase 1 : produit
 
