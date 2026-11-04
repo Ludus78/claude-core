@@ -62,3 +62,4 @@ L'objectif de recrutement dans le spatial a été **retiré** de ce projet : il 
 | # | Décision | Raison |
 |---|---|---|
 | D25 | **Three.js** retenu pour le globe (pas CesiumJS) | Préférence du propriétaire : contrôle visuel total pour la couche pédagogique. Contreparties connues : globe, repères ECI/ECEF et caméra à construire soi-même ; performances à mesurer au prototype (voir `research/cesium-vs-threejs.md`) |
+| D26 | **CelesTrak** : format JSON (pas TLE) ; cache serveur de 2 h par groupe, un seul téléchargement par mise à jour ; surveillance des erreurs 403/404 (arrêt des appels et service de l'ancienne copie si elles montent) | Quotas officiels : une IP est bloquée après 50 erreurs en 2 h ; plus de numéros de catalogue à 5 chiffres depuis le 11/07/2026, donc plus de TLE pour les nouveaux objets. Règles d'attribution et de réutilisation : à vérifier à la source |
