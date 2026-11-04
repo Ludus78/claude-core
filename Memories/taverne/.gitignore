@@ -6,3 +6,6 @@ node_modules/
 !.env.example
 *.tsbuildinfo
 next-env.d.ts
+
+# Généré par next dev
+AGENTS.md
