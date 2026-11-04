@@ -17,7 +17,7 @@ Tâches tirées de l'état réel du dépôt (octobre 2026). La commande `/next i
 Audits en lecture seule d'abord : chacun produit un rapport dans `immonova2.0/docs/`, sans modifier l'application. Les corrections qui en découlent deviennent des tâches à valider.
 
 - [x] Audit des pages : lister les pages de `app/` et leur rôle dans `docs/pages.md`, repérer les doublons probables (`calculette/`, `calculateurs/`, `calculette-locative/`, `calculette-viager/`) (à confirmer) (2026-11-04)
-- [ ] Audit des deux dossiers `app/` et `src/app/` : `src/app/` ne contient que `api/real-estate` et `PropertyCard.tsx`. Next.js l'utilise-t-il vraiment à côté de `app/` ? (à vérifier à la source, dans la documentation de Next.js). Rapport dans `docs/audit-structure.md`
+- [x] Audit des deux dossiers `app/` et `src/app/` : `src/app/` ne contient que `api/real-estate` et `PropertyCard.tsx`. Next.js l'utilise-t-il vraiment à côté de `app/` ? (à vérifier à la source, dans la documentation de Next.js). Rapport dans `docs/audit-structure.md` : `src/app` était ignoré par Next.js, déjà supprimé le 2026-10-31, rapport fait (2026-11-04)
 - [ ] Audit de sécurité des routes API : authentification, validation des entrées, limites de débit, accès public ou non (surtout `seed-news`, `leads`, `chat`, `web-search`). Rapport dans `docs/audit-api.md`
 - [ ] Audit SEO, performance et accessibilité des pages principales (balises, sitemap, images, contrastes). Rapport dans `docs/audit-seo.md`
 - [ ] Audit RGPD : ce que PostHog, les formulaires (`contact`, `leads`) et les simulations enregistrent, et où figure le consentement. Rapport dans `docs/audit-rgpd.md`
