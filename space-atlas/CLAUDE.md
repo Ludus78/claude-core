@@ -4,7 +4,7 @@ Deux projets spatiaux liés par les NORAD IDs : `globe/` (globe pédagogique des
 
 ## État
 
-**Phase de recherche : documentation uniquement, aucun code.** Voir `README.md` et `docs/roadmap.md`.
+**Phase de recherche, plus un prototype du globe dans `globe/` (M1-3, Three.js, D25). L'observatoire est en documentation uniquement.** Voir `README.md` et `docs/roadmap.md`.
 
 ## Règles
 

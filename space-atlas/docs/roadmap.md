@@ -46,7 +46,7 @@ La commande `/next space-atlas` ne prend que les tâches **sans** « validation 
 
 ### Réalisation
 
-- [ ] M1-3 : globe de départ (ISS + quelques constellations, cache CelesTrak), vidéo de 15 s (validation requise : démarre après le choix de la 3D)
+- [x] M1-3 : globe de départ (ISS + quelques constellations, cache CelesTrak) : prototype fait dans `globe/` (15 tests, build OK, rendu contrôlé dans le navigateur) ; reste la vidéo de 15 s, à faire par toi (2026-11-04)
 - [ ] M4-5 : lancements, couleurs par orbite, infobulles pédagogiques, premier lien en ligne
 - [ ] M6-8 : observatoire v1 (30 entreprises, carte, filtres)
 - [ ] M9-11 : fusion des modules + 2 ou 3 mini-histoires

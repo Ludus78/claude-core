@@ -1,6 +1,6 @@
 # Globe pédagogique des orbites
 
-Projet 1 de [space-atlas](../README.md). **Statut : recherche, aucun code pour l'instant.**
+Projet 1 de [space-atlas](../README.md). **Statut : prototype M1-3 (2026-11-04).** Commandes depuis `globe/` : `npm install`, `npm run dev`, `npm test`, `npm run build`. Le globe est une sphère avec graticule, sans fond de carte (texture à choisir après contrôle de licence). Groupes CelesTrak : `stations`, `starlink`, `oneweb` (noms à vérifier à la source). Cache serveur dans `server/celestrak-cache.ts` (2 h, copie gardée si CelesTrak échoue, arrêt des appels après 5 erreurs en 2 h).
 
 ## Pourquoi
 

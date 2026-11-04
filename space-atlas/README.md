@@ -4,7 +4,7 @@
 
 Deux projets personnels autour du spatial, faits par passion et pour apprendre (3D, mécanique orbitale, données satellites). L'objectif : des résultats visuels et partageables, compréhensibles par un non-expert en quelques secondes.
 
-**Statut : phase de recherche.** Aucun code fonctionnel pour l'instant, uniquement de la documentation.
+**Statut : phase de recherche, avec un premier prototype du globe dans `globe/` (M1-3, 2026-11-04). L'observatoire reste en documentation.**
 
 ## Les deux projets
 

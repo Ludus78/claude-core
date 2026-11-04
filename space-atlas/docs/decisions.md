@@ -63,3 +63,12 @@ L'objectif de recrutement dans le spatial a été **retiré** de ce projet : il 
 |---|---|---|
 | D25 | **Three.js** retenu pour le globe (pas CesiumJS) | Préférence du propriétaire : contrôle visuel total pour la couche pédagogique. Contreparties connues : globe, repères ECI/ECEF et caméra à construire soi-même ; performances à mesurer au prototype (voir `research/cesium-vs-threejs.md`) |
 | D26 | **CelesTrak** : format JSON (pas TLE) ; cache serveur de 2 h par groupe, un seul téléchargement par mise à jour ; surveillance des erreurs 403/404 (arrêt des appels et service de l'ancienne copie si elles montent) | Quotas officiels : une IP est bloquée après 50 erreurs en 2 h ; plus de numéros de catalogue à 5 chiffres depuis le 11/07/2026, donc plus de TLE pour les nouveaux objets. Règles d'attribution et de réutilisation : à vérifier à la source |
+
+## Prototype du globe (2026-11-04)
+
+| # | Décision | Raison |
+|---|---|---|
+| D27 | `satellite.js` **6.0.2** (pas 7.x) | La 7.x exporte des modules WebAssembly qui importent `node:worker_threads` : le build Next.js échoue en webpack et se bloque en Turbopack (constaté le 2026-11-04). La 6.x se construit et lit le format OMM JSON (`json2satrec`). À réexaminer quand la 7.x sera compatible (à vérifier à la source) |
+| D28 | Globe sans texture de la Terre (sphère sombre + graticule) pour le prototype | Aucune image sans contrôle de licence ; la règle « rendu simple d'abord » s'applique |
+| D29 | Échantillons : jusqu'à 50 stations (20 reçues le 2026-11-04), 300 Starlink, 200 OneWeb, pris dans l'ordre de la réponse CelesTrak ; limites en dur, à ajuster | Rester entre 20 et 500 objets (voir `globe/README.md`) ; le choix des objets est arbitraire pour l'instant |
+| D30 | Le cache CelesTrak est en mémoire du serveur, propre à chaque instance | Suffisant pour le prototype ; sur Vercel, chaque instance garde son propre cache et son propre budget d'erreurs : à revoir (cache partagé) avant une mise en ligne |
