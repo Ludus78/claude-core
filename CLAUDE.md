@@ -9,6 +9,7 @@ Monorepo de projets personnels. **Un dossier = un projet indépendant** (son pro
 | `SeanceClub/` | Cadrage d'une plateforme pour cinéphiles (documents, schéma SQL) |
 | `Memories/` | Projet de BD sur des souvenirs de WoW (pas de code) |
 | `space-atlas/` | Globe des orbites + observatoire spatial européen (recherche) |
+| `games/` | **Sous-module git** (`cyclop-studio/games`, projet à 3, dépôt tiers) : 3 jeux navigateur + classement (Bun, three.js, Cloudflare). Ne pas y committer depuis ce dépôt ; son `README.md` fait foi |
 | `_hub/` | Poste de pilotage : `PROJETS.md` (état de chaque projet), commande `/status` |
 
 ## Règles générales
