@@ -21,7 +21,7 @@ Tirée de la synthèse du projet (`memories-synthese.md.py`). Projet sans code :
 
 ## Production
 
-- [ ] Rédiger la description de style commune dans `style/guide-de-style.md`
+- [x] Rédiger la description de style commune dans `style/guide-de-style.md` (proposition à relire et corriger par toi) — 2026-11-04
 - [ ] Choisir comment dessiner : illustrateur, plateforme de commissions, ou outils d'images avec l'accord du groupe (validation requise)
 - [ ] Écrire le script de la première vraie anecdote, case par case, dans `anecdotes/` à partir de `_modele.md`
 - [ ] Choisir la diffusion : PDF partagé, page web ou carnet imprimé (validation requise)
