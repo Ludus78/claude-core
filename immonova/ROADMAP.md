@@ -21,6 +21,10 @@ Audits en lecture seule d'abord : chacun produit un rapport dans `immonova2.0/do
 - [x] Audit de sécurité des routes API : authentification, validation des entrées, limites de débit, accès public ou non (surtout `seed-news`, `leads`, `chat`, `web-search`). Rapport dans `docs/audit-api.md` (2026-11-04)
 - [x] Audit SEO, performance et accessibilité des pages principales (balises, sitemap, images, contrastes). Rapport dans `docs/audit-seo.md` (2026-11-09)
 - [x] Audit RGPD : ce que PostHog, les formulaires (`contact`, `leads`) et les simulations enregistrent, et où figure le consentement. Rapport dans `docs/audit-rgpd.md` (2026-11-17)
+- [x] RGPD, correction 1 : retirer les `console.log` qui écrivent des données personnelles dans les journaux Vercel (`api/simulations/save`, `api/contact`, `api/chat`) ; seuls les `console.error` sans donnée personnelle restent (2026-11-17)
+- [ ] RGPD, correction 2 : ajouter sur `/contact` la mention d'information et le lien vers `/confidentialite` (finalité, durée, droits), sans changer le formulaire
+- [ ] Tests Vitest de `/api/leads` (Prisma simulé) : e-mail invalide refusé, un consentement newsletter donné n'est jamais retiré, compteur de passages
+- [ ] RGPD, correction 3 : corriger `/confidentialite` (ligne Google : l'assistant n'appelle pas `web-search` ; transferts hors UE ; durée PostHog à vérifier à la source) (validation requise : texte juridique)
 - [x] Mettre à jour Next.js 15.2.3 vers 15.5.28 : Vercel bloquait le déploiement (« Vulnerable version of Next.js detected ») (2026-10-31)
 - [x] Audit des dépendances : 29 vulnérabilités ramenées à 11 sans changement majeur, rapport dans `docs/audit-dependances.md` (2026-10-31)
 - [x] Supprimer le code mort de `src/` (`src/app`, `src/lib`, `src/types`) et retirer `next-auth`, `@auth/prisma-adapter`, `bcrypt`, `nodemailer` (2026-10-31)

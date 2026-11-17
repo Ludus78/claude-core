@@ -117,9 +117,6 @@ export async function POST(request: Request) {
       }, { status: 200 });
     }
     
-    console.log("Message reçu:", message);
-    console.log("Historique:", history);
-
     // Vérifier si la question est liée à l'immobilier
     if (!isRealEstateRelated(message)) {
       // Si c'est une question hors sujet répétée, donner une réponse plus ferme

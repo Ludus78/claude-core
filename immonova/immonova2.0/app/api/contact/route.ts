@@ -15,7 +15,6 @@ export async function POST(request: Request) {
                 message
             }
         });
-        console.log(response);
 
         return Response.json(response, { status: 201 });
     } catch (error) {
