@@ -47,7 +47,12 @@ La commande `/next space-atlas` ne prend que les tâches **sans** « validation 
 ### Réalisation
 
 - [x] M1-3 : globe de départ (ISS + quelques constellations, cache CelesTrak) : prototype fait dans `globe/` (15 tests, build OK, rendu contrôlé dans le navigateur) ; reste la vidéo de 15 s, à faire par toi (2026-11-04)
-- [ ] M4-5 : lancements, couleurs par orbite, infobulles pédagogiques, premier lien en ligne
+- [ ] M4-5 : lancements, couleurs par orbite, infobulles pédagogiques, premier lien en ligne (découpée le 2026-11-17 en 5 sous-tâches ci-dessous)
+  - [x] M4-5a : `globe/lib/orbitClass.ts` (famille d'orbite LEO/MEO/GEO/HEO depuis périgée et apogée, seuils « à vérifier à la source ») et ses tests (2026-11-17)
+  - [ ] M4-5b : colorer les satellites par famille d'orbite et ajouter la légende (dépend de M4-5a ; nécessite les paramètres orbitaux dans la réponse de `/api/orbits/[group]`)
+  - [ ] M4-5c : infobulles pédagogiques par famille d'orbite (validation requise : les textes sont des faits techniques, recherche menée par toi)
+  - [ ] M4-5d : lancements via Launch Library 2 (validation requise : licence et quota « à vérifier à la source », `research/launch-library-2.md` vide)
+  - [ ] M4-5e : premier lien en ligne (validation requise : déploiement Vercel)
 - [ ] M6-8 : observatoire v1 (30 entreprises, carte, filtres)
 - [ ] M9-11 : fusion des modules + 2 ou 3 mini-histoires
 - [ ] M12 : bilan
