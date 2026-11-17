@@ -13,6 +13,15 @@ Tâches tirées de l'état réel du dépôt (octobre 2026). La commande `/next C
 - [x] `claudetest.md` supprimé : ancien script de rejeu du scoring qui importait un `./scoring` inexistant, récupérable dans l'historique git (2026-11-04)
 - [x] `sersestechestestoile` supprimé : ancienne copie de `src/gmail/headers.ts`, accents corrompus, sans les correctifs récents, récupérable dans l'historique git (2026-11-04)
 
+## Phase 0 bis : tests des modules restants (ajoutée le 2026-11-17)
+
+Modules sans test après la phase 0 : `config.ts`, `auth/identity.ts`, `background/index.ts`, `popup/popup.ts`. Chrome simulé, jamais de vraie boîte ni de vrai jeton.
+
+- [x] Écrire les tests de `src/config.ts` (`isOAuthClientConfigured` : identifiant absent, factice, mal formé, valide) (2026-11-17)
+- [ ] Écrire les tests de `src/auth/identity.ts` (API `chrome.identity` simulée)
+- [ ] Écrire les tests de `src/background/index.ts` (routage des messages, réponse `ok`/`error`, état de connexion sans client OAuth configuré)
+- [ ] Le service worker importe `scripts/testOnRealInbox` et expose `runInboxRiskCheck` sur `globalThis` : retirer ce lien de l'extension livrée (validation requise : change le comportement)
+
 ## Phase 1 : produit
 
 À définir par toi (publication de l'extension, nouveaux signaux de détection, autres messageries…). La revue hebdomadaire propose des pistes, à valider.
