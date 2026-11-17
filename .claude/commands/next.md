@@ -11,7 +11,13 @@ Si aucun projet n'est indiqué, demande-le moi et arrête-toi. Réponds en fran�
 
 1. Lis le `CLAUDE.md` racine, puis le `CLAUDE.md` du projet, puis `<projet>/ROADMAP.md`. La branche de référence est toujours `main`. Pour immonova, le dossier du projet est `immonova/` (le code est dans `immonova2.0/`).
 2. Fais `git fetch`, place-toi sur `main` et fais `git pull --ff-only`. Vérifie que `git status` est propre. Si ce n'est pas le cas, arrête-toi et dis-moi pourquoi.
-3. Choisis la **première** tâche `- [ ]` qui ne porte pas la mention « validation requise ». S'il n'y en a aucune, dis-le, liste les tâches qui attendent ma validation, et arrête-toi.
+3. Choisis la **première** tâche `- [ ]` qui ne porte pas la mention « validation requise ».
+4. S'il n'y en a aucune, ne t'arrête pas : fais le point sur l'état réel du projet (code, documents, `git log`, `_hub/PROJETS.md`) et **ajoute 2 à 4 tâches suivantes** à la roadmap, puis traite la première.
+   - Chaque tâche est petite (un commit), vérifiable, et que Claude peut faire seul.
+   - Elles respectent les règles du projet : pas d'anecdote ou de fait inventé, pas de recherche menée à la place du propriétaire, pas de nouvelle dépendance, pas de migration, pas de secret ni de vraie donnée.
+   - Une tâche qui exige un choix, un accord ou une action du propriétaire garde la mention « validation requise » et n'est pas traitée.
+   - Si le projet n'offre vraiment aucune tâche de ce genre, dis-le avec la raison, liste ce qui attend ma validation, et arrête-toi.
+   - Les tâches ajoutées vont dans la roadmap du projet, dans le commit de la tâche traitée.
 
 ## Réalisation
 
