@@ -26,6 +26,14 @@ Tirée de la synthèse du projet (`memories-synthese.md.py`). Projet sans code :
 - [ ] Écrire le script de la première vraie anecdote, case par case, dans `anecdotes/` à partir de `_modele.md`
 - [ ] Choisir la diffusion : PDF partagé, page web ou carnet imprimé (validation requise)
 
+## Ajoutées le 2026-11-17 (point d'état : aucune tâche que Claude puisse faire seul)
+
+Le reste dépend d'anecdotes réelles, d'accords des amis ou de décisions du propriétaire ; Claude n'invente ni anecdote ni accord.
+
+- [ ] Renommer `memories-synthese.md.py` en `memories-synthese.md` (c'est du Markdown) et corriger les renvois (`CLAUDE.md`, `ROADMAP.md`) (validation requise : accord demandé par `CLAUDE.md`)
+- [ ] Taverne : ajouter Vitest et des tests de `src/validation.ts` et `src/acces.ts` (validation requise : nouvelle dépendance)
+- [ ] Taverne : permettre de modifier une fiche après envoi (limite connue du README) (validation requise : choix de fonctionnement et de sécurité du lien privé)
+
 ## Légende
 
 `- [ ]` à faire · `- [x]` fait.
